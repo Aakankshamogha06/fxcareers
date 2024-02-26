@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 
 <!-- Header Start -->
 <section>
@@ -71,4 +70,3 @@
 <!-- Contact End -->
 
 
-<?php include_once './include/footer.php' ?>

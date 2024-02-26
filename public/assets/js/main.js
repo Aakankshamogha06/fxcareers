@@ -24,12 +24,7 @@
       return false;
   });
 
-  // add class while on home page
-  if (window.location.pathname === "/new/") {
-    $(".header").addClass("position-absolute");
-  } else {
-    $(".header .navbar-brand>img").attr("src", "./img/logo.png");
-  }
+  
 
   // Dropdown on mouse hover
   $(document).ready(function () {

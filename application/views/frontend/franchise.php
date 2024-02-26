@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 
 <!-- Banner section Start -->
 <section>
@@ -219,4 +218,3 @@
         </div>
     </div>
 </section>
-<?php include_once './include/footer.php' ?>

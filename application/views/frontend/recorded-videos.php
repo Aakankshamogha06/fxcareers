@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 
 <!-- Header Start -->
 <section>
@@ -32,4 +31,3 @@
 </section>
 <!-- Recorded videos End -->
 
-<?php include_once './include/footer.php' ?>

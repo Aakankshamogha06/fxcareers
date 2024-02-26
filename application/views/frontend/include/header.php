@@ -71,8 +71,7 @@
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-light py-0 px-lg-5">
                 <a href="<?=base_url()?>" class="navbar-brand">
-                    <img src="<?=base_url()?>public/assets/img/logo-light.png" alt="FXCareers Logo" title="FXCareers Logo" class="img-fluid" />
-                </a>
+                <img src="<?=base_url()?>public/assets/img/logo.png" alt="FXCareers Logo" title="FXCareers Logo" class="img-fluid">                </a>
                 <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="toggler-icon fa-2x fa-solid fa-bars"></span>
                 </button>
@@ -83,24 +82,24 @@
                             <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown">About Us <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-menu drop-after m-0">
                                 <a href="<?=base_url()?>about" class="dropdown-item">Company Profile</a>
-                                <a href="./gallery.php" class="dropdown-item">Gallery</a>
-                                <a href="./team.php" class="dropdown-item">Our Team</a>
-                                <a href="./testimonial.php" class="dropdown-item">Testimonials</a>
+                                <a href="<?=base_url()?>gallery" class="dropdown-item">Gallery</a>
+                                <a href="<?=base_url()?>team" class="dropdown-item">Our Team</a>
+                                <a href="<?=base_url()?>testimonial" class="dropdown-item">Testimonials</a>
                             </div>
                         </div>
-                        <a href="franchise.php" class="nav-item nav-link">Franchise</a>
+                        <a href="franchise" class="nav-item nav-link">Franchise</a>
                         <div class="nav-item dropdown">
                             <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown">Programs <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-menu drop-after  m-0">
-                                <a href="./offline-program.php" class="dropdown-item">Offline Programs</a>
-                                <a href="./online-program.php" class="dropdown-item">Online Programs</a>
-                                <a href="./recorded-videos.php" class="dropdown-item">Recorded Videos</a>
+                                <a href="<?=base_url()?>offline-program" class="dropdown-item">Offline Programs</a>
+                                <a href="<?=base_url()?>online-program" class="dropdown-item">Online Programs</a>
+                                <a href="<?=base_url()?>recorded-videos" class="dropdown-item">Recorded Videos</a>
                             </div>
                         </div>
-                        <a href="./ebook.php" class="nav-item nav-link">E-Book</a>
-                        <a href="./analysis.php" class="nav-item nav-link">Analysis</a>
-                        <a href="./blog.php" class="nav-item nav-link">Blog</a>
-                        <a href="./contact.php" class="nav-item nav-link">Contact</a>
+                        <a href="<?=base_url()?>ebook" class="nav-item nav-link">E-Book</a>
+                        <a href="<?=base_url()?>analysis" class="nav-item nav-link">Analysis</a>
+                        <a href="<?=base_url()?>blog" class="nav-item nav-link">Blog</a>
+                        <a href="<?=base_url()?>contact" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="https://www.fxcareers.com/admin/auth/login" target="_blank" class="theme-btn  d-none d-lg-block">Join Us <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
@@ -114,35 +113,45 @@
             <div class="offcanvas-body p-0">
                 <div class="mobile-menu-wrap">
                     <ul class="mobile-menu-list">
-                        <li><a href="./" class="menu-link">Home</a></li>
+                        <li><a href="<?=base_url()?>" class="menu-link">Home</a></li>
                         <li>
                             <a role="button" class="menu-link moblie-dropdwon">About Us <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-mb-menu">
                                 <ul>
-                                    <li><a href="./about.php">Company</a></li>
-                                    <li><a href="./gallery.php">Gallery</a></li>
-                                    <li><a href="./team.php">Our Team</li>
-                                    <li><a href="./testimonial.php">Testimonials</a></li>
+                                    <li><a href="<?=base_url()?>about">Company</a></li>
+                                    <li><a href="<?=base_url()?>gallery">Gallery</a></li>
+                                    <li><a href="<?=base_url()?>team">Our Team</li>
+                                    <li><a href="<?=base_url()?>testimonial">Testimonials</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="./franchise.php" class="menu-link">Franchise</a></li>
+                        <li><a href="<?=base_url()?>franchise" class="menu-link">Franchise</a></li>
                         <li><a role="button" class="menu-link moblie-dropdwon">Programs <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-mb-menu">
                                 <ul>
-                                    <li><a href="./offline-program.php">Offline Programs</a></li>
-                                    <li><a href="./online-program.php">Online Programs</a></li>
-                                    <li><a href="./recorded-videos.php">Recorded Videos</a></li>
+                                    <li><a href="<?=base_url()?>offline-program">Offline Programs</a></li>
+                                    <li><a href="<?=base_url()?>online-program">Online Programs</a></li>
+                                    <li><a href="<?=base_url()?>recorded-videos">Recorded Videos</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="./ebook.php" class="menu-link">E-books</a></li>
-                        <li><a href="./analysis.php" class="menu-link">Analysis</a></li>
-                        <li><a href="./blog.php" class="menu-link">Blog</a></li>
-                        <li><a href="./contact.php" class="menu-link">Contact</a></li>
+                        <li><a href="<?=base_url()?>ebook" class="menu-link">E-books</a></li>
+                        <li><a href="<?=base_url()?>analysis" class="menu-link">Analysis</a></li>
+                        <li><a href="<?=base_url()?>blog" class="menu-link">Blog</a></li>
+                        <li><a href="<?=base_url()?>contact" class="menu-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div> -->
         <!-- Navbar End -->
     </header>
+
+    <script>
+
+        // add class while on home page
+        if (window.location.pathname === "<?=base_url()?>") {
+            document.querySelector(".header").classList.add("position-absolute");
+        } else {
+            document.querySelector(".header .navbar-brand>img").setAttribute("src", "<?=base_url()?>public/assets/img/logo.png");
+        }
+        </script>

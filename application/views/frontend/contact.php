@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 
 <!-- Header Start -->
 <section>
@@ -101,4 +100,3 @@
         </div>
     </div>
 </section>
-<?php include_once './include/footer.php' ?>

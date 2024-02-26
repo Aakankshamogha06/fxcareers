@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 <style>
     .blog-card {
         transition: all .3s ease-in-out;
@@ -93,4 +92,3 @@
 <!-- Contact End -->
 
 
-<?php include_once './include/footer.php' ?>

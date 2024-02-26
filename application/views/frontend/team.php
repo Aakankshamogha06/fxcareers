@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 <style>
     .show-modal-btn {
         position: absolute;
@@ -51,7 +50,7 @@
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6">
                 <div class="team-item">
-                    <img class="img-fluid w-100" src="./img/rekha-sharma.jpg" alt="Ms. Rekha Sharma" />
+                    <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/rekha-sharma.jpg" alt="Ms. Rekha Sharma" />
                     <div class="bg-light text-center p-4 position-relative overflow-hidden">
                         <h5 class="mb-3">Ms. Rekha Sharma</h5>
                         <p class="mb-2">L & D Head</p>
@@ -65,7 +64,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="team-item">
-                    <img class="img-fluid w-100" src="./img/nitin-vishnoi.jpg" alt="Mr. Nitin Vishnoi" />
+                    <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/nitin-vishnoi.jpg" alt="Mr. Nitin Vishnoi" />
                     <div class="bg-light text-center p-4 position-relative overflow-hidden">
                         <h5 class="mb-3">Mr. Nitin Vishnoi</h5>
                         <p class="mb-2">L & D Head</p>
@@ -79,7 +78,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="team-item">
-                    <img class="img-fluid w-100" src="./img/ruchit-thakur.jpg" alt="Mr. Ruchit Thakur" />
+                    <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/ruchit-thakur.jpg" alt="Mr. Ruchit Thakur" />
                     <div class="bg-light text-center p-4 position-relative overflow-hidden">
                         <h5 class="mb-3">Mr. Ruchit Thakur</h5>
                         <p class="mb-2">Trainer & Analyst</p>
@@ -109,7 +108,7 @@
             </div>
             <div class="modal-body text-center">
                 <figure>
-                    <img src="./img/rekha-sharma.jpg" alt="" class="img-fluid rounded-circle w-50" />
+                    <img src="<?=base_url()?>public/assets/img/rekha-sharma.jpg" alt="" class="img-fluid rounded-circle w-50" />
                 </figure>
                 <h3>Ms. Rekha Sharma</h3>
                 <p class="text-muted">L & D Head</p>
@@ -130,7 +129,7 @@
             </div>
             <div class="modal-body text-center">
                 <figure>
-                    <img src="./img/nitin-vishnoi.jpg" alt="" class="img-fluid rounded-circle w-50" />
+                    <img src="<?=base_url()?>public/assets/img/nitin-vishnoi.jpg" alt="" class="img-fluid rounded-circle w-50" />
                 </figure>
                 <h3>Mr. Nitin Vishnoi</h3>
                 <p class="text-muted">L & D Head</p>
@@ -151,7 +150,7 @@
             </div>
             <div class="modal-body text-center">
                 <figure>
-                    <img src="./img/ruchit-thakur.jpg" alt="" class="img-fluid rounded-circle w-50" />
+                    <img src="<?=base_url()?>public/assets/img/ruchit-thakur.jpg" alt="" class="img-fluid rounded-circle w-50" />
                 </figure>
                 <h3>Mr. Ruchit Thakur</h3>
                 <p class="text-muted">Trainer & Analyst</p>
@@ -167,4 +166,3 @@
     </div>
 </div>
 
-<?php include_once './include/footer.php' ?>

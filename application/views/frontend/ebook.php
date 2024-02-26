@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 <style>
     .ebook-card {
         border: 1px solid #f5f5f5;
@@ -132,4 +131,3 @@
 </section>
 <!-- Contact End -->
 
-<?php include_once './include/footer.php' ?>

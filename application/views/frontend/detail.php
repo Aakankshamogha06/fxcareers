@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 <style>
     .courses-list-item img {
         height: 300px;
@@ -210,4 +209,3 @@
 </div>
 <!-- Related Programs End -->
 
-<?php include_once './include/footer.php' ?>

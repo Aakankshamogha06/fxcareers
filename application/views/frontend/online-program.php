@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 <style>
     .courses-list-item img {
         height: 400px;
@@ -81,4 +80,3 @@
 </section>
 <!-- Courses End -->
 
-<?php include_once './include/footer.php' ?>

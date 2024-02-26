@@ -1,4 +1,3 @@
-<?php include_once './include/header.php' ?>
 
 <style>
     .gallery-hover figure>img {
@@ -144,4 +143,3 @@
 </section>
 <!-- Gallery Start -->
 
-<?php include_once './include/footer.php' ?>
