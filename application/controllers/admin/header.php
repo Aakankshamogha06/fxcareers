@@ -4,7 +4,7 @@
     <meta name="description" content=""/>
     <meta name="keywords" content="" />
     <link rel="icon" type="image/x-icon" href="<?=base_url()?>public/web/images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/css/bootstrap5.3.0.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/css/bootstrap5.3.0.min.css"> -->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="<?=base_url()?>public/web/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/fonts/font-awesome.css">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?=base_url()?>public/web/css/style.css" />
     <link rel="stylesheet" href="<?=base_url()?>public/web/css/responsive.css" />
     <script src="<?=base_url()?>public/web/js/index1.js"></script>
-    <script type="text/javascript" src="<?=base_url()?>public/web/js/bootstrap.bundle.min5.2.0.js"></script>
+    <!-- <script type="text/javascript" src="<?=base_url()?>public/web/js/bootstrap.bundle.min5.2.0.js"></script> -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2CT2TEW5G"></script>
     <script>
