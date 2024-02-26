@@ -1,1026 +1,315 @@
-<?php include_once './include/header.php' ?>
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license	https://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 
-<style>
-  .jumbotron>video {
-    position: absolute;
-    width: 100%;
-    inset: 0;
-    top: -20px;
-    z-index: 1;
-    height: 103%;
-    object-fit: cover;
-  }
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
-  .jumbotron>.container {
-    position: relative;
-    z-index: 2;
-    transform: translateY(80px);
-  }
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
 
-  .about-points>.col-sm-6>div {
-    background-color: #0f0f0f;
-  }
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+		}
+		else
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+		}
+	break;
 
-  .about-points>.col-sm-6>div>h6 {
-    color: #f9c311;
-  }
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
 
-  .about-points>.col-sm-6:first-child>div,
-  .about-points>.col-sm-6:last-child>div {
-    background-color: #f9c311;
-  }
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
 
-  .about-points>.col-sm-6:first-child>div>h6,
-  .about-points>.col-sm-6:last-child>div>h6 {
-    color: #0f0f0f;
-  }
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/userguide3/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
 
-  .courses-item>img {
-    height: 450px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .team-item {
-    position: relative;
-  }
-
-  .team-carousel.owl-carousel .owl-item img {
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .team-item>.play-btn {
-    position: absolute;
-    padding: .4rem 0;
-    width: 100%;
-    height: 20%;
-    bottom: -20%;
-    background-color: #fff;
-    box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.2);
-    display: grid;
-    place-content: center;
-    transition: all .3s ease-in-out;
-  }
-
-  .team-item:hover>.play-btn {
-    bottom: 0;
-  }
-
-  .team-item:hover>.play-btn>a {
-    color: rgb(205, 32, 31);
-    font-size: 2rem;
-  }
-
-  .marque {
-    height: 370px;
-    overflow: hidden auto;
-    padding: 1rem .4rem;
-  }
-</style>
-
-<!-- Header Start -->
-<div class="jumbotron jumbotron-fluid position-relative overlay-bottom overflow-hidden d-flex align-items-center">
-  <video autoplay muted loop>
-    <source src="./video/fxcareersExpo.mp4" type="video/mp4" />
-  </video>
-  <div class="container text-white text-center text-lg-left my-5 py-5">
-    <div>
-      <h1 class="mb-2 text-secondary wow fadeInUp" data-wow-delay="0.2s">FXCareers</h1>
-      <div class="h1 text-white display-3 fw-bolder mb-4 wow fadeInUp" data-wow-delay="0.3s">A Leading Financial Education Institute</div>
-      <p class="fs-2 mb-0 wow fadeInUp" data-wow-delay="0.4s">#1 India's Premier Currency Trading Education Institute!</p>
-    </div>
-    <!-- <div class="mx-auto mb-5" style="width: 100%; max-width: 600px">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Courses
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Courses 1</a>
-            <a class="dropdown-item" href="#">Courses 2</a>
-            <a class="dropdown-item" href="#">Courses 3</a>
-          </div>
-        </div>
-        <input type="text" class="form-control border-light" style="padding: 30px 25px" placeholder="Keyword" />
-        <div class="input-group-append">
-          <button class="btn btn-secondary px-4 px-lg-5">Search</button>
-        </div>
-      </div>
-    </div> -->
-  </div>
-</div>
-<!-- Header End -->
-
-<!-- About Start -->
-<section class="space-sec">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="section-title position-relative mb-4">
-          <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2 wow fadeInUp">FXCareers</h6>
-          <h2 class="display-5 wow fadeInRight" data-wow-delay="100ms">About FXCareers</h2>
-          <p class="wow fadeInRight" data-wow-delay="200ms">FXCareers, a trusted financial markets institute, offers in-depth currency trading programs and training in financial markets. The programs are taught by expert mentors who have years of experience in the financial markets and cover all aspects of advance trading concepts with live market analysis.</p>
-        </div>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-7 mb-md-4 mb-xs-4">
-        <div class="row  mx-0 about-points">
-          <div class="col-sm-6 px-0 wow fadeInUp" data-wow-delay="200ms">
-            <div class="h-100 text-center p-4">
-              <!-- <h1 class="text-white" data-toggle="counter-up">123</h1> -->
-              <h6 class="text-uppercase">Market Analysis</h6>
-              <p class="mb-0 text-white">Receive daily market analysis and news on trending events and other economic factors.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 px-0 wow fadeInUp" data-wow-delay="300ms">
-            <div class="h-100 text-center p-4">
-              <!-- <h1 class="text-white" data-toggle="counter-up">1234</h1> -->
-              <h6 class="text-uppercase">Valuable E-books</h6>
-              <p class="mb-0 text-white">Explore our topical e-books on popular trading strategies and concepts.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 px-0 wow fadeInUp" data-wow-delay="400ms">
-            <div class="h-100 text-center p-4">
-              <!-- <h1 class="text-white" data-toggle="counter-up">123</h1> -->
-              <h6 class="text-uppercase">Informative Blogs</h6>
-              <p class="mb-0 text-white">Get valuable market insights and knowledge through our informative blogs.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 px-0 wow fadeInUp" data-wow-delay="500ms">
-            <div class="h-100 text-center p-4">
-              <!-- <h1 class="text-white" data-toggle="counter-up">1234</h1> -->
-              <h6 class="text-uppercase">Webinar Sessions</h6>
-              <p class="mb-0 text-white">Participate in our interactive webinar sessions led by advance traders.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 mt-4 wow fadeInUp">
-            <a href="#" class="theme-btn">Explore Programs</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5 text-center wow fadeInLeft">
-        <img class="img-fluid" src="img/about-img.png" />
-      </div>
-    </div>
-  </div>
-</section>
-<!-- About End -->
-
-<!-- Feature Start -->
-<section class="space-sec  bg-image">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 align-self-center">
-        <div class="section-title position-relative mb-4">
-          <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2 wow fadeInLeft" data-wow-delay="100ms">
-            Why Choose Us?
-          </h6>
-          <h2 class="display-6 wow fadeInLeft" data-wow-delay="200ms">Improve Your Trading Skills with Our Online and Offline Trading Programs</h2>
-        </div>
-        <p class="mb-4 pb-2 wow fadeInLeft" data-wow-delay="300ms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quod reiciendis, fuga recusandae porro culpa asperiores similique dolore! Illum, mollitia!</p>
-      </div>
-      <div class="col-lg-6 wow fadeInRight">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="why-choose-wrapper text-center mb-4 wow fadeInDown" data-wow-delay="100ms">
-              <div class="icon-wrap">
-                <i class="fa fa-2x fa-book-reader text-white btn-icon bg-warning  rounded-circle "></i>
-              </div>
-              <div class="caption-text mt-n1 wow fadeInRight">
-                <h4>Online Classes</h4>
-                <p class="m-0">Learn from Anywhere</p>
-              </div>
-            </div>
-            <div class="why-choose-wrapper text-center wow fadeInDown" data-wow-delay="200ms">
-              <div class="icon-wrap">
-                <i class="fa-solid fa-2x text-white fa-chalkboard-user btn-icon bg-dark  rounded-circle"></i>
-              </div>
-              <div class="caption-text mt-n1 wow fadeInRight">
-                <h4>Mentor Support</h4>
-                <p class="m-0">Clear your Doubts</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="why-choose-wrapper text-center mt-4 mb-4 wow fadeInDown" data-wow-delay="400ms">
-              <div class="icon-wrap">
-                <i class="fa-solid fa-2x text-white fa-graduation-cap  btn-icon bg-dark  rounded-circle "></i>
-              </div>
-              <div class="mt-n1 caption-text wow fadeInRight">
-                <h4>Flexible Classes</h4>
-                <p class="mb-0">You pick the Schedule</p>
-              </div>
-            </div>
-            <div class="why-choose-wrapper text-center  wow fadeInDown" data-wow-delay="500ms">
-              <div class="icon-wrap">
-                <i class="fa-solid fa-2x text-white fa-certificate  btn-icon bg-warning  rounded-circle wow fadeInLeft"></i>
-              </div>
-              <div class="mt-n1 caption-text wow fadeInRight">
-                <h4>Interactive Learning</h4>
-                <p class="mb-0">Fulfill your Curiosity</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Feature Start -->
-<!-- Feature Start -->
-
-<!-- Program Start -->
-<section class="space-sec">
-  <div class="container-fluid">
-    <div class="row mx-0 justify-content-center ">
-      <div class="col-lg-6">
-        <div class="section-title text-center position-relative mb-4">
-          <!-- <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">
-          Our Courses
-        </h6> -->
-          <h2 class="display-5  wow fadeInUp" data-wow-delay="300ms">Choose the Program that Suits you Best!</h2>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="nav nav-tabs program-tabs scroll-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="Online-Programs" data-bs-toggle="tab" data-bs-target="#OnlinePrograms" type="button" role="tab" aria-controls="Online-Programs-pane" aria-selected="true">Online Programs</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="Offline-Programs" data-bs-toggle="tab" data-bs-target="#OfflinePrograms" type="button" role="tab" aria-controls="Offline-Programs-pane" aria-selected="false">Offline Programs</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="Recorded-Videos" data-bs-toggle="tab" data-bs-target="#RecordedVideos" type="button" role="tab" aria-controls="Recorded-Videos-pane" aria-selected="false">Recorded Videos</button>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="OnlinePrograms" role="tabpanel" aria-labelledby="Online-Programs" tabindex="0">
-          <div class="owl-carousel courses-carousel">
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program1.jpg" alt="Basic Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Basic Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4">₹ 25000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program2.jpg" alt="Intermediate Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Intermediate Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program3.jpg" alt="Advanced Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Advanced Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>30hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program4.jpg" alt="Mastering Currency Market" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 50000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program5.jpg" alt="Mastering Currency Market VIP" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 100000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="OfflinePrograms" role="tabpanel" aria-labelledby="Offline-Programs" tabindex="0">
-          <div class="owl-carousel courses-carousel">
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program1.jpg" alt="Basic Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Basic Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 25000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program2.jpg" alt="Intermediate Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Intermediate Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program3.jpg" alt="Advanced Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Advanced Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>30hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program4.jpg" alt="Mastering Currency Market" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 50000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program5.jpg" alt="Mastering Currency Market VIP" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 100000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="RecordedVideos" role="tabpanel" aria-labelledby="Recorded-Videos" tabindex="0">
-          <div class="owl-carousel courses-carousel">
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program1.jpg" alt="Basic Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Basic Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4">₹ 25000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program2.jpg" alt="Intermediate Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Intermediate Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program3.jpg" alt="Advanced Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Advanced Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>30hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program4.jpg" alt="Mastering Currency Market" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 50000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="img/program5.jpg" alt="Mastering Currency Market VIP" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 100000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
 
 
-    <!-- Programs tabs --
-    <div class="container">
-      <div class="row">
-        <div class="col-12 overflow-x-auto overflow-y-hidden">
-          <ul class="nav nav-pills gap-2 mb-3 flex-nowrap text-nowrap scroll-tabs" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="offline-tab" data-toggle="pill" href="#offline" role="tab" aria-controls="offline" aria-selected="true">Offline Programs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="online-tab" data-toggle="pill" href="#online" role="tab" aria-controls="online" aria-selected="false">Online Programs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="recorded-tab" data-toggle="pill" href="#recorded" role="tab" aria-controls="recorded" aria-selected="false">Recorded Videos</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="offline" role="tabpanel" aria-labelledby="offline-tab">
-        <div class="owl-carousel courses-carousel">
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program1.jpg" alt="Basic Program" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Basic Program</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4">₹ 25000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program2.jpg" alt="Intermediate Program" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Intermediate Program</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4">₹ 35000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program3.jpg" alt="Advanced Program" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Advanced Program</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>30hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program4.jpg" alt="Mastering Currency Market" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 50000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program5.jpg" alt="Mastering Currency Market VIP" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 100000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="online" role="tabpanel" aria-labelledby="online-tab">
-        <div class="owl-carousel courses-carousel">
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program1.jpg" alt="Basic Program" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Basic Program</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 25000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program2.jpg" alt="Intermediate Program" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Intermediate Program</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program3.jpg" alt="Advanced Program" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Advanced Program</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>30hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program4.jpg" alt="Mastering Currency Market" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 50000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="courses-item position-relative">
-            <img class="img-fluid" src="img/program5.jpg" alt="Mastering Currency Market VIP" />
-            <div class="courses-text">
-              <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
-              <div class="border-top w-100 mt-3">
-                <div class="d-flex align-items-center justify-content-between p-4">
-                  <div class="d-flex gap-3">
-                    <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                    <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                  </div>
-                  <span class="text-secondary fs-4 font-xm">₹ 100000</span>
-                </div>
-              </div>
-              <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="recorded" role="tabpanel" aria-labelledby="recorded-tab">...</div>
-    </div>-->
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
 
-    <!-- <div class="row justify-content-center bg-image mx-0 mb-5">
-    <div class="col-lg-6 py-5">
-      <div class="bg-white p-5 my-5">
-        <h1 class="text-center mb-4">30% Off For New Students</h1>
-        <form>
-          <div class="form-row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="padding: 30px 20px" />
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="padding: 30px 20px" />
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <select class="custom-select bg-light border-0 px-3" style="height: 60px">
-                  <option selected>Select A courses</option>
-                  <option value="1">courses 1</option>
-                  <option value="2">courses 1</option>
-                  <option value="3">courses 1</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <button class="theme-btn btn-block" type="submit" style="height: 60px">
-                Sign Up Now
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
-  </div>
-</section>
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
 
-<!-- Program End -->
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
-<!-- Team Start -->
 
-<section class="space-sec pt-0">
-  <div class="container">
-    <div class="section-title text-center position-relative mb-5">
-      <!-- <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Instructors</h6> -->
-      <h2 class="display-5 wow fadeInUp" data-wow-delay="0.2s">Knowledge Hub of FXCareers</h2>
-    </div>
-    <div class="owl-carousel team-carousel position-relative mb-3" style="padding: 0 30px">
-      <div class="team-item">
-        <img class="img-fluid w-100" src="img/thumbnail-1.jpg" alt="" />
-        <div class="play-btn">
-          <a href="https://www.youtube.com/watch?v=h19Gq4P5ieA" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      <div class="team-item">
-        <img class="img-fluid w-100" src="img/thumbnail-2.jpg" alt="" />
-        <div class="play-btn">
-          <a href="https://www.youtube.com/watch?v=6gnDAcjtUII" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      <div class="team-item">
-        <img class="img-fluid w-100" src="img/thumbnail-3.jpg" alt="" />
-        <div class="play-btn">
-          <a href="https://www.youtube.com/watch?v=55c0Ic-Dtw0" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      <div class="team-item">
-        <img class="img-fluid w-100" src="img/thumbnail-4.jpg" alt="" />
-        <div class="play-btn">
-          <a href="https://www.youtube.com/watch?v=D1R2AW4E1Ak" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      <div class="team-item">
-        <img class="img-fluid w-100" src="img/thumbnail-5.jpg" alt="" />
-        <div class="play-btn">
-          <a href="https://www.youtube.com/watch?v=2i-J_Oke2zA" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      <div class="team-item">
-        <img class="img-fluid w-100" src="img/thumbnail-6.jpg" alt="" />
-        <div class="play-btn">
-          <a href="https://www.youtube.com/watch?v=u-fY-mAR2L8" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Team End -->
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
-<!-- Testimonial Start -->
 
-<section class="bg-image space-sec">
 
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-5 mb-5 mb-lg-0">
-        <div class="section-title position-relative mb-4">
-          <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-1 wow fadeInLeft" data-wow-delay="0.2s">WHAT OUR STUDENTS LOVE ABOUT FXCAREERS</h6>
-          <h2 class="display-6 wow fadeInLeft" data-wow-delay="0.3s">Students Feedback</h2>
-        </div>
-        <p class="m-0 wow fadeInLeft" data-wow-delay="0.4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quidem magnam officia sunt unde, quibusdam totam cum quae, maxime magni a ut repudiandae veniam! Fugit accusantium id fuga aliquid eius.</p>
-      </div>
-      <div class="col-lg-7">
-        <div class="owl-carousel testimonial-carousel">
-          <div class="bg-white p-5">
-            <i class="fa fa-3x fa-quote-left text-primary opacity-25 mb-4"></i>
-            <p>FXCareers Best Technical Analysis Program not only taught me about technical analysis but also emphasized the importance of discipline and Risk Management. It's a comprehensive programme for anyone serious about trading. Thank you to FXCAREERS!</p>
-            <div class="d-flex gap-1">
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-            </div>
-            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-              <div class="mr-4">
-                <img class="img-fluid rounded-circle" src="img/nittiin.png" alt="" />
-              </div>
-              <div>
-                <h5>Nitin Shokeen</h5>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-5">
-            <i class="fa fa-3x fa-quote-left text-primary opacity-25 mb-4"></i>
-            <p>I've been trading for years, but I wanted to refine my strategies. This course exceeded my expectations. The advanced techniques and real world examples were incredibly valuable.</p>
-            <div class="d-flex gap-1">
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-              <i class="fa fa-star text-secondary"></i>
-            </div>
-            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-              <div class="mr-4">
-                <img class="img-fluid rounded-circle" src="img/rejeshh.png" alt="" />
-              </div>
-              <div>
-                <h5>Rajesh</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Testimonial End -->
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
 
-<!-- Latest News Start -->
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
-<section class="space-sec">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-8-offset-lg-2 text-center">
-        <div class="section-title position-relative mb-4">
-          <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2 wow fadeInUp">updates from fxcareers</h6>
-          <h2 class="display-6 wow fadeInUp">Latest News</h2>
-          <p class="wow fadeInUp">Take part in our financial education webinars and events and get a chance to connect with other learners.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <h3 class="text-warning mb-4 wow fadeInUp">Blogs</h3>
-        <div class="marque">
-          <?php for ($i = 0; $i < 9; $i++) { ?>
-            <div class="row align-items-center mb-4">
-              <div class="col-4">
-                <div class="date-box">
-                  <span class="d-block">2</span>
-                  <span class="">Jan</span>
-                </div>
-              </div>
-              <div class="col-8">
-                <a href="" class="d-block title-list">
-                  <h6 class="mb-2">FXCareers New Batch Starting 2nd Jan</h6>
-                </a>
-                <p class="mb-2 location">
-                  <i class="fa fa-location mr-1"></i>
-                  <span>Delhi</span>
-                </p>
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
 
-              </div>
-            </div>
-          <?php } ?>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <h3 class="text-warning mb-4 wow fadeInUp">Notifications</h3>
-        <div class="marque">
-          <?php for ($i = 0; $i < 9; $i++) { ?>
-            <div class="row align-items-center mb-4">
-              <div class="col-4">
-                <div class="date-box">
-                  <span class="d-block">2</span>
-                  <span class="">Jan</span>
-                </div>
-              </div>
-              <div class="col-8">
-                <a href="" class="d-block  title-list">
-                  <h6 class="mb-2">FXCareers New Batch Starting 2nd Jan</h6>
-                </a>
-                <p class="mb-2 location">
-                  <i class="fa fa-location mr-1"></i>
-                  <span>Delhi</span>
-                </p>
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
 
-              </div>
-            </div>
-          <?php } ?>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <h3 class="text-warning mb-4 wow fadeInUp">News Analysis</h3>
-        <div class="marque">
-          <?php for ($i = 0; $i < 9; $i++) { ?>
-            <div class="row align-items-center mb-4">
-              <div class="col-4">
-                <div class="date-box">
-                  <span class="d-block">2</span>
-                  <span class="">Jan</span>
-                </div>
-              </div>
-              <div class="col-8">
-                <a href="" class="d-block title-list">
-                  <h6 class="mb-2">FXCareers New Batch Starting 2nd Jan</h6>
-                </a>
-                <p class="mb-2 location">
-                  <i class="fa fa-location mr-1"></i>
-                  <span>Delhi</span>
-                </p>
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
 
-              </div>
-            </div>
-          <?php } ?>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Latest News End -->
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
-<?php include_once './include/footer.php' ?>
+	// Path to the system directory
+	define('BASEPATH', $system_path);
+
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
+
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
