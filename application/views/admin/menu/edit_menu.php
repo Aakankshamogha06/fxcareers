@@ -1,9 +1,9 @@
-<div class="pcoded-main-container">
-    <div class="pcoded-content">
-        <div class="row">
-            <!-- [ sample-page ] start -->
-            <div class="col-sm-12">
-                <div class="card">
+<div class="container-fluid">
+    <div class="container-fluid">
+        
+
+            <div class="card">
+                <div class="card-body">
                     <?php foreach ($view_menu as $row) :
 
                     ?>

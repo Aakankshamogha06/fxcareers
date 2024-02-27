@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div class="col-md-6 align-self-center wow fadeInUp" data-wow-delay="400ms">
-                <img src="<?=base_url()?>public/assets/img/franchise-offer.png" alt="" width="100%">
+                <img src="<?=base_url()?>public/web/img/franchise-offer.png" alt="" width="100%">
             </div>
         </div>
     </div>
@@ -213,7 +213,7 @@
                 </div>
             </div>
             <div class="col-md-6 align-self-center  text-center wow fadeInUp " data-wow-delay="0.3s">
-                <img src="<?=base_url()?>public/assets/img/benefits.png" alt="" class="img-fluid">
+                <img src="<?=base_url()?>public/web/img/benefits.png" alt="" class="img-fluid">
             </div>
         </div>
     </div>

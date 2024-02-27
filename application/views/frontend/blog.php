@@ -50,7 +50,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp">
                     <div class="card border-primary rounded overflow-hidden h-100 blog-card">
                         <a href="<?=base_url()?>blog-detail">
-                            <img src="<?=base_url()?>public/assets/img/blog/blog-1.jpg" class="card-img-top" alt="USDINR Analysis" />
+                            <img src="<?=base_url()?>public/web/img/blog/blog-1.jpg" class="card-img-top" alt="USDINR Analysis" />
                         </a>
                         <div class="card-body">
                             <p class="card-text d-flex justify-content-between">

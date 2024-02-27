@@ -42,7 +42,7 @@
                         </div>
                         <div class="d-flex flex-shrink-0 align-items-center mt-4">
                             <div class="mr-4">
-                                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/assets/img/nittiin.png" alt="" />
+                                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/web/img/nittiin.png" alt="" />
                             </div>
                             <div>
                                 <h5>Nitin Shokeen</h5>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="d-flex flex-shrink-0 align-items-center mt-4">
                             <div class="mr-4">
-                                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/assets/img/rejeshh.png" alt="" />
+                                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/web/img/rejeshh.png" alt="" />
                             </div>
                             <div>
                                 <h5>Rajesh</h5>

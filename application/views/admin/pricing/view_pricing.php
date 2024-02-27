@@ -1,18 +1,23 @@
-<div class="pcoded-main-container">
-  <div class="pcoded-content">
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- [ Main Content ] start -->
-    <div class="row">
-      <!-- [ sample-page ] start -->
-      <div class="col-sm-12">
-        <div class="card">
-          <div class="card-header">
-            <h5>View pricing</h5>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="container-fluid">
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-header">
+        <h5>View pricing</h5>
             <a href="<?= base_url('admin/pricing/add_pricing'); ?>">
-              <button type="button" c class="btn btn-primary toggle-btn mb-4 mr-2" style="margin-left: 80.5%;">Add </button>
+              <button type="button" c class="btn btn-primary toggle-btn mb-4 mr-2" style="margin-left: 80.5%;">Add Blog Detail</button>
             </a>
           </div>
-          <div class="card-body">
             <table id="table_id" class="table table-striped">
               <thead>
                 <tr>
@@ -31,9 +36,10 @@
                     <td><?= $c++; ?></td>
                     <td><?= $row->name ?></td>
                     <td><?= $row->description ?></td>
-                    <td>$<?= $row->price ?></td>                    
+                    <td><?= $row->price ?></td>                    
 
-                    <td class="text-right"><a href="<?= base_url('admin/pricing/pricing_edit/' . $row->id); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/pricing/pricing_delete/' . $row->id); ?>" class="btn btn-danger btn-flat" onclick="return confirm('Are you sure want to delete ?');">Delete</a></td>                  </tr>
+                    <td class="text-right"><a href="<?= base_url('admin/pricing/pricing_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a><a href="<?= base_url('admin/pricing/pricing_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
+                  </tr>
                 <?php endforeach; ?>
               </tbody>
 

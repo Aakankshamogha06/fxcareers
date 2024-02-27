@@ -82,7 +82,7 @@
 <!-- Header Start -->
 <div class="jumbotron jumbotron-fluid position-relative overlay-bottom overflow-hidden d-flex align-items-center">
   <video autoplay muted loop>
-    <source src="<?=base_url()?>public/assets/video/fxcareersExpo.mp4" type="video/mp4" />
+    <source src="<?=base_url()?>public/web/video/fxcareersExpo.mp4" type="video/mp4" />
   </video>
   <div class="container text-white text-center text-lg-left my-5 py-5">
     <div>
@@ -164,7 +164,7 @@
         </div>
       </div>
       <div class="col-lg-5 text-center wow fadeInLeft">
-        <img class="img-fluid" src="<?=base_url()?>public/assets/img/about-img.png" />
+        <img class="img-fluid" src="<?=base_url()?>public/web/img/about-img.png" />
       </div>
     </div>
   </div>
@@ -271,7 +271,7 @@
         <div class="tab-pane fade show active" id="OnlinePrograms" role="tabpanel" aria-labelledby="Online-Programs" tabindex="0">
           <div class="owl-carousel courses-carousel">
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program1.jpg" alt="Basic Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Basic Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -289,7 +289,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program2.jpg" alt="Intermediate Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program2.jpg" alt="Intermediate Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Intermediate Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -307,7 +307,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program3.jpg" alt="Advanced Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program3.jpg" alt="Advanced Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Advanced Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -325,7 +325,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program4.jpg" alt="Mastering Currency Market" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program4.jpg" alt="Mastering Currency Market" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
                 <div class="border-top w-100 mt-3">
@@ -343,7 +343,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program5.jpg" alt="Mastering Currency Market VIP" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program5.jpg" alt="Mastering Currency Market VIP" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
                 <div class="border-top w-100 mt-3">
@@ -365,7 +365,7 @@
         <div class="tab-pane fade" id="OfflinePrograms" role="tabpanel" aria-labelledby="Offline-Programs" tabindex="0">
           <div class="owl-carousel courses-carousel">
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program1.jpg" alt="Basic Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Basic Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -383,7 +383,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program2.jpg" alt="Intermediate Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program2.jpg" alt="Intermediate Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Intermediate Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -401,7 +401,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program3.jpg" alt="Advanced Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program3.jpg" alt="Advanced Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Advanced Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -419,7 +419,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program4.jpg" alt="Mastering Currency Market" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program4.jpg" alt="Mastering Currency Market" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
                 <div class="border-top w-100 mt-3">
@@ -437,7 +437,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program5.jpg" alt="Mastering Currency Market VIP" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program5.jpg" alt="Mastering Currency Market VIP" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
                 <div class="border-top w-100 mt-3">
@@ -459,7 +459,7 @@
         <div class="tab-pane fade" id="RecordedVideos" role="tabpanel" aria-labelledby="Recorded-Videos" tabindex="0">
           <div class="owl-carousel courses-carousel">
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program1.jpg" alt="Basic Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Basic Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -477,7 +477,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program2.jpg" alt="Intermediate Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program2.jpg" alt="Intermediate Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Intermediate Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -495,7 +495,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program3.jpg" alt="Advanced Program" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program3.jpg" alt="Advanced Program" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Advanced Program</h4>
                 <div class="border-top w-100 mt-3">
@@ -513,7 +513,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program4.jpg" alt="Mastering Currency Market" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program4.jpg" alt="Mastering Currency Market" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
                 <div class="border-top w-100 mt-3">
@@ -531,7 +531,7 @@
               </div>
             </div>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/assets/img/program5.jpg" alt="Mastering Currency Market VIP" />
+              <img class="img-fluid" src="<?=base_url()?>public/web/img/program5.jpg" alt="Mastering Currency Market VIP" />
               <div class="courses-text">
                 <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
                 <div class="border-top w-100 mt-3">
@@ -577,7 +577,7 @@
       <div class="tab-pane fade show active" id="offline" role="tabpanel" aria-labelledby="offline-tab">
         <div class="owl-carousel courses-carousel">
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program1.jpg" alt="Basic Program" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Basic Program</h4>
               <div class="border-top w-100 mt-3">
@@ -595,7 +595,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program2.jpg" alt="Intermediate Program" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program2.jpg" alt="Intermediate Program" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Intermediate Program</h4>
               <div class="border-top w-100 mt-3">
@@ -613,7 +613,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program3.jpg" alt="Advanced Program" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program3.jpg" alt="Advanced Program" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Advanced Program</h4>
               <div class="border-top w-100 mt-3">
@@ -631,7 +631,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program4.jpg" alt="Mastering Currency Market" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program4.jpg" alt="Mastering Currency Market" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
               <div class="border-top w-100 mt-3">
@@ -649,7 +649,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program5.jpg" alt="Mastering Currency Market VIP" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program5.jpg" alt="Mastering Currency Market VIP" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
               <div class="border-top w-100 mt-3">
@@ -671,7 +671,7 @@
       <div class="tab-pane fade" id="online" role="tabpanel" aria-labelledby="online-tab">
         <div class="owl-carousel courses-carousel">
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program1.jpg" alt="Basic Program" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Basic Program</h4>
               <div class="border-top w-100 mt-3">
@@ -689,7 +689,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program2.jpg" alt="Intermediate Program" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program2.jpg" alt="Intermediate Program" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Intermediate Program</h4>
               <div class="border-top w-100 mt-3">
@@ -707,7 +707,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program3.jpg" alt="Advanced Program" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program3.jpg" alt="Advanced Program" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Advanced Program</h4>
               <div class="border-top w-100 mt-3">
@@ -725,7 +725,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program4.jpg" alt="Mastering Currency Market" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program4.jpg" alt="Mastering Currency Market" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
               <div class="border-top w-100 mt-3">
@@ -743,7 +743,7 @@
             </div>
           </div>
           <div class="courses-item position-relative">
-            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program5.jpg" alt="Mastering Currency Market VIP" />
+            <img class="img-fluid" src="<?=base_url()?>public/web/img/program5.jpg" alt="Mastering Currency Market VIP" />
             <div class="courses-text">
               <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
               <div class="border-top w-100 mt-3">
@@ -818,7 +818,7 @@
     </div>
     <div class="owl-carousel team-carousel position-relative mb-3" style="padding: 0 30px">
       <div class="team-item">
-        <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/thumbnail-1.jpg" alt="" />
+        <img class="img-fluid w-100" src="<?=base_url()?>public/web/img/thumbnail-1.jpg" alt="" />
         <div class="play-btn">
           <a href="https://www.youtube.com/watch?v=h19Gq4P5ieA" target="_blank">
             <i class="fa-brands fa-youtube"></i>
@@ -826,7 +826,7 @@
         </div>
       </div>
       <div class="team-item">
-        <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/thumbnail-2.jpg" alt="" />
+        <img class="img-fluid w-100" src="<?=base_url()?>public/web/img/thumbnail-2.jpg" alt="" />
         <div class="play-btn">
           <a href="https://www.youtube.com/watch?v=6gnDAcjtUII" target="_blank">
             <i class="fa-brands fa-youtube"></i>
@@ -834,7 +834,7 @@
         </div>
       </div>
       <div class="team-item">
-        <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/thumbnail-3.jpg" alt="" />
+        <img class="img-fluid w-100" src="<?=base_url()?>public/web/img/thumbnail-3.jpg" alt="" />
         <div class="play-btn">
           <a href="https://www.youtube.com/watch?v=55c0Ic-Dtw0" target="_blank">
             <i class="fa-brands fa-youtube"></i>
@@ -842,7 +842,7 @@
         </div>
       </div>
       <div class="team-item">
-        <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/thumbnail-4.jpg" alt="" />
+        <img class="img-fluid w-100" src="<?=base_url()?>public/web/img/thumbnail-4.jpg" alt="" />
         <div class="play-btn">
           <a href="https://www.youtube.com/watch?v=D1R2AW4E1Ak" target="_blank">
             <i class="fa-brands fa-youtube"></i>
@@ -850,7 +850,7 @@
         </div>
       </div>
       <div class="team-item">
-        <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/thumbnail-5.jpg" alt="" />
+        <img class="img-fluid w-100" src="<?=base_url()?>public/web/img/thumbnail-5.jpg" alt="" />
         <div class="play-btn">
           <a href="https://www.youtube.com/watch?v=2i-J_Oke2zA" target="_blank">
             <i class="fa-brands fa-youtube"></i>
@@ -858,7 +858,7 @@
         </div>
       </div>
       <div class="team-item">
-        <img class="img-fluid w-100" src="<?=base_url()?>public/assets/img/thumbnail-6.jpg" alt="" />
+        <img class="img-fluid w-100" src="<?=base_url()?>public/web/img/thumbnail-6.jpg" alt="" />
         <div class="play-btn">
           <a href="https://www.youtube.com/watch?v=u-fY-mAR2L8" target="_blank">
             <i class="fa-brands fa-youtube"></i>
@@ -897,7 +897,7 @@
             </div>
             <div class="d-flex flex-shrink-0 align-items-center mt-4">
               <div class="mr-4">
-                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/assets/img/nittiin.png" alt="" />
+                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/web/img/nittiin.png" alt="" />
               </div>
               <div>
                 <h5>Nitin Shokeen</h5>
@@ -916,7 +916,7 @@
             </div>
             <div class="d-flex flex-shrink-0 align-items-center mt-4">
               <div class="mr-4">
-                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/assets/img/rejeshh.png" alt="" />
+                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/web/img/rejeshh.png" alt="" />
               </div>
               <div>
                 <h5>Rajesh</h5>

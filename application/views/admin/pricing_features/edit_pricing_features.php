@@ -1,9 +1,9 @@
-<div class="pcoded-main-container">
-    <div class="pcoded-content">
-        <div class="row">
-            <!-- [ sample-page ] start -->
-            <div class="col-sm-12">
-                <div class="card">
+<div class="container-fluid">
+    <div class="container-fluid">
+        
+
+            <div class="card">
+                <div class="card-body">
                     <?php foreach ($view_pricing_features as $row) :
 
                     ?>
@@ -17,7 +17,7 @@
                                 </div>
                             <?php endif; ?>
                         </div>
-                        <div class="card-body">
+                       
                             <form class="form-horizontal" method="post" action="<?= base_url('pricing_features/pricing_features_update_data'); ?>">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <input type="hidden" name="id" value="<?= $row->id ?>">
@@ -39,10 +39,7 @@
                                     <label for="inputEmail4" class="form-label">FEATURES <span class="text-danger">*</span> </label>
                                     <input type="text" name="features" parsley-trigger="change" class="form-control" id="features" value="<?= $row->features ?>" placeholde="Features" required>
                                 </div>
-                                <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">FEATURES AVAILABLE<span class="text-danger">*</span> </label>
-                               <input type="text" name="features_available" parsley-trigger="change" class="form-control" id="features_available"value="<?= $row->features_available ?>" placeholder="Features Available " required>
-                           </div>
+                               
                             
                             
 

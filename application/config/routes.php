@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -63,43 +63,33 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
-// blog ****************
-$route['blog/add_blog'] = 'admin/blog/add_blog';
-$route['blog/blog_submit_data'] = 'admin/blog/blog_submit_data';
-$route['blog/view_blog']        = 'admin/blog/blog_view';
-$route['blog/edit_blog/(:any)'] = 'admin/blog/blog_edit/$1';
-$route['blog/blog_update_data'] = 'admin/blog/blog_update_data';
-$route['blog/blog_delete/(:any)'] = 'admin/blog/blog_delete/$1';
 
-// blog_category ****************
-$route['blog_category/add_blog_category'] = 'admin/blog_category/add_blog_category';
-$route['blog_category/blog_category_submit_data'] = 'admin/blog_category/blog_category_submit_data';
-$route['blog_category/view_blog_category']        = 'admin/blog_category/blog_category_view';
-$route['blog_category/edit_blog_category/(:any)'] = 'admin/blog_category/blog_category_edit/$1';
-$route['blog_category/blog_category_update_data'] = 'admin/blog_category/blog_category_update_data';
-$route['blog_category/blog_category_delete/(:any)'] = 'admin/blog_category/blog_category_delete/$1';
+// news ****************
+$route['news/add_news'] = 'admin/news/add_news';
+$route['news/news_submit_data'] = 'admin/news/news_submit_data';
+$route['news/view_news']        = 'admin/news/news_view';
+$route['news/edit_news/(:any)'] = 'admin/news/news_edit/$1';
+$route['news/news_update_data'] = 'admin/news/news_update_data';
+$route['news/news_delete/(:any)'] = 'admin/news/news_delete/$1';
+
+
+
 
 
 
 //website
-$route['index'] = 'website/index';
-$route['about'] = 'website/about';
-$route['analysis'] = 'website/analysis';
-$route['blog-detail'] = 'website/blog_detail';
-$route['blog'] = 'website/blog';
-$route['contact'] = 'website/contact';
-$route['detail'] = 'website/detail';
-$route['ebook'] = 'website/ebook';
-$route['franchise'] = 'website/franchise';
-$route['gallery'] = 'website/gallery';
-$route['offline-program'] = 'website/offline_program';
-$route['online-program'] = 'website/online_program';
-$route['recorded-videos'] = 'website/recorded_videos';
-$route['team'] = 'website/team';
-$route['testimonial'] = 'website/testimonial';
-
-
-//api
-$route['api/register'] = 'api/User/register';
-$route['api/login'] = 'api/User/login';
-$route['api/logout'] = 'api/User/logout';
+$route['index']  = "website/index";
+$route['about']  = "website/about";
+$route['blog']  = "website/blog";
+$route['analysis']  = "website/analysis";
+$route['contact']  = "website/contact";
+$route['ebook']  = "website/ebook";
+$route['contact']  = "website/contact";
+$route['detail']  = "website/detail";
+$route['blog-detail']  = "website/blog_detail";
+$route['gallery']  = "website/gallery";
+$route['offline-program']  = "website/offline_program";
+$route['online-program']  = "website/online_program";
+$route['recorded-videos']  = "website/recorded_videos";
+$route['team']  = "website/team";
+$route['testimonial']  = "website/testimonial";

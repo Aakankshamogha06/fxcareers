@@ -67,16 +67,16 @@
             <div class="col-md-4 wow fadeInLeftBig">
                 <div class="gallery-hover p-3 overflow-hidden position-relative text-center shadow rounded">
                     <figure>
-                        <img src="<?=base_url()?>public/assets/img/class-gallery-1.png" alt="Classes" class="img-fluid rounded" />
+                        <img src="<?=base_url()?>public/web/img/class-gallery-1.png" alt="Classes" class="img-fluid rounded" />
                     </figure>
                     <h4 class="mb-0">Classes</h4>
                     <div class="gallery-btn">
-                        <a href="<?=base_url()?>public/assets/img/class-gallery-1.png" class="text-secondary" data-fancybox="gallery1">
+                        <a href="<?=base_url()?>public/web/img/class-gallery-1.png" class="text-secondary" data-fancybox="gallery1">
                             <i class="fa-solid fa-2x fa-magnifying-glass-plus"></i>
                         </a>
                         <div class="d-none">
-                            <a href="<?=base_url()?>public/assets/img/class-gallery-2.jpg" data-fancybox="gallery1"></a>
-                            <a href="<?=base_url()?>public/assets/img/class-gallery-1.png" data-fancybox="gallery1"></a>
+                            <a href="<?=base_url()?>public/web/img/class-gallery-2.jpg" data-fancybox="gallery1"></a>
+                            <a href="<?=base_url()?>public/web/img/class-gallery-1.png" data-fancybox="gallery1"></a>
                         </div>
                     </div>
                 </div>
@@ -84,31 +84,31 @@
             <div class="col-md-4 wow fadeInUpBig">
                 <div class="gallery-hover p-3 overflow-hidden position-relative text-center shadow rounded">
                     <figure>
-                        <img src="<?=base_url()?>public/assets/img/exhibition-gallery.jpg" alt="Exhibition" class="img-fluid rounded" />
+                        <img src="<?=base_url()?>public/web/img/exhibition-gallery.jpg" alt="Exhibition" class="img-fluid rounded" />
                     </figure>
                     <h4 class="mb-0">Exhibition</h4>
                     <div class="gallery-btn">
-                        <a href="<?=base_url()?>public/assets/img/exhibition-gallery.jpg" class="text-secondary" data-fancybox="gallery2">
+                        <a href="<?=base_url()?>public/web/img/exhibition-gallery.jpg" class="text-secondary" data-fancybox="gallery2">
                             <i class="fa-solid fa-2x fa-magnifying-glass-plus"></i>
                         </a>
                         <div class="d-none">
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-1.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-2.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-3.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-4.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-5.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-6.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-7.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-8.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-9.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-10.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-11.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-12.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-13.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-14.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-15.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-16.jpeg" data-fancybox="gallery2"></a>
-                            <a href="<?=base_url()?>public/assets/img/exhibition-gallery-17.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-1.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-2.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-3.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-4.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-5.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-6.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-7.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-8.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-9.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-10.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-11.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-12.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-13.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-14.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-15.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-16.jpeg" data-fancybox="gallery2"></a>
+                            <a href="<?=base_url()?>public/web/img/exhibition-gallery-17.jpeg" data-fancybox="gallery2"></a>
                         </div>
                     </div>
                 </div>
@@ -116,23 +116,23 @@
             <div class="col-md-4 wow fadeInRightBig">
                 <div class="gallery-hover p-3 overflow-hidden position-relative text-center shadow rounded">
                     <figure>
-                        <img src="<?=base_url()?>public/assets/img/sponsers-gallery.png" alt="Sponsers" class="img-fluid rounded" />
+                        <img src="<?=base_url()?>public/web/img/sponsers-gallery.png" alt="Sponsers" class="img-fluid rounded" />
                     </figure>
                     <h4 class="mb-0">Sponsers</h4>
                     <div class="gallery-btn">
-                        <a href="<?=base_url()?>public/assets/img/sponsers-gallery.png" class="text-secondary" data-fancybox="gallery3">
+                        <a href="<?=base_url()?>public/web/img/sponsers-gallery.png" class="text-secondary" data-fancybox="gallery3">
                             <i class="fa-solid fa-2x fa-magnifying-glass-plus"></i>
                         </a>
                         <div class="d-none">
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-1.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-2.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-3.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-4.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-5.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-6.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-7.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery-8.jpg" data-fancybox="gallery3"></a>
-                            <a href="<?=base_url()?>public/assets/img/sponsers-gallery.png" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-1.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-2.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-3.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-4.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-5.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-6.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-7.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery-8.jpg" data-fancybox="gallery3"></a>
+                            <a href="<?=base_url()?>public/web/img/sponsers-gallery.png" data-fancybox="gallery3"></a>
                         </div>
                     </div>
                 </div>

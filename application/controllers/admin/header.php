@@ -42,61 +42,61 @@
     <div class="collapse navbar-collapse" id="navbar-content">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown dropdown-mega position-static">
-          <a class="nav-link dropdown-toggle yaprimeheader-size" href="<?=base_url()?>about-us" data-bs-toggle="dropdown" data-bs-auto-close="outside" >About Us</a>
+          <a class="nav-link dropdown-toggle FXCareersheader-size" href="<?=base_url()?>about-us" data-bs-toggle="dropdown" data-bs-auto-close="outside" >About Us</a>
           <div class="dropdown-menu shadow">
             <div class="mega-content px-4">
               <div class="container-fluid">
                 <div class="row">
                   <h5 class="new-header-main-heading row_positioning992">About Us</h5>
                   <div class="col-12 col-sm-4 col-md-3 py-4">
-                    <a class="newheaderyaprime" href="<?=base_url()?>about-us">
+                    <a class="newheaderFXCareers" href="<?=base_url()?>about-us">
                       <h5 class="new-header-heading">About Us</h5></a>
                     <p class="new-header-paragraph-text row_positioning992">
-                      Learn More about YaPrime
+                      Learn More about FXCareers
                     </p>
-                    <a class="newheaderyaprime" href="<?=base_url()?>careers">
+                    <a class="newheaderFXCareers" href="<?=base_url()?>careers">
                       <h5 class="new-header-heading">Careers</h5></a>
                     <p class="new-header-paragraph-text row_positioning992">
-                      Join YaPrime for exciting career opportunities.
+                      Join FXCareers for exciting career opportunities.
                     </p>
-                    <a class="newheaderyaprime" href="<?=base_url()?>contact-us">
+                    <a class="newheaderFXCareers" href="<?=base_url()?>contact-us">
                       <h5 class="new-header-heading">Contact Us</h5></a>
                     <p class="new-header-paragraph-text row_positioning992">
                       Reach out to us anytime for inquiries and support.
                     </p>
                   </div>
                   <div class="col-12 col-sm-4 col-md-3 py-4 ">
-                    <a class="newheaderyaprime" href="<?=base_url()?>why-choose-us">
+                    <a class="newheaderFXCareers" href="<?=base_url()?>why-choose-us">
                       <h5 class="new-header-heading ">Why Choose Us</h5></a>
                     <p class="new-header-paragraph-text row_positioning992">
-                      Choose YaPrime for reliable Forex liquidity and dedicated support.
+                      Choose FXCareers for reliable Forex liquidity and dedicated support.
                     </p>
-                    <a class="newheaderyaprime" href="<?=base_url()?>portfolio"
+                    <a class="newheaderFXCareers" href="<?=base_url()?>portfolio"
                       ><h5 class="new-header-heading">Portfolio</h5></a>
                     <p class="new-header-paragraph-text row_positioning992">
                       Explore our portfolio to see our Forex success stories.
                     </p>
-                    <a class="newheaderyaprime" href="<?=base_url()?>our-teams">
+                    <a class="newheaderFXCareers" href="<?=base_url()?>our-teams">
                       <h5 class="new-header-heading">Meet Our Team</h5></a>
                     <p class="new-header-paragraph-text row_positioning992">
-                      Meet the experienced professionals behind YaPrime.
+                      Meet the experienced professionals behind FXCareers.
                     </p>
                   </div>
                   <div class="col-12 col-sm-4 col-md-3 py-4">
-                    <a class="newheaderyaprime" href="<?=base_url()?>blog">
+                    <a class="newheaderFXCareers" href="<?=base_url()?>blog">
                       <h5 class="new-header-heading">Our Blog</h5></a>
                     <p class="new-header-paragraph-text row_positioning992">
                       Stay informed with the latest Forex insights and News.
                     </p>
                   </div>
                   <div class="col-12 col-sm-4 col-md-3 py-4 row_positioning992">
-                    <div class="card yaprime_card-body">
+                    <div class="card FXCareers_card-body">
                       <div class="card-body ">
-                        <div class="yaprime_newheader_heading">
-                          Why YaPrime?
+                        <div class="FXCareers_newheader_heading">
+                          Why FXCareers?
                         </div>
                         <p class="card-text new-header-paragraph-text">
-                          YaPrime is the industry leader in the Forex and
+                          FXCareers is the industry leader in the Forex and
                           CFD markets. We pledge to create a trustworthy,
                           approachable, and ethical trading platform.
                         </p>
@@ -109,10 +109,10 @@
           </div>
         </li>
          <!-- <li class="nav-item">
-          <a class="nav-link yaprimeheader-size" href="<?=base_url()?>liquidity_solution">Liquidity Solution</a>
+          <a class="nav-link FXCareersheader-size" href="<?=base_url()?>liquidity_solution">Liquidity Solution</a>
         </li> -->
         <li class="nav-item dropdown dropdown-mega position-static">
-          <a class="nav-link dropdown-toggle yaprimeheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Liquidity</a >
+          <a class="nav-link dropdown-toggle FXCareersheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Liquidity</a >
           <div class="dropdown-menu shadow">
             <div class="mega-content px-4">
               <div class="container-fluid">
@@ -155,13 +155,13 @@
                     </p>
                   </div>
                   <div class="col-12 col-sm-4 col-md-3 py-4 row_positioning992">
-                    <div class="card yaprime_card-body">
+                    <div class="card FXCareers_card-body">
                       <div class="card-body ">
-                        <div class="yaprime_newheader_heading">
-                          Why YaPrime?
+                        <div class="FXCareers_newheader_heading">
+                          Why FXCareers?
                         </div>
                         <p class="card-text new-header-paragraph-text">
-                          YaPrime is the industry leader in the Forex and
+                          FXCareers is the industry leader in the Forex and
                           CFD markets. We pledge to create a trustworthy,
                           approachable, and ethical trading platform.
                         </p>
@@ -174,7 +174,7 @@
           </div>
         </li>
         <li class="nav-item dropdown dropdown-mega position-static">
-          <a class="nav-link dropdown-toggle yaprimeheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Broker Setup</a >
+          <a class="nav-link dropdown-toggle FXCareersheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Broker Setup</a >
           <div class="dropdown-menu shadow">
             <div class="mega-content px-4">
               <div class="container-fluid">
@@ -254,13 +254,13 @@
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="card yaprime_card-body">
+                    <div class="card FXCareers_card-body">
                       <div class="card-body">
-                        <div class="yaprime_newheader_heading">
-                          Why YaPrime?
+                        <div class="FXCareers_newheader_heading">
+                          Why FXCareers?
                         </div>
                         <p class="card-text new-header-paragraph-text">
-                          YaPrime is the industry leader in the Forex and
+                          FXCareers is the industry leader in the Forex and
                           CFD markets. We pledge to create a trustworthy,
                           approachable, and ethical trading platform.
                         </p>
@@ -273,7 +273,7 @@
           </div>
         </li>
         <li class="nav-item dropdown dropdown-mega position-static">
-          <a class="nav-link dropdown-toggle yaprimeheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Advisory</a >
+          <a class="nav-link dropdown-toggle FXCareersheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Advisory</a >
           <div class="dropdown-menu shadow">
             <div class="mega-content px-4">
               <div class="container-fluid">
@@ -320,13 +320,13 @@
                   </div>
                   <div class="col-12 col-sm-4 col-md-3 py-4 row_positioning992">
                     <!-- <h5 class="new-header-heading">Card</h5> -->
-                    <div class="card yaprime_card-body">
+                    <div class="card FXCareers_card-body">
                       <div class="card-body ">
-                        <div class="yaprime_newheader_heading">
-                          Why YaPrime?
+                        <div class="FXCareers_newheader_heading">
+                          Why FXCareers?
                         </div>
                         <p class="card-text new-header-paragraph-text">
-                          YaPrime is the industry leader in the Forex and
+                          FXCareers is the industry leader in the Forex and
                           CFD markets. We pledge to create a trustworthy,
                           approachable, and ethical trading platform.
                         </p>
@@ -339,10 +339,10 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle yaprimeheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Wealth</a >
+          <a class="nav-link dropdown-toggle FXCareersheader-size" href="<?=base_url()?>#" data-bs-toggle="dropdown" data-bs-auto-close="outside" >Wealth</a >
           <ul class="dropdown-menu shadow">
             <li>
-              <a class="dropdown-item yaprimeheader-size" href="<?=base_url()?>ya-wealth"
+              <a class="dropdown-item FXCareersheader-size" href="<?=base_url()?>ya-wealth"
                 >Ya Wealth
               </a>
             </li>
@@ -353,7 +353,7 @@
       <div class="d-flex">
         <div class="input-group">
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary btnn-yellow-colour border-0 yaprimeheader-size" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-primary btnn-yellow-colour border-0 FXCareersheader-size" data-toggle="modal" data-target="#exampleModal">
             Request Quote
           </button>
 

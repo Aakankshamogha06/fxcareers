@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Favicon -->
-    <link href="<?=base_url()?>public/assets/img/favicon.png" rel="icon" />
+    <link href="<?=base_url()?>public/web/img/favicon.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,17 +15,17 @@
 
     <!-- Bootstrap Stylesheet -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
-    <link href="<?=base_url()?>public/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?=base_url()?>public/web/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> -->
-    <link href="<?=base_url()?>public/assets/css/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="<?=base_url()?>public/web/css/fontawesome/css/all.css" rel="stylesheet" />
     <!-- Libraries Stylesheet -->
-    <link href="<?=base_url()?>public/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="<?=base_url()?>public/assets/lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="<?=base_url()?>public/assets/lib/fancybox/fancybox.min.css" rel="stylesheet" />
+    <link href="<?=base_url()?>public/web/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="<?=base_url()?>public/web/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="<?=base_url()?>public/web/lib/fancybox/fancybox.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="<?=base_url()?>public/assets/css/style.css?v=<?= time(); ?>" rel="stylesheet" />
+    <link href="<?=base_url()?>public/web/css/style.css?v=<?= time(); ?>" rel="stylesheet" />
 </head>
 
 <body>
@@ -71,7 +71,7 @@
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-light py-0 px-lg-5">
                 <a href="<?=base_url()?>" class="navbar-brand">
-                <img src="<?=base_url()?>public/assets/img/logo.png" alt="FXCareers Logo" title="FXCareers Logo" class="img-fluid">                </a>
+                <img src="<?=base_url()?>public/web/img/logo.png" alt="FXCareers Logo" title="FXCareers Logo" class="img-fluid">                </a>
                 <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="toggler-icon fa-2x fa-solid fa-bars"></span>
                 </button>
@@ -152,6 +152,6 @@
         if (window.location.pathname === "<?=base_url()?>") {
             document.querySelector(".header").classList.add("position-absolute");
         } else {
-            document.querySelector(".header .navbar-brand>img").setAttribute("src", "<?=base_url()?>public/assets/img/logo.png");
+            document.querySelector(".header .navbar-brand>img").setAttribute("src", "<?=base_url()?>public/web/img/logo.png");
         }
         </script>

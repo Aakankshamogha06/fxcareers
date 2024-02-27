@@ -1,20 +1,10 @@
-<div class="pcoded-main-container">
-    <div class="pcoded-content">
-        <div class="row">
-            <!-- [ sample-page ] start -->
-            <div class="col-sm-12">
+   <!-- [ Main Content ] end -->
+   <div class="container-fluid">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title fw-semibold mb-4">SUB MENU</h5>
                 <div class="card">
-
-                    <div class="card-header">
-                        <h5>Add </h5>
-                        <?php if (isset($msg) || validation_errors() !== '') : ?>
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <?= validation_errors(); ?>
-                                <?= isset($msg) ? $msg : ''; ?>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                            </div>
-                        <?php endif; ?>
-                    </div>
                     <div class="card-body">
                         <form class="form-horizontal" method="post" action="<?= base_url('sub_menu/sub_menu_submit_data'); ?>"enctype="multipart/form-data">
                             <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
@@ -22,8 +12,8 @@
                            
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-                                <label for="menu_id" class="form-label"> MENU NAME <span class="text-danger">*</span></label>
-                                    <select id="menu_id" class="form-control" name="menu_id">
+                                <label for="menu" class="form-label"> MENU NAME <span class="text-danger">*</span></label>
+                                    <select id="menu" class="form-control" name="menu">
                                         <option value="">SELECT MENU NAME</option>
                                         <?php
                                         $role_fetch_data = $this->sub_menu_model->role_fetch();
@@ -34,15 +24,15 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="inputEmail4" class="form-label">Sub Menu Name<span class="text-danger">*</span> </label>
-                                    <input type="text" name="sub_menu" parsley-trigger="change" class="form-control" id="sub_menu" placeholder="Sub Menu name " required>
+                                    <label for="inputEmail4" class="form-label">Sub Menu<span class="text-danger">*</span> </label>
+                                    <textarea type="text" name="sub_menu" parsley-trigger="change" class="form-control" id="sub_menu" placeholder="SEO Description " required></textarea>
                                 </div>
-                                
+                            
 
                     </div>
                     <div class="widget-footer text-left">
 
-                        <button type="submit" name="submit" value="Add " class="btn btn-primary " style="margin: 10px;">Add SUB MENU </button>
+                        <button type="submit" name="submit" value="Add sub_menu" class="btn btn-primary " style="margin: 10px;">Add SUB MENU category</button>
                         <button type="reset" class="btn btn-outline-primary" style="margin-left: 0px;">Reset</button>
                     </div>
                     </form>
