@@ -69,7 +69,7 @@
         <div class="row align-items-center">
             <div class="col-lg-5 mb-5 mb-lg-0">
                 <div class="wow fadeInLeft" data-wow-duration="1000ms">
-                    <img class="img-fluid" src="./img/about.png">
+                    <img class="img-fluid" src="<?=base_url()?>public/assets/img/about.png">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -84,7 +84,7 @@
         <div class="row mt-5 g-4 justify-content-center">
             <div class=" col-lg-6 col-md-6">
                 <div class="mission-card card text-center border-primary wow slideInLeft">
-                    <img src="./img/mission.png" class="img-fluid mx-auto mt-3" alt="OUR MISSION" width="100" />
+                    <img src="<?=base_url()?>public/assets/img/mission.png" class="img-fluid mx-auto mt-3" alt="OUR MISSION" width="100" />
                     <div class="card-body">
                         <h5 class="card-title">OUR MISSION</h5>
                         <p class="card-text">To promulgate the potential of financial markets by training ardent traders with effective knowledge and trading skills.</p>
@@ -93,7 +93,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="mission-card card text-center border-primary wow slideInRight">
-                    <img src="./img/vission.png" class="img-fluid mx-auto mt-3" alt="OUR VISION" width="100" />
+                    <img src="<?=base_url()?>public/assets/img/vission.png" class="img-fluid mx-auto mt-3" alt="OUR VISION" width="100" />
                     <div class="card-body">
                         <h5 class="card-title">OUR VISION</h5>
                         <p class="card-text">To become a leading global trading academy, delivering world-class education and mentorship programs to traders of all levels.</p>
@@ -118,7 +118,7 @@
                 <div class="row gy-4">
                     <div class="col-md-4">
                         <div class="how-we-card card overflow-hidden text-center bg-transparent text-white h-100 border-primary wow slideInRight" data-wow-delay="200ms">
-                            <img src="./img/Learn.png" class="img-fluid custom-card-img mx-auto mt-3" alt="Learn" />
+                            <img src="<?=base_url()?>public/assets/img/Learn.png" class="img-fluid custom-card-img mx-auto mt-3" alt="Learn" />
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">Learn</h5>
                                 <p class="card-text">Get the knowledge and skills needed for successful trading.</p>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class=" how-we-card  card overflow-hidden text-center bg-transparent text-white h-100 border-primary wow slideInRight" data-wow-delay="400ms">
-                            <img src="./img/Grow.png" class="img-fluid custom-card-img mx-auto mt-3" alt="Grow" />
+                            <img src="<?=base_url()?>public/assets/img/Grow.png" class="img-fluid custom-card-img mx-auto mt-3" alt="Grow" />
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">Grow</h5>
                                 <p class="card-text">Develop your trading abilities and make informed decisions.</p>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class=" how-we-card card overflow-hidden text-center bg-transparent text-white h-100 border-primary wow slideInRight" data-wow-delay="600ms">
-                            <img src="./img/Sucess.png" class="img-fluid custom-card-img mx-auto mt-3" alt="Succeed" />
+                            <img src="<?=base_url()?>public/assets/img/Sucess.png" class="img-fluid custom-card-img mx-auto mt-3" alt="Succeed" />
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">Succeed</h5>
                                 <p class="card-text">Achieve your financial goals in the world of financial markets.</p>
@@ -167,7 +167,7 @@
     <div class="container-fluid">
         <div class="row align-items-center  mb-md-0">
             <div class="col-md-6 wow fadeInLeft h-100 p-0">
-                <img src="./img/learning.jpg" alt="Learning at FXCareers" class="img-fluid" />
+                <img src="<?=base_url()?>public/assets/img/learning.jpg" alt="Learning at FXCareers" class="img-fluid" />
             </div>
             <div class="col-lg-6 col-md-6 h-100 ">
                 <div class="learning-caption">
@@ -184,7 +184,7 @@
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight h-100 p-0">
-                <img src="./img/learning.jpg" alt="Learning at FXCareers" class="img-fluid" />
+                <img src="<?=base_url()?>public/assets/img/learning.jpg" alt="Learning at FXCareers" class="img-fluid" />
             </div>
         </div>
     </div>
@@ -215,7 +215,7 @@
                         </div>
                         <div class="d-flex flex-shrink-0 align-items-center mt-4">
                             <div class="mr-4">
-                                <img class="img-fluid rounded-circle" src="img/nittiin.png" alt="" />
+                                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/assets/img/nittiin.png" alt="" />
                             </div>
                             <div>
                                 <h5>Nitin Shokeen</h5>
@@ -234,7 +234,7 @@
                         </div>
                         <div class="d-flex flex-shrink-0 align-items-center mt-4">
                             <div class="mr-4">
-                                <img class="img-fluid rounded-circle" src="img/rejeshh.png" alt="" />
+                                <img class="img-fluid rounded-circle" src="<?=base_url()?>public/assets/img/rejeshh.png" alt="" />
                             </div>
                             <div>
                                 <h5>Rajesh</h5>
@@ -248,4 +248,3 @@
 </section>
 <!-- Testimonial End -->
 
-<?php include_once './include/footer.php' ?>

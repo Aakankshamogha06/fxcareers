@@ -49,13 +49,13 @@
                 <div class="card overflow-hidden ebook-card wow slideInLeft">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="./img/ebooks/what-is-investment.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="What is Investment" />
+                            <img src="<?=base_url()?>public/assets/img/ebooks/what-is-investment.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="What is Investment" />
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">What is Investment</h5>
                                 <p class="card-text line-clamp">The meaning of investment is putting your money into an asset that can grow in value or produce income or both.</p>
-                                <a href="./docs/what-is-investment.pdf" class="btn btn-primary" target="_blank">View Book</a>
+                                <a href="<?=base_url()?>public/assets/docs/what-is-investment.pdf" class="btn btn-primary" target="_blank">View Book</a>
                             </div>
                         </div>
                     </div>
@@ -65,14 +65,14 @@
                 <div class="card overflow-hidden ebook-card wow slideInRight">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="./img/ebooks/swing-trading.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="Swing Trading" />
+                            <img src="<?=base_url()?>public/assets/img/ebooks/swing-trading.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="Swing Trading" />
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">Swing Trading</h5>
                                 <p class="card-text line-clamp">Swing trading is a method of trading that tries to capture big moves on either side
                                     over a period of a few days to several weeks. Swing traders use both technical analysis and fundamental analysis to look for trading opportunities.</p>
-                                <a href="./docs/swing-trading.pdf" class="btn btn-primary" target="_blank">View Book</a>
+                                <a href="<?=base_url()?>public/assets/docs/swing-trading.pdf" class="btn btn-primary" target="_blank">View Book</a>
                             </div>
                         </div>
                     </div>
@@ -82,13 +82,13 @@
                 <div class="card overflow-hidden ebook-card wow slideInLeft">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="./img/ebooks/what-is-trading.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="What is Trading" />
+                            <img src="<?=base_url()?>public/assets/img/ebooks/what-is-trading.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="What is Trading" />
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">What is Trading</h5>
                                 <p class="card-text line-clamp">Trading is the act of buying and selling a financial asset/instrument in order to make money; you can buy then sell (a long trade) or sell then buy (a short trade). The idea is to open and close a trade within a relatively short period of time e.g. Day Traders are so called because</p>
-                                <a href="./docs/what-is-trading.pdf" class="btn btn-primary" target="_blank">View Book</a>
+                                <a href="<?=base_url()?>public/assets/docs/what-is-trading.pdf" class="btn btn-primary" target="_blank">View Book</a>
                             </div>
                         </div>
                     </div>
@@ -98,13 +98,13 @@
                 <div class="card overflow-hidden ebook-card wow slideInRight">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="./img/ebooks/indicator-rsi.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="Indicator-RSI" />
+                            <img src="<?=base_url()?>public/assets/img/ebooks/indicator-rsi.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="Indicator-RSI" />
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">Indicator-RSI</h5>
                                 <p class="card-text line-clamp">The Relative Strength Index (RSI) is developed by J. Welles Wilder, is a momentum oscillator that measures the change of price movements with respect to its strength.</p>
-                                <a href="./docs/indicator-RSI.pdf" class="btn btn-primary" target="_blank">View Book</a>
+                                <a href="<?=base_url()?>public/assets/docs/indicator-RSI.pdf" class="btn btn-primary" target="_blank">View Book</a>
                             </div>
                         </div>
                     </div>
@@ -114,13 +114,13 @@
                 <div class="card overflow-hidden ebook-card wow slideInLeft">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="./img/ebooks/forex-terminology.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="Forex Terminology" />
+                            <img src="<?=base_url()?>public/assets/img/ebooks/forex-terminology.jpg" class="card-img rounded-0 h-100 object-fit-cover" alt="Forex Terminology" />
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title text-secondary">Forex Terminology</h5>
                                 <p class="card-text line-clamp">The foreign exchange market, also known as Forex, is the world’s largest and most liquid financial market. Sometimes Trading terms can get confusing, even more so with Forex trading, which has</p>
-                                <a href="./docs/forex-terminology.pdf" class="btn btn-primary" target="_blank">View Book</a>
+                                <a href="<?=base_url()?>public/assets/docs/forex-terminology.pdf" class="btn btn-primary" target="_blank">View Book</a>
                             </div>
                         </div>
                     </div>

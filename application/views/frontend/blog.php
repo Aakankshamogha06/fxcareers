@@ -49,8 +49,8 @@
             <?php for ($i = 0; $i < 6; $i++) { ?>
                 <div class="col-lg-4 col-md-6 wow fadeInUp">
                     <div class="card border-primary rounded overflow-hidden h-100 blog-card">
-                        <a href="./blog-detail.php">
-                            <img src="./img/blog/blog-1.jpg" class="card-img-top" alt="USDINR Analysis" />
+                        <a href="<?=base_url()?>blog-detail">
+                            <img src="<?=base_url()?>public/assets/img/blog/blog-1.jpg" class="card-img-top" alt="USDINR Analysis" />
                         </a>
                         <div class="card-body">
                             <p class="card-text d-flex justify-content-between">
@@ -58,10 +58,10 @@
                                 <small class="text-muted"><i class="fa-solid fa-user-tie mr-2"></i>Ruchit Thakur</small>
                             </p>
                             <h5 class="card-title">
-                                <a class="text-secondary" href="./blog-detail.php">USDINR Analysis</a>
+                                <a class="text-secondary" href="<?=base_url()?>blog-detail">USDINR Analysis</a>
                             </h5>
                             <p class="card-text">USDINR : In-depth analysis and Path Ahead</p>
-                            <a href="./blog-detail.php" class="btn btn-primary">Read More</a>
+                            <a href="<?=base_url()?>blog-detail" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>

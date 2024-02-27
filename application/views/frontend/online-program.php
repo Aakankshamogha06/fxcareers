@@ -38,8 +38,8 @@
         <div class="row gy-4 justify-content-center">
             <?php for ($i = 0; $i < 5; $i++) { ?>
                 <div class="col-lg-4 col-md-6 wow fadeInUp">
-                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.php">
-                        <img class="img-fluid" src="./img/program1.jpg" alt="">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="<?=base_url()?>detail">
+                        <img class="img-fluid" src="<?=base_url()?>public/assets/img/program1.jpg" alt="">
                         <div class="courses-text">
                             <h4 class="text-center text-white px-3">Intermediate Program</h4>
                             <div class="border-top w-100 mt-3">

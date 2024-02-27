@@ -60,7 +60,7 @@
                         <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Course Detail</h6>
                         <h2 class="display-4">Basic Program</h2>
                     </div>
-                    <img class="img-fluid rounded w-100 mb-4" src="img/header.jpg" alt="Image">
+                    <img class="img-fluid rounded w-100 mb-4" src="<?=base_url()?>public/assets/img/header.jpg" alt="Image">
                     <p>Join our Basic Program to dive into the fascinating world of Financial Markets. You'll learn the basics of currency trading, gaining a solid understanding of how investments work.</p>
                     <p class="mb-5">Financial markets are important for any country's economy, aiding entrepreneurs in getting funds and allowing companies to grow. This growth leads to more jobs and a better life for everyone. That's why investing or trading in financial markets matters. It helps build wealth, support families, and plan for retirement.</p>
 
@@ -189,8 +189,8 @@
                 <h2 class="mb-3">Related Programs</h2>
                 <div class="owl-carousel related-carousel position-relative" style="padding: 0 20px;">
                     <?php for ($i = 0; $i < 6; $i++) { ?>
-                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.php">
-                            <img class="img-fluid" src="./img/program1.jpg" alt="">
+                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="<?=base_url()?>detail">
+                            <img class="img-fluid" src="<?=base_url()?>public/assets/img/program1.jpg" alt="">
                             <div class="courses-text">
                                 <h4 class="text-center text-white px-3">Intermediate Program</h4>
                                 <div class="border-top w-100 mt-3">

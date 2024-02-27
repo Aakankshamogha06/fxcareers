@@ -284,7 +284,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -302,7 +302,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -320,7 +320,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -338,7 +338,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -356,7 +356,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -378,7 +378,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -396,7 +396,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -414,7 +414,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -432,7 +432,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -450,7 +450,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -472,7 +472,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -490,7 +490,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -508,7 +508,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -526,7 +526,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -544,7 +544,7 @@
                   </div>
                 </div>
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="./detail.php">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
                 </div>
               </div>
             </div>
@@ -555,7 +555,7 @@
     </div>
 
 
-    <!-- Programs tabs --
+    <!-- Programs tabs 
     <div class="container">
       <div class="row">
         <div class="col-12 overflow-x-auto overflow-y-hidden">
@@ -590,7 +590,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -608,7 +608,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -626,7 +626,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -644,7 +644,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -662,7 +662,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -684,7 +684,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -702,7 +702,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -720,7 +720,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -738,7 +738,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>
@@ -756,7 +756,7 @@
                 </div>
               </div>
               <div class="w-100 bg-white text-center p-4">
-                <a class="theme-btn" href="./detail.php">Read More</a>
+                <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
               </div>
             </div>
           </div>

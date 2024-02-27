@@ -3,7 +3,7 @@
     <div class="container  pt-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-5 pr-lg-5">
-                <a href="./" class="navbar-brand">
+                <a href="<?=base_url()?>" class="navbar-brand">
                     <img src="<?= base_url() ?>public/assets/img/logo-light.png" alt="Footer Logo" title="Footer Logo" class="img-fluid" />
                 </a>
                 <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit assumenda odit cupiditate, vel sit fuga vero ut, laboriosam quibusdam sint hic accusamus impedit deserunt quis reprehenderit perspiciatis eos in facere?</p>
@@ -63,11 +63,11 @@
             <div class="col-md-4">
                 <h3 class="text-white mb-4">Quick Links</h3>
                 <div class="d-flex flex-column justify-content-start footer-links">
-                    <a class="text-white-50 mb-2" href="./about.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white-50 mb-2" href="./analysis.php"><i class="fa fa-angle-right mr-2"></i>Analysis</a>
-                    <a class="text-white-50 mb-2" href="./gallery.php"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="./ebook.php"><i class="fa fa-angle-right mr-2"></i>E-Books</a>
-                    <a class="text-white-50" href="./blog.php"><i class="fa fa-angle-right mr-2"></i>Blogs</a>
+                    <a class="text-white-50 mb-2" href="<?=base_url()?>about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white-50 mb-2" href="<?=base_url()?>analysis"><i class="fa fa-angle-right mr-2"></i>Analysis</a>
+                    <a class="text-white-50 mb-2" href="<?=base_url()?>gallery"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white-50 mb-2" href="<?=base_url()?>ebook"><i class="fa fa-angle-right mr-2"></i>E-Books</a>
+                    <a class="text-white-50" href="<?=base_url()?>blog"><i class="fa fa-angle-right mr-2"></i>Blogs</a>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-lg-5 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0">Copyright &copy; <?= date('Y') ?> <a href="https://fxcareers.com/new/" class="text-white">FX Careers</a>. All Rights Reserved</p>
+                <p class="m-0">Copyright &copy; <?= date('Y') ?> <a href="<?=base_url()?>" class="text-white">FX Careers</a>. All Rights Reserved</p>
             </div>
             <div class="col-md-6 col-lg-7 text-center text-md-right footer-links">
                 <a href="#" class="text-white-50">Disclaimer</a>
@@ -101,7 +101,8 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
-<script src="<?= base_url() ?>public/assets/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="<?= base_url() ?>public/assets/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url() ?>public/assets/lib/easing/easing.min.js"></script>
 <script src="<?= base_url() ?>public/assets/lib/waypoints/waypoints.min.js"></script>
 <script src="<?= base_url() ?>public/assets/lib/counterup/counterup.min.js"></script>

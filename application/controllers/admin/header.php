@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="<?=base_url()?>public/web/images/favicon.png">
     <!-- <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/css/bootstrap5.3.0.min.css"> -->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>public/web/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="<?=base_url()?>public/web/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/fonts/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/web/css/font-poppins.css">
     <link rel="stylesheet" href="<?=base_url()?>public/web/css/style.css" />
