@@ -47,7 +47,7 @@ class blog_detail extends MY_Controller
 			$data = [];
 			if ($this->input->post()) {
 				$data = $this->input->post();
-				$config['upload_path'] = 'uploads';
+				$config['upload_path'] = 'uploads/blogs';
 				$config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
 				$config['encrypt_name'] = TRUE;
 				$this->load->library('upload',$config);

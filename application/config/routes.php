@@ -64,15 +64,21 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-// news ****************
-$route['news/add_news'] = 'admin/news/add_news';
-$route['news/news_submit_data'] = 'admin/news/news_submit_data';
-$route['news/view_news']        = 'admin/news/news_view';
-$route['news/edit_news/(:any)'] = 'admin/news/news_edit/$1';
-$route['news/news_update_data'] = 'admin/news/news_update_data';
-$route['news/news_delete/(:any)'] = 'admin/news/news_delete/$1';
+// blog_category ****************
+$route['blog_category/add_blog_category'] = 'admin/blog_category/add_blog_category';
+$route['blog_category/blog_category_submit_data'] = 'admin/blog_category/blog_category_submit_data';
+$route['blog_category/view_blog_category']        = 'admin/blog_category/blog_category_view';
+$route['blog_category/edit_blog_category/(:any)'] = 'admin/blog_category/blog_category_edit/$1';
+$route['blog_category/blog_category_update_data'] = 'admin/blog_category/blog_category_update_data';
+$route['blog_category/blog_category_delete/(:any)'] = 'admin/blog_category/blog_category_delete/$1';
 
-
+// blog_detail ****************
+$route['blog_detail/add_blog_detail'] = 'admin/blog_detail/add_blog_detail';
+$route['blog_detail/blog_detail_submit_data'] = 'admin/blog_detail/blog_detail_submit_data';
+$route['blog_detail/view_blog_detail']        = 'admin/blog_detail/blog_detail_view';
+$route['blog_detail/edit_blog_detail/(:any)'] = 'admin/blog_detail/blog_detail_edit/$1';
+$route['blog_detail/blog_detail_update_data'] = 'admin/blog_detail/blog_detail_update_data';
+$route['blog_detail/blog_detail_delete/(:any)'] = 'admin/blog_detail/blog_detail_delete/$1';
 
 
 

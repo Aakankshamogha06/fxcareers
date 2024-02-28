@@ -21,7 +21,7 @@
             </a>
           </div>
 
-          <table id="table_id" class="table table-striped">
+          <table id="table_id" class="table">
             <thead>
               <tr>
                 <th>SR NO</th>

@@ -18,19 +18,17 @@
                         <?php endif; ?>
                     </div>
                     <form class="form-horizontal" method="post" action="<?= base_url('blog_category/blog_category_update_data'); ?>">
-                        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-                        <input type="hidden" name="id" value="<?= $row->id ?>">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4" class="form-label">blog category Name<span class="text-danger">*</span> </label>
-                                <input type="text" name="blog_category_name" value="<?= $row->blog_category_name ?>" parsley-trigger="change" class="form-control" id="blog_category_name" placeholder="Name" required>
-                            </div>
+                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputEmail4" class="form-label">Blog category name<span class="text-danger">*</span> </label>
+                            <input type="text" name="category" parsley-trigger="change" class="form-control" id="category" value="<?=$row->category?>" placeholder="Blog Category Name" required>
                         </div>
-                        <div class="widget-footer text-left">
-                            <button type="submit" name="submit" value="update " class="btn btn-primary " style="margin: 10px;">update </button>
+                        <div>
+                            <button type="submit" name="submit" value="Update " class="btn btn-primary " style="margin: 10px;">Update</button>
                             <button type="reset" class="btn btn-outline-primary" style="margin-left: 0px;">Reset</button>
                         </div>
-                    </form>
+                </form>
 
         </div>
     </div>
@@ -39,4 +37,4 @@
 <!-- [ Main Content ] end -->
 <?php endforeach; ?>
 
-</div>
+</div>   

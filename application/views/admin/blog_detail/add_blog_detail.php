@@ -7,16 +7,7 @@
 
                    <form class="form-horizontal" method="post" action="<?= base_url('blog_detail/blog_detail_submit_data'); ?>" enctype="multipart/form-data">
                        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-                       <div class="form-row">
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">SEO Title <span class="text-danger">*</span> </label>
-                               <input type="text" name="seo_title" parsley-trigger="change" class="form-control" id="seo_title" placeholder="SEO Title  " required>
-                           </div>
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">SEO Keywords <span class="text-danger">*</span> </label>
-                               <input type="text" name="seo_keywords" parsley-trigger="change" class="form-control" id="seo_keywords" placeholder="SEO Keywords  " required>
-                           </div>
-                       </div>
+                       
 
                        <div class="form-row">
                            <div class="form-group col-md-12">
@@ -24,10 +15,7 @@
                                <input type="text" id="blog_name" class="form-control" name="blog_name">
 
                            </div>
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">SEO Description <span class="text-danger">*</span> </label>
-                               <textarea type="text" name="seo_desc" parsley-trigger="change" class="form-control" id="seo_desc" placeholder="SEO Description " required></textarea>
-                           </div>
+                           
                            <div class="form-group col-md-12">
                                <label for="inputEmail4" class="form-label">Blog Image <span class="text-danger">*</span> </label>
                                <input type="file" name="blog_image" parsley-trigger="change" class="form-control" id="blog_image" placeholder="Blog Image  " required>

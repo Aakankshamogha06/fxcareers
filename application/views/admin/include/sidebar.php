@@ -64,62 +64,6 @@
                 <span class="hide-menu">BLOGS DETAIL</span>
               </a>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url('admin/pricing/pricing_view'); ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-tag"></i>
-                </span>
-                <span class="hide-menu">PRICING</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url('admin/pricing_features/pricing_features_view'); ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-tags"></i>
-                </span>
-                <span class="hide-menu">PRICING FEATURES</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url('admin/talk_to_us/talk_to_us_view'); ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-address-book"></i>
-                </span>
-                <span class="hide-menu">TALK TO US</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url('admin/start_broker/start_broker_view'); ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cookie-man"></i>
-                </span>
-                <span class="hide-menu">START BROKER</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url('admin/slider/slider_view'); ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-slideshow"></i>
-                </span>
-                <span class="hide-menu">SLIDER</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url('admin/contact_us/contact_us_view'); ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-address-book"></i>
-                </span>
-                <span class="hide-menu">CONTACT US</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="<?= base_url('admin/request_demo/request_demo_view'); ?>" aria-expanded="false">
-                <span>
-                  <i class="ti ti-presentation"></i>
-                </span>
-                <span class="hide-menu">REQUEST DEMO</span>
-              </a>
-            </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu"><b style="font-size:20px;">AUTH</b></span>

@@ -23,9 +23,6 @@
               <thead>
                 <tr>
                   <th>SR NO</th>
-                  <th>SEO TITLE </th>
-                  <th>SEO KEYWORDS</th>
-                  <th>SEO DESCRIPTION</th>
                   <th>BLOG NAME</th>
                   <th>BLOG IMAGE</th>
                   <th>BLOG CATEGORY</th>
@@ -42,13 +39,10 @@
                 foreach ($blog_detail_view as $row) : ?>
                   <tr>
                     <td><?= $c++; ?></td>
-                    <td><?= $row->seo_title ?></td>
-                    <td><?= $row->seo_keywords ?></td>
-                    <td><?= $row->seo_desc ?></td>
                     <td><?= $row->blog_name ?></td>
                     <td>
                       <?php if ($row->blog_image) { ?>
-                        <img src="<?php echo base_url('uploads/') . $row->blog_image; ?>" style="width:50px;height:80px">
+                        <img src="<?php echo base_url('uploads/blogs/') . $row->blog_image; ?>" style="width:50px;height:80px">
                       <?php } ?>
                     </td>
                     <td><?= $row->blog_category ?></td>

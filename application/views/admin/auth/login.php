@@ -20,9 +20,7 @@
 		body {
 
 			background-image: url("<?php echo base_url('public/src/assets/images/backgrounds/adminbanner2.jpg'); ?>");
-
 			background-size: cover;
-
 			background-repeat: no-repeat;
 
 		}
@@ -34,7 +32,7 @@
 <!-- [ auth-signin ] start -->
 <div class="auth-wrapper">
 	<div class="auth-content text-center">
-		<img src="<?=base_url()?>public/web/img/logo.png"
+		<img src="<?=base_url()?>public/web/img/logo-light.png"
  alt="" class="img-fluid mb-4">
         <?php if(isset($msg) || validation_errors() !== ''): ?>
         <div class="alert alert-danger" role="alert">

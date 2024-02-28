@@ -6,9 +6,7 @@ class blog_detail_model extends CI_Model
 	public function blog_detail_data_submit($data,$blog_image)
 	{
 		$data = [
-			'seo_title' => $data['seo_title'],
-			'seo_keywords' => $data['seo_keywords'],
-			'seo_desc' => $data['seo_desc'],
+			
 			'blog_name' => $data['blog_name'],
 			'blog_image' => $blog_image,
             'blog_category' => $data['blog_category'],
@@ -27,19 +25,7 @@ class blog_detail_model extends CI_Model
 
 	public function blog_detail_view()
 {
-    $result = $this->db->query("
-        SELECT 
-            blog_detail.*, 
-            blog_category.category AS blog_category 
-        FROM 
-            blog_detail
-        LEFT JOIN 
-            blog ON blog_detail.blog_name = blog.id
-        LEFT JOIN 
-            blog_category ON blog_detail.blog_category = blog_category.id
-        ORDER BY 
-            blog_detail.blog_date DESC; 
-    ");
+    $result = $this->db->query(" SELECT *  FROM blog_detail");
 
     if ($result->num_rows() > 0) {
         return $result->result();
@@ -53,18 +39,8 @@ class blog_detail_model extends CI_Model
 {
     $uid = $this->uri->segment(2);
 
-    $result = $this->db->query("
-        SELECT 
-            blog_detail.*, 
-            blog_category.category AS blog_category 
-        FROM 
-            blog_detail
-        LEFT JOIN 
-            blog ON blog_detail.blog_name = blog.id
-        LEFT JOIN 
-            blog_category ON blog_detail.blog_category = blog_category.id
-        WHERE 
-            REPLACE(LOWER(blog_detail.seo_title), ' ', '-') = '$uid'
+    $result = $this->db->query("SELECT blog_detail.*, blog_category.category AS blog_category FROM blog_detail WHERE 
+            REPLACE(LOWER(blog_detail.name), ' ', '-') = '$uid'
     ");
 
     if ($result->num_rows() > 0) {
@@ -85,11 +61,7 @@ class blog_detail_model extends CI_Model
 
 	public function blog_detail_update_data($data)
 	{
-		echo ("hi");
 		$newdata = [
-			'seo_title' => $data['seo_title'],
-			'seo_keywords' => $data['seo_keywords'],
-			'seo_desc' => $data['seo_desc'],
 			'blog_name' => $data['blog_name'],
 			'blog_image'=>$data['blog_image'],
             'blog_category' => $data['blog_category'],
@@ -98,7 +70,6 @@ class blog_detail_model extends CI_Model
             'blog_desc' => $data['blog_desc'],
             'long_desc' => $data['long_desc'],
 		];
-		print_r($newdata);
 		$this->db->where('id', $data['id']);
 		if ($this->db->update('blog_detail', $newdata)) {
 
