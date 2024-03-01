@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 mb-5 pr-lg-5">
                 <a href="<?=base_url()?>" class="navbar-brand">
-                    <img src="<?= base_url() ?>public/assets/img/logo-light.png" alt="Footer Logo" title="Footer Logo" class="img-fluid" />
+                    <img src="<?= base_url() ?>public/web/img/logo-light.png" alt="Footer Logo" title="Footer Logo" class="img-fluid" />
                 </a>
                 <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit assumenda odit cupiditate, vel sit fuga vero ut, laboriosam quibusdam sint hic accusamus impedit deserunt quis reprehenderit perspiciatis eos in facere?</p>
             </div>
@@ -101,17 +101,17 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
-<!-- <script src="<?= base_url() ?>public/assets/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src="<?= base_url() ?>public/web/js/bootstrap.bundle.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="<?= base_url() ?>public/assets/lib/easing/easing.min.js"></script>
-<script src="<?= base_url() ?>public/assets/lib/waypoints/waypoints.min.js"></script>
-<script src="<?= base_url() ?>public/assets/lib/counterup/counterup.min.js"></script>
-<script src="<?= base_url() ?>public/assets/lib/owlcarousel/owl.carousel.js"></script>
-<script src="<?= base_url() ?>public/assets/lib/fancybox/fancybox.min.js"></script>
-<script src="<?= base_url() ?>public/assets/lib/wow/wow.min.js"></script>
+<script src="<?= base_url() ?>public/web/lib/easing/easing.min.js"></script>
+<script src="<?= base_url() ?>public/web/lib/waypoints/waypoints.min.js"></script>
+<script src="<?= base_url() ?>public/web/lib/counterup/counterup.min.js"></script>
+<script src="<?= base_url() ?>public/web/lib/owlcarousel/owl.carousel.js"></script>
+<script src="<?= base_url() ?>public/web/lib/fancybox/fancybox.min.js"></script>
+<script src="<?= base_url() ?>public/web/lib/wow/wow.min.js"></script>
 
 <!-- Javascript -->
-<script src="<?= base_url() ?>public/assets/js/main.js"></script>
+<script src="<?= base_url() ?>public/web/js/main.js"></script>
 
 </body>
 

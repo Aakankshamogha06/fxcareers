@@ -80,7 +80,21 @@ $route['blog_detail/edit_blog_detail/(:any)'] = 'admin/blog_detail/blog_detail_e
 $route['blog_detail/blog_detail_update_data'] = 'admin/blog_detail/blog_detail_update_data';
 $route['blog_detail/blog_detail_delete/(:any)'] = 'admin/blog_detail/blog_detail_delete/$1';
 
+// gallery ****************
+$route['gallery/add_gallery'] = 'admin/gallery/add_gallery';
+$route['gallery/gallery_submit_data'] = 'admin/gallery/gallery_submit_data';
+$route['gallery/view_gallery']        = 'admin/gallery/gallery_view';
+$route['gallery/edit_gallery/(:any)'] = 'admin/gallery/gallery_edit/$1';
+$route['gallery/gallery_update_data'] = 'admin/gallery/gallery_update_data';
+$route['gallery/gallery_delete/(:any)'] = 'admin/gallery/gallery_delete/$1';
 
+// sub_gallery ****************
+$route['sub_gallery/add_sub_gallery'] = 'admin/sub_gallery/add_sub_gallery';
+$route['sub_gallery/sub_gallery_submit_data'] = 'admin/sub_gallery/sub_gallery_submit_data';
+$route['sub_gallery/view_sub_gallery']        = 'admin/sub_gallery/sub_gallery_view';
+$route['sub_gallery/edit_sub_gallery/(:any)'] = 'admin/sub_gallery/sub_gallery_edit/$1';
+$route['sub_gallery/sub_gallery_update_data'] = 'admin/sub_gallery/sub_gallery_update_data';
+$route['sub_gallery/sub_gallery_delete/(:any)'] = 'admin/sub_gallery/sub_gallery_delete/$1';
 
 
 //website

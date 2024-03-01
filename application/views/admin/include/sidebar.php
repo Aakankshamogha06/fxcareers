@@ -64,6 +64,22 @@
                 <span class="hide-menu">BLOGS DETAIL</span>
               </a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/gallery/gallery_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-brand-blogger"></i>
+                </span>
+                <span class="hide-menu">GALLERY</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/sub_gallery/sub_gallery_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-brand-blogger"></i>
+                </span>
+                <span class="hide-menu">SUB GALLERY</span>
+              </a>
+            </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu"><b style="font-size:20px;">AUTH</b></span>

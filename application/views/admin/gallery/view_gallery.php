@@ -14,7 +14,7 @@
       <div class="card-body">
         <div class="card-header">
         <h5>View</h5>
-            <a href="<?= base_url('admin/blog_detail/add_blog_detail'); ?>">
+            <a href="<?= base_url('admin/gallery/add_gallery'); ?>">
               <button type="button" c class="btn btn-primary toggle-btn mb-4 mr-2" style="margin-left: 80.5%;">Add</button>
             </a>
           </div>
@@ -23,35 +23,24 @@
               <thead>
                 <tr>
                   <th>SR NO</th>
-                  <th>BLOG NAME</th>
-                  <th>BLOG IMAGE</th>
-                  <th>BLOG CATEGORY</th>
-                  <th>BLOG AUTHOR</th>
-                  <th>BLOG DATE</th>
-                  <th>BLOG DESCRIPTION</th>
-                  <th>LONG DESCRIPTION </th>
+                  <th>Image NAME</th>
+                  <th> IMAGE</th>
                   <th style="width: 150px;" class="text-right">OPTION</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
                 $c = 1;
-                foreach ($blog_detail_view as $row) : ?>
+                foreach ($gallery_view as $row) : ?>
                   <tr>
                     <td><?= $c++; ?></td>
-                    <td><?= $row->blog_name ?></td>
+                    <td><?= $row->image_name ?></td>
                     <td>
-                      <?php if ($row->blog_image) { ?>
-                        <img src="<?php echo base_url('uploads/blogs/') . $row->blog_image; ?>" style="width:50px;height:80px">
+                      <?php if ($row->image) { ?>
+                        <img src="<?php echo base_url('uploads/gallery/') . $row->image; ?>" style="width:50px;height:80px">
                       <?php } ?>
                     </td>
-                    <td><?= $row->blog_category ?></td>
-                    <td><?= $row->blog_author ?></td>
-                    <td><?= $row->blog_date ?></td>
-                    <td><?= $row->blog_desc ?></td>
-                    <td><?= $row->long_desc ?></td>
-
-                    <td class="text-right"><a href="<?= base_url('admin/blog_detail/blog_detail_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a><a href="<?= base_url('admin/blog_detail/blog_detail_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
+                    <td class="text-right"><a href="<?= base_url('admin/gallery/gallery_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a><a href="<?= base_url('admin/gallery/gallery_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
