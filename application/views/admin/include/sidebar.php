@@ -67,7 +67,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="<?= base_url('admin/gallery/gallery_view'); ?>" aria-expanded="false">
                 <span>
-                  <i class="ti ti-brand-blogger"></i>
+                  <i class="ti ti-brand-gallery"></i>
                 </span>
                 <span class="hide-menu">GALLERY</span>
               </a>
