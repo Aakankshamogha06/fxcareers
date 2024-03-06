@@ -7,7 +7,6 @@ class Seo_model extends CI_Model
 	{
 		$data = [
 			'page_name' => $data['page_name'],
-            'url' => $data['url'],
             'keywords' => $data['keywords'],
             'title' => $data['title'],
             'meta_description' => $data['meta_description'],

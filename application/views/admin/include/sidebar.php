@@ -59,7 +59,7 @@
 			<li class="sidebar-item">
               <a class="sidebar-link" href="<?= base_url('admin/blog_detail/blog_detail_view'); ?>" aria-expanded="false">
                 <span>
-                  <i class="ti ti-brand-blogger"></i>
+                  <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">BLOGS DETAIL</span>
               </a>
@@ -67,7 +67,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="<?= base_url('admin/gallery/gallery_view'); ?>" aria-expanded="false">
                 <span>
-                  <i class="ti ti-brand-gallery"></i>
+                  <i class="ti ti-photo-check"></i>
                 </span>
                 <span class="hide-menu">GALLERY</span>
               </a>
@@ -75,9 +75,41 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="<?= base_url('admin/sub_gallery/sub_gallery_view'); ?>" aria-expanded="false">
                 <span>
-                  <i class="ti ti-brand-blogger"></i>
+                  <i class="ti ti-photo-star"></i>
                 </span>
                 <span class="hide-menu">SUB GALLERY</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/course/course_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-certificate-2"></i>
+                </span>
+                <span class="hide-menu">COURSE</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/curriculum/curriculum_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-list-details"></i>
+                </span>
+                <span class="hide-menu">CURRICULUM</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/detail/detail_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-details"></i>
+                </span>
+                <span class="hide-menu"> COURSE DETAIL</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/ebook/ebook_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-book"></i>
+                </span>
+                <span class="hide-menu">E-BOOK</span>
               </a>
             </li>
             <li class="nav-small-cap">

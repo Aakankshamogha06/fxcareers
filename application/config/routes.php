@@ -96,6 +96,51 @@ $route['sub_gallery/edit_sub_gallery/(:any)'] = 'admin/sub_gallery/sub_gallery_e
 $route['sub_gallery/sub_gallery_update_data'] = 'admin/sub_gallery/sub_gallery_update_data';
 $route['sub_gallery/sub_gallery_delete/(:any)'] = 'admin/sub_gallery/sub_gallery_delete/$1';
 
+// seo ****************
+$route['seo/add_seo'] = 'admin/seo/add_seo';
+$route['seo/seo_submit_data'] = 'admin/seo/seo_submit_data';
+$route['seo/view_seo']        = 'admin/seo/seo_view';
+$route['seo/edit_seo/(:any)'] = 'admin/seo/seo_edit/$1';
+$route['seo/seo_update_data'] = 'admin/seo/seo_update_data';
+$route['seo/seo_delete/(:any)'] = 'admin/seo/seo_delete/$1';
+
+// course ****************
+$route['course/add_course'] = 'admin/course/add_course';
+$route['course/course_submit_data'] = 'admin/course/course_submit_data';
+$route['course/view_course']        = 'admin/course/course_view';
+$route['course/edit_course/(:any)'] = 'admin/course/course_edit/$1';
+$route['course/course_update_data'] = 'admin/course/course_update_data';
+$route['course/course_delete/(:any)'] = 'admin/course/course_delete/$1';
+
+// curriculum ****************
+$route['curriculum/add_curriculum'] = 'admin/curriculum/add_curriculum';
+$route['curriculum/curriculum_submit_data'] = 'admin/curriculum/curriculum_submit_data';
+$route['curriculum/view_curriculum']        = 'admin/curriculum/curriculum_view';
+$route['curriculum/edit_curriculum/(:any)'] = 'admin/curriculum/curriculum_edit/$1';
+$route['curriculum/curriculum_update_data'] = 'admin/curriculum/curriculum_update_data';
+$route['curriculum/curriculum_delete/(:any)'] = 'admin/curriculum/curriculum_delete/$1';
+
+// detail ****************
+$route['detail/add_detail'] = 'admin/detail/add_detail';
+$route['detail/detail_submit_data'] = 'admin/detail/detail_submit_data';
+$route['detail/view_detail']        = 'admin/detail/detail_view';
+$route['detail/edit_detail/(:any)'] = 'admin/detail/detail_edit/$1';
+$route['detail/detail_update_data'] = 'admin/detail/detail_update_data';
+$route['detail/detail_delete/(:any)'] = 'admin/detail/detail_delete/$1';
+
+// ebook ****************
+$route['ebook/add_ebook'] = 'admin/ebook/add_ebook';
+$route['ebook/ebook_submit_data'] = 'admin/ebook/ebook_submit_data';
+$route['ebook/view_ebook']        = 'admin/ebook/ebook_view';
+$route['ebook/edit_ebook/(:any)'] = 'admin/ebook/ebook_edit/$1';
+$route['ebook/ebook_update_data'] = 'admin/ebook/ebook_update_data';
+$route['ebook/ebook_delete/(:any)'] = 'admin/ebook/ebook_delete/$1';
+
+
+
+
+
+
 
 //website
 $route['index']  = "website/index";

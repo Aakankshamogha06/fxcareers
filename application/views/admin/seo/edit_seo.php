@@ -25,10 +25,7 @@
                                 <label for="inputEmail4" class="form-label">PAGE NAME<span class="text-danger">*</span> </label>
                                 <input type="text" name="page_name" parsley-trigger="change" class="form-control" id="page_name" value="<?= $row->page_name ?>" placeholder="Page Name" required>
                             </div>
-                            <div class="form-group col-md-12">
-                                <label for="inputEmail4" class="form-label">URL<span class="text-danger">*</span> </label>
-                                <input type="text" name="url" parsley-trigger="change" class="form-control" id="url" value="<?= $row->url ?>" placeholder="Url" required>
-                            </div>
+                           =
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4" class="form-label">KEYWORDS<span class="text-danger">*</span> </label>
                                 <input type="text" name="keywords" parsley-trigger="change" class="form-control" id="keywords" value="<?= $row->keywords ?>" placeholder="Keywords" required>

@@ -20,12 +20,11 @@
             </a>
           </div>
           <div class="card-body">
-            <table id="table_id" class="table table-striped">
+            <table id="table_id" class="table ">
               <thead>
                 <tr>
                   <th>SR NO</th>
                   <th>PAGE NAME</th>
-                  <th>URL</th>
                   <th>KEYWORDS</th>
                   <th>TITLE</th>
                   <th>META DESCRIPTION</th>
@@ -39,7 +38,6 @@
                   <tr>
                     <td><?= $c++; ?></td>
                     <td><?= $row->page_name ?></td>
-                    <td><?= $row->url ?></td>
                     <td><?= $row->keywords ?></td>
                     <td><?= $row->title ?></td>
                     <td><?= $row->meta_description ?></td>
