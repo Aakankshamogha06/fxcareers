@@ -136,9 +136,15 @@ $route['ebook/edit_ebook/(:any)'] = 'admin/ebook/ebook_edit/$1';
 $route['ebook/ebook_update_data'] = 'admin/ebook/ebook_update_data';
 $route['ebook/ebook_delete/(:any)'] = 'admin/ebook/ebook_delete/$1';
 
+// topic ****************
+$route['topic/add_topic'] = 'admin/topic/add_topic';
+$route['topic/topic_submit_data'] = 'admin/topic/topic_submit_data';
+$route['topic/view_topic']        = 'admin/topic/topic_view';
+$route['topic/edit_topic/(:any)'] = 'admin/topic/topic_edit/$1';
+$route['topic/topic_update_data'] = 'admin/topic/topic_update_data';
+$route['topic/topic_delete/(:any)'] = 'admin/topic/topic_delete/$1';
 
-
-
+    
 
 
 

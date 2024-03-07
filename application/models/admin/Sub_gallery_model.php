@@ -21,7 +21,7 @@ class sub_gallery_model extends CI_Model
 
 	public function sub_gallery_view()
 {
-    $result = $this->db->query(" SELECT *  FROM sub_gallery");
+    $result = $this->db->query(" SELECT *,(SELECT image_name FROM gallery WHERE gallery.id=sub_gallery.gallery_id)as gallery_id FROM `sub_gallery`;");
 
     if ($result->num_rows() > 0) {
         return $result->result();

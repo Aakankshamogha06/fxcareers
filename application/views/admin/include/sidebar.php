@@ -89,6 +89,14 @@
               </a>
             </li>
             <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/topic/topic_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-presentation-analytics"></i>
+                </span>
+                <span class="hide-menu">TOPIC</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
               <a class="sidebar-link" href="<?= base_url('admin/curriculum/curriculum_view'); ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-list-details"></i>

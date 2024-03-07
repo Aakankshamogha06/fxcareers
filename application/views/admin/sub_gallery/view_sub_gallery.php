@@ -14,7 +14,7 @@
       <div class="card-body">
         <div class="card-header">
         <h5>View</h5>
-            <a href="<?= base_url('admin/topic/add_topic'); ?>">
+            <a href="<?= base_url('admin/sub_gallery/add_sub_gallery'); ?>">
               <button type="button" c class="btn btn-primary toggle-btn mb-4 mr-2" style="margin-left: 80.5%;">Add</button>
             </a>
           </div>
@@ -23,20 +23,27 @@
               <thead>
                 <tr>
                   <th>SR NO</th>
-                  <th>COURSE NAME</th>
-                  <th>TOPIC NAME</th>
+                  <th>Gallery NAME</th>
+                  <th>Sub gallery IMAGE</th>
                   <th style="width: 150px;" class="text-right">OPTION</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
                 $c = 1;
-                foreach ($topic_view as $row) : ?>
+                foreach ($sub_gallery_view as $row) : ?>
                   <tr>
                     <td><?= $c++; ?></td>
-                    <td><?= $row->course_id ?></td>
-                    <td><?= $row->topic_name ?></td>
-                    <td class="text-right"><a href="<?= base_url('admin/topic/topic_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a><a href="<?= base_url('admin/topic/topic_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
+                    <td><?= $row->gallery_id ?></td>
+                    <td>
+                      <?php if ($row->image) { ?>
+                        <img src="<?php echo base_url('uploads/sub_gallery/') . $row->image; ?>" style="width:50px;height:80px">
+                      <?php } ?>
+                    </td>
+
+                    <td class="text-right">
+                    <!-- <a href="<?= base_url('admin/sub_gallery/sub_gallery_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a> -->
+                    <a href="<?= base_url('admin/sub_gallery/sub_gallery_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
