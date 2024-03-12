@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <style>
+        table.table th,
+        table.table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid">

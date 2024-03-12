@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <div class="card-header">
                         <h5>View</h5>
-                        <a href="<?= base_url('admin/curriculum/add_curriculum'); ?>">
+                        <a href="<?= base_url('admin/course_language/add_course_language'); ?>">
                             <button type="button" c class="btn btn-primary toggle-btn mb-4 mr-2" style="margin-left: 80.5%;">Add</button>
                         </a>
                     </div>
@@ -30,24 +30,20 @@
                             <thead>
                                 <tr>
                                     <th>SR NO</th>
-                                    <th>Course NAME</th>
-                                    <th>topic name</th>
-                                    <th>sub topic name</th>
+                                    <th>language NAME</th>
                                     <th style="width: 150px;" class="text-right">OPTION</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $c = 1;
-                                foreach ($curriculum_view as $row) : ?>
+                                foreach ($course_language_view as $row) : ?>
                                     <tr>
                                         <td><?= $c++; ?></td>
-                                        <td><?= $row->course_id ?></td>
-                                        <td><?= $row->topic_name ?></td>
-                                        <td><?= $row->sub_topic_name ?></td>
+                                        <td><?= $row->language_name ?></td>
                                         <td class="text-right">
-                                            <a href="<?= base_url('admin/curriculum/curriculum_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"></a>
-                                            <a href="<?= base_url('admin/curriculum/curriculum_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"></a>
+                                            <a href="<?= base_url('admin/course_language/course_language_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"></a>
+                                            <a href="<?= base_url('admin/course_language/course_language_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

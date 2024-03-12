@@ -81,6 +81,30 @@
               </a>
             </li>
             <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/course_category/course_category_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-book"></i>
+                </span>
+                <span class="hide-menu">COURSE CATEGORY</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/course_mode/course_mode_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-book"></i>
+                </span>
+                <span class="hide-menu">COURSE MODE</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/course_language/course_language_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-book"></i>
+                </span>
+                <span class="hide-menu">COURSE LANGUAGE</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
               <a class="sidebar-link" href="<?= base_url('admin/course/course_view'); ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-certificate-2"></i>

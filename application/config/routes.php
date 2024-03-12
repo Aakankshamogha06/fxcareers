@@ -144,7 +144,37 @@ $route['topic/edit_topic/(:any)'] = 'admin/topic/topic_edit/$1';
 $route['topic/topic_update_data'] = 'admin/topic/topic_update_data';
 $route['topic/topic_delete/(:any)'] = 'admin/topic/topic_delete/$1';
 
-    
+  // course_category ****************
+$route['course_category/add_course_category'] = 'admin/course_category/add_course_category';
+$route['course_category/course_category_submit_data'] = 'admin/course_category/course_category_submit_data';
+$route['course_category/view_course_category']        = 'admin/course_category/course_category_view';
+$route['course_category/edit_course_category/(:any)'] = 'admin/course_category/course_category_edit/$1';
+$route['course_category/course_category_update_data'] = 'admin/course_category/course_category_update_data';
+$route['course_category/course_category_delete/(:any)'] = 'admin/course_category/course_category_delete/$1';
+
+  // course_mode ****************
+$route['course_mode/add_course_mode'] = 'admin/course_mode/add_course_mode';
+$route['course_mode/course_mode_submit_data'] = 'admin/course_mode/course_mode_submit_data';
+$route['course_mode/view_course_mode']        = 'admin/course_mode/course_mode_view';
+$route['course_mode/edit_course_mode/(:any)'] = 'admin/course_mode/course_mode_edit/$1';
+$route['course_mode/course_mode_update_data'] = 'admin/course_mode/course_mode_update_data';
+$route['course_mode/course_mode_delete/(:any)'] = 'admin/course_mode/course_mode_delete/$1';
+
+  // course_language ****************
+$route['course_language/add_course_language'] = 'admin/course_language/add_course_language';
+$route['course_language/course_language_submit_data'] = 'admin/course_language/course_language_submit_data';
+$route['course_language/view_course_language']        = 'admin/course_language/course_language_view';
+$route['course_language/edit_course_language/(:any)'] = 'admin/course_language/course_language_edit/$1';
+$route['course_language/course_language_update_data'] = 'admin/course_language/course_language_update_data';
+$route['course_language/course_language_delete/(:any)'] = 'admin/course_language/course_language_delete/$1';
+
+  // course_category ****************
+// $route['course_category/add_course_category'] = 'admin/course_category/add_course_category';
+// $route['course_category/course_category_submit_data'] = 'admin/course_category/course_category_submit_data';
+// $route['course_category/view_course_category']        = 'admin/course_category/course_category_view';
+// $route['course_category/edit_course_category/(:any)'] = 'admin/course_category/course_category_edit/$1';
+// $route['course_category/course_category_update_data'] = 'admin/course_category/course_category_update_data';
+// $route['course_category/course_category_delete/(:any)'] = 'admin/course_category/course_category_delete/$1';
 
 
 

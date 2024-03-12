@@ -10,46 +10,36 @@
                        
 
                        <div class="form-row">
-                           <div class="form-group col-md-12">
-                               <label for="blog_name" class="form-label"> Co <span class="text-danger">*</span></label>
-                               <input type="text" id="blog_name" class="form-control" name="blog_name">
-
-                           </div>
-                           
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">Blog Image <span class="text-danger">*</span> </label>
-                               <input type="file" name="blog_image" parsley-trigger="change" class="form-control" id="blog_image" placeholder="Blog Image  " required>
-                           </div>
-                           <div class="form-group col-md-12">
-                               <label for="blog_category" class="form-label"> Blog Category <span class="text-danger">*</span></label>
-                               <select id="blog_category" class="form-control" name="blog_category">
-                                   <option value="">Select Blog Category</option>
+                        <div class="form-group col-md-6">
+                                <label for="course_id" class="form-label"> course <span class="text-danger">*</span></label>
+                                <select id="course_id" class="form-control" name="course_id">
+                                    <option value="">Select course</option>
+                                    <?php
+                                        $course_fetch_data = $this->curriculum_model->course_fetch();
+                                        foreach ($course_fetch_data as $data) { ?>
+                                        <option value="<?php echo $data['id']; ?>"><?php echo $data['course_type']; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label for="topic_name" class="form-label"> topic <span class="text-danger">*</span></label>
+                               <select id="topic_name" class="form-control" name="topic_name">
+                                   <option value="">Select topic</option>
                                    <?php
-                                    $blog_fetch_data = $this->curriculum_model->blog_fetch();
-                                    foreach ($blog_fetch_data as $data) { ?>
-                                       <option value="<?php echo $data['id']; ?>"><?php echo $data['category']; ?></option>
+                                    $topic_fetch_data = $this->curriculum_model->topic_fetch();
+                                    foreach ($topic_fetch_data as $data) { ?>
+                                       <option value="<?php echo $data['id']; ?>"><?php echo $data['topic_name']; ?></option>
                                    <?php } ?>
-
                                </select>
                            </div>
+                           
+                           
 
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">Blog Author <span class="text-danger">*</span> </label>
-                               <input type="text" name="blog_author" parsley-trigger="change" class="form-control" id="blog_author" placeholder="Blog Author  " required>
-                           </div>
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">Blog Date <span class="text-danger">*</span> </label>
-                               <input type="date" name="blog_date" parsley-trigger="change" class="form-control" id="blog_date" placeholder="Blog Date  " required>
+                           <div class="form-group col-md-6">
+                               <label for="inputEmail4" class="form-label">Sub Topic Name <span class="text-danger">*</span> </label>
+                               <input type="text" name="sub_topic_name" parsley-trigger="change" class="form-control" id="sub_topic_name" placeholder="Sub Topic Name" required>
                            </div>
 
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">Blog Description <span class="text-danger">*</span> </label>
-                               <textarea type="text" name="blog_desc" parsley-trigger="change" class="form-control" id="blog_desc" placeholder="Blog Description  " required></textarea>
-                           </div>
-                           <div class="form-group col-md-12">
-                               <label for="inputEmail4" class="form-label">Blog Long Description <span class="text-danger">*</span> </label>
-                               <textarea type="text" name="long_desc" parsley-trigger="change" class="form-control" id="long_desc" placeholder="Blog Long Description  " required></textarea>
-                           </div>
 
                        </div>
 
