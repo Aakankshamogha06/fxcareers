@@ -6,7 +6,7 @@ class Website extends CI_Controller
     {
         parent::__construct();
         $this->load->model('admin/Auth_model', 'Auth_model');
-        
+        $this->load->model('admin/blog_detail_model', 'blog_detail_model');
 
         $this->load->helper('url');
     }
@@ -32,14 +32,16 @@ class Website extends CI_Controller
     }
     public function blog_detail()
     {
+        $data['blog_detail'] = $this->blog_detail_model->blog_detail_view();
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/blog-detail');
+        $this->load->view('frontend/blog-detail',$data);
         $this->load->view('frontend/include/footer');
     }
     public function blog()
     {
+        $data['blog_detail_view'] = $this->blog_detail_model->blog_detail_view();        
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/blog');
+        $this->load->view('frontend/blog',$data);
         $this->load->view('frontend/include/footer');
     }
     public function contact()

@@ -25,7 +25,8 @@ class blog_detail_model extends CI_Model
 
 	public function blog_detail_view()
 {
-    $result = $this->db->query(" SELECT *  FROM blog_detail");
+    $result = $this->db->query(" SELECT blog_detail.*, blog_category.category AS blog_category FROM blog_detail LEFT JOIN 
+	blog_category ON blog_detail.blog_category = blog_category.id");
 
     if ($result->num_rows() > 0) {
         return $result->result();
@@ -35,12 +36,21 @@ class blog_detail_model extends CI_Model
 }
 
 
-	public function blog_detail_data_nm()
+public function blog_detail_data_nm()
 {
     $uid = $this->uri->segment(2);
 
-    $result = $this->db->query("SELECT blog_detail.*, blog_category.category AS blog_category FROM blog_detail WHERE 
-            REPLACE(LOWER(blog_detail.name), ' ', '-') = '$uid'
+    $result = $this->db->query("
+        SELECT 
+            blog_detail.*, 
+            blog_category.category AS blog_category 
+        FROM 
+            blog_detail
+        
+        LEFT JOIN 
+            blog_category ON blog_detail.blog_category = blog_category.id
+        WHERE 
+            REPLACE(LOWER(blog_detail.blog_name), ' ', '-') = '$uid'
     ");
 
     if ($result->num_rows() > 0) {

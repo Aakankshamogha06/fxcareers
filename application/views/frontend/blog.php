@@ -25,7 +25,7 @@
         <div class="breadscrumb-title">
             <h1 class="text-white display-3 mb-4 wow fadeInUp">Blog</h1>
             <div class="d-inline-flex text-white mb-4 wow fadeInUp" data-wow-delay="100ms">
-                <p class="m-0 text-uppercase"><a class="text-secondary" href="./">Home</a></p>
+                <p class="m-0 text-uppercase"><a class="text-secondary" href="<?=base_url()?>">Home</a></p>
                 <i class="fa fa-angle-double-right pt-1 px-3"></i>
                 <p class="m-0 text-uppercase">Blog</p>
             </div>
@@ -46,26 +46,29 @@
                     <h2 class="display-5 mb-3 wow fadeInUp" data-wow-delay="100ms">Stay Up-to-Date with our Latest Financial&nbsp;Blogs</h2>
                 </div>
             </div>
-            <?php for ($i = 0; $i < 6; $i++) { ?>
+            <?php 
+            foreach($blog_detail_view as $row):?>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp">
                     <div class="card border-primary rounded overflow-hidden h-100 blog-card">
-                        <a href="<?=base_url()?>blog-detail">
-                            <img src="<?=base_url()?>public/web/img/blog/blog-1.jpg" class="card-img-top" alt="USDINR Analysis" />
-                        </a>
+                    <a href="<?=base_url()?>blog/<?=str_replace(' ','-',strtolower($row->blog_name));?>">
+                        
+                            <img src="<?=base_url('uploads/blogs/').$row->blog_image;?>" class="card-img-top" alt="USDINR Analysis" />
+                        </a> 
                         <div class="card-body">
                             <p class="card-text d-flex justify-content-between">
-                                <small class="text-muted"><i class="fa-solid fa-clock mr-2"></i><?= date('d M Y') ?></small>
-                                <small class="text-muted"><i class="fa-solid fa-user-tie mr-2"></i>Ruchit Thakur</small>
+                                <small class="text-muted"><i class="fa-solid fa-clock mr-2"></i><?= date('d-m-Y', strtotime($row->blog_date))?></small>
+                                <small class="text-muted"><i class="fa-solid fa-user-tie mr-2"></i><?=$row->blog_author?></small>
                             </p>
                             <h5 class="card-title">
-                                <a class="text-secondary" href="<?=base_url()?>blog-detail">USDINR Analysis</a>
+                                <a class="text-secondary" href="<?=base_url()?>blog-detail"><?=$row->blog_name?></a>
                             </h5>
-                            <p class="card-text">USDINR : In-depth analysis and Path Ahead</p>
+                            <p class="card-text"><?=$row->blog_desc?></p>
                             <a href="<?=base_url()?>blog-detail" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endforeach ?>
             <div class="col-12">
                 <nav aria-label="pagination-navigation">
                     <ul class="pagination justify-content-center mt-3 wow fadeInUp">

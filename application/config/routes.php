@@ -179,18 +179,18 @@ $route['course_language/course_language_delete/(:any)'] = 'admin/course_language
 
 
 //website
-$route['index']  = "website/index";
-$route['about']  = "website/about";
-$route['blog']  = "website/blog";
-$route['analysis']  = "website/analysis";
-$route['contact']  = "website/contact";
-$route['ebook']  = "website/ebook";
-$route['contact']  = "website/contact";
-$route['detail']  = "website/detail";
-$route['blog-detail']  = "website/blog_detail";
-$route['gallery']  = "website/gallery";
-$route['offline-program']  = "website/offline_program";
-$route['online-program']  = "website/online_program";
-$route['recorded-videos']  = "website/recorded_videos";
-$route['team']  = "website/team";
-$route['testimonial']  = "website/testimonial";
+$route['index']  = 'website/index';
+$route['about']  = 'website/about';
+$route['blog']  = 'website/blog';
+$route['analysis']  = 'website/analysis';
+$route['contact']  = 'website/contact';
+$route['ebook']  = 'website/ebook';
+$route['contact']  = 'website/contact';
+$route['detail']  = 'website/detail';
+$route['blog-detail']  = 'website/blog_detail';
+$route['gallery']  = 'website/gallery';
+$route['offline-program']  = 'website/offline_program';
+$route['online-program']  = 'website/online_program';
+$route['recorded-videos']  = 'website/recorded_videos';
+$route['team']  = 'website/team';
+$route['testimonial']  = 'website/testimonial';

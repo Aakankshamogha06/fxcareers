@@ -48,8 +48,8 @@
                     <td><?= $row->blog_category ?></td>
                     <td><?= $row->blog_author ?></td>
                     <td><?= $row->blog_date ?></td>
-                    <td><?= $row->blog_desc ?></td>
-                    <td><?= $row->long_desc ?></td>
+                    <td><?= substr($row->blog_desc,0,30) . '...' ?></td>
+                    <td><?= substr($row->long_desc,0,30) . '...' ?></td>
 
                     <td class="text-right"><a href="<?= base_url('admin/blog_detail/blog_detail_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a><a href="<?= base_url('admin/blog_detail/blog_detail_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
                   </tr>
