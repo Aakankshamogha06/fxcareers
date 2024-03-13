@@ -54,7 +54,7 @@
                     <a href="<?=base_url()?>blog/<?=str_replace(' ','-',strtolower($row->blog_name));?>">
                         
                             <img src="<?=base_url('uploads/blogs/').$row->blog_image;?>" class="card-img-top" alt="USDINR Analysis" />
-                        </a> 
+                        
                         <div class="card-body">
                             <p class="card-text d-flex justify-content-between">
                                 <small class="text-muted"><i class="fa-solid fa-clock mr-2"></i><?= date('d-m-Y', strtotime($row->blog_date))?></small>
@@ -63,8 +63,9 @@
                             <h5 class="card-title">
                                 <a class="text-secondary" href="<?=base_url()?>blog-detail"><?=$row->blog_name?></a>
                             </h5>
-                            <p class="card-text"><?=$row->blog_desc?></p>
-                            <a href="<?=base_url()?>blog-detail" class="btn btn-primary">Read More</a>
+                            <p class="card-text"><?=substr($row->blog_desc,0,30),'...'; ?></p>
+                            <a href="<?= base_url('blog/')?><?=str_replace(' ','-',strtolower($row->blog_name));?>"class="btn btn-primary">Read More</a>
+                            </a> 
                         </div>
                     </div>
                 </div>

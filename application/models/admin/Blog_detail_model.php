@@ -39,23 +39,13 @@ class blog_detail_model extends CI_Model
 public function blog_detail_data_nm()
 {
     $uid = $this->uri->segment(2);
+    $result = $this->db->query("SELECT * FROM `blog_detail` WHERE REPLACE(LOWER(blog_name), ' ', '-')='$uid'");
 
-    $result = $this->db->query("
-        SELECT 
-            blog_detail.*, 
-            blog_category.category AS blog_category 
-        FROM 
-            blog_detail
-        
-        LEFT JOIN 
-            blog_category ON blog_detail.blog_category = blog_category.id
-        WHERE 
-            REPLACE(LOWER(blog_detail.blog_name), ' ', '-') = '$uid'
-    ");
-
-    if ($result->num_rows() > 0) {
+    if ($result->num_rows() > 0) 
+    {
         return $result->result(); // Return the fetched data
-    } else {
+    } 
+    else {
         return 0;
     }
 }

@@ -32,7 +32,7 @@ class Website extends CI_Controller
     }
     public function blog_detail()
     {
-        $data['blog_detail'] = $this->blog_detail_model->blog_detail_view();
+        $data['blog_detail'] = $this->blog_detail_model->blog_detail_data_nm();
         $this->load->view('frontend/include/header');
         $this->load->view('frontend/blog-detail',$data);
         $this->load->view('frontend/include/footer');
