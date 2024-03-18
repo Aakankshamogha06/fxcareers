@@ -53,7 +53,9 @@
                     <td><?= $row->ebook_pages ?></td>
                     <td><?= $row->ebook_type ?></td>
 
-                    <td class="text-right"><a href="<?= base_url('admin/ebook/ebook_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a><a href="<?= base_url('admin/ebook/ebook_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
+                    <td class="text-right">
+                <!-- <a href="<?= base_url('admin/ebook/ebook_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a> -->
+                    <a href="<?= base_url('admin/ebook/ebook_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
