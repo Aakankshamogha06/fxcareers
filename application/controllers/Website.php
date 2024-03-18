@@ -21,6 +21,7 @@ class Website extends CI_Controller
     public function index()
     {
         $data['detail_view'] = $this->detail_model->online_course(); 
+        $data['offline_view'] = $this->detail_model->offline_course(); 
         $this->load->view('frontend/include/header');
         $this->load->view('frontend/index',$data);
         $this->load->view('frontend/include/footer');
@@ -66,12 +67,12 @@ class Website extends CI_Controller
             if ($this->Contact_model->contact_submit_data($data) == true) 
             {
                 ?>
-<script type="text/javascript">
-alert("Submit Successfully");
+                <script type="text/javascript">
+                alert("Submit Successfully");
 
-window.location.href = "<?php echo base_url(); ?>";
-</script>
-<?php
+                window.location.href = "<?php echo base_url(); ?>";
+                </script>
+                <?php
                 exit; 
             }
         }

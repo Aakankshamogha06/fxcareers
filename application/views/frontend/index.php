@@ -159,7 +159,7 @@
         </div>
         <div class="row">
           <div class="col-12 mt-4 wow fadeInUp">
-            <a href="#" class="theme-btn">Explore Programs</a>
+            <a href="<?php base_url()?>offline-program" class="theme-btn">Explore Programs</a>
           </div>
         </div>
       </div>
@@ -267,197 +267,68 @@
       </div>
     </div>
     <div class="row">
+
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="OnlinePrograms" role="tabpanel" aria-labelledby="Online-Programs" tabindex="0">
           <div class="owl-carousel courses-carousel">
+          <?php foreach($detail_view as $row): ?>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
+             
+              <img class="img-fluid" src="<?=base_url('uploads/course/').$row->course_image;?>" alt="Basic Program" />
               <div class="courses-text">
-                <h4 class="text-center text-white px-3">Basic Program</h4>
+                <h4 class="text-center text-white px-3"><?=$row->course_name?></h4>
                 <div class="border-top w-100 mt-3">
                   <div class="d-flex align-items-center justify-content-between p-4">
                     <div class="d-flex gap-3">
                       <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
+                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i><?= $row->duration?> hrs</span>
                     </div>
-                    <span class="text-secondary fs-4">₹ 25000</span>
+                    <span class="text-secondary fs-4">$ <?= $row-> price?></span>
                   </div>
                 </div>
+                
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail/<?=str_replace(' ','-',strtolower($row->course_name));?>">Read More</a>
                 </div>
+               
               </div>
+              
             </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program2.jpg" alt="Intermediate Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Intermediate Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program3.jpg" alt="Advanced Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Advanced Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>30hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program4.jpg" alt="Mastering Currency Market" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 50000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program5.jpg" alt="Mastering Currency Market VIP" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 100000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
+            <?php endforeach;?>
+            
           </div>
         </div>
         <div class="tab-pane fade" id="OfflinePrograms" role="tabpanel" aria-labelledby="Offline-Programs" tabindex="0">
           <div class="owl-carousel courses-carousel">
+          <?php foreach($offline_view as $row): ?>
             <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
+             
+              <img class="img-fluid" src="<?=base_url('uploads/course/').$row->course_image;?>" alt="Basic Program" />
               <div class="courses-text">
-                <h4 class="text-center text-white px-3">Basic Program</h4>
+                <h4 class="text-center text-white px-3"><?=$row->course_name?></h4>
                 <div class="border-top w-100 mt-3">
                   <div class="d-flex align-items-center justify-content-between p-4">
                     <div class="d-flex gap-3">
                       <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
+                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i><?= $row->duration?> hrs</span>
                     </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 25000</span>
+                    <span class="text-secondary fs-4">$ <?= $row-> price?></span>
                   </div>
                 </div>
+                
                 <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
+                  <a class="theme-btn" href="<?=base_url()?>detail/<?=str_replace(' ','-',strtolower($row->course_name));?>">Read More</a>
                 </div>
+               
               </div>
+              
             </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program2.jpg" alt="Intermediate Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Intermediate Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program3.jpg" alt="Advanced Program" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Advanced Program</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>30hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 35000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program4.jpg" alt="Mastering Currency Market" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 50000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="courses-item position-relative">
-              <img class="img-fluid" src="<?=base_url()?>public/web/img/program5.jpg" alt="Mastering Currency Market VIP" />
-              <div class="courses-text">
-                <h4 class="text-center text-white px-3">Mastering Currency Market VIP</h4>
-                <div class="border-top w-100 mt-3">
-                  <div class="d-flex align-items-center justify-content-between p-4">
-                    <div class="d-flex gap-3">
-                      <span class="text-white font-xm"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                      <span class="text-white font-xm"><i class="fa-solid fa-clock mr-2"></i>60hrs</span>
-                    </div>
-                    <span class="text-secondary fs-4 font-xm">₹ 100000</span>
-                  </div>
-                </div>
-                <div class="w-100 bg-white text-center p-4">
-                  <a class="theme-btn" href="<?=base_url()?>detail">Read More</a>
-                </div>
-              </div>
-            </div>
+            <?php endforeach;?>
+            
           </div>
         </div>
         <div class="tab-pane fade" id="RecordedVideos" role="tabpanel" aria-labelledby="Recorded-Videos" tabindex="0">
-          <div class="owl-carousel courses-carousel">
+          <!-- <div class="owl-carousel courses-carousel">
             <div class="courses-item position-relative">
               <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="Basic Program" />
               <div class="courses-text">
@@ -548,7 +419,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
