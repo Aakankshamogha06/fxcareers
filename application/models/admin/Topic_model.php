@@ -21,7 +21,7 @@ class topic_model extends CI_Model
 
 	public function topic_view()
 {
-    $result = $this->db->query(" SELECT *,(SELECT course_type FROM course WHERE topic.course_id= course.id) AS course_id FROM `topic`;
+    $result = $this->db->query(" SELECT *,(SELECT course_name FROM detail WHERE topic.course_id= detail.id) AS course_id FROM `topic`;
 	");
 
     if ($result->num_rows() > 0) {
@@ -42,7 +42,7 @@ class topic_model extends CI_Model
 	}
 
 
-	public function topic_update_data($data,$image)
+	public function topic_update_data($data)
 	{
 		$newdata = [
 			'course_id' => $data['course_id'],
@@ -73,7 +73,7 @@ class topic_model extends CI_Model
 	public function course_fetch()
 	{
 
-		$course_data = $this->db->query("SELECT * FROM `course`");
+		$course_data = $this->db->query("SELECT * FROM `detail`");
 
 		$fetch = $course_data->num_rows();
 		if ($fetch > 0) {
@@ -82,5 +82,28 @@ class topic_model extends CI_Model
 			return false;
 		}
 	}
+
+
+	public function onlineBasic_topic($id)
+    {
+    $result = $this->db->query("SELECT * FROM `topic` WHERE course_id=$id");
+
+    if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return 0;
+        }
+    }
+
+	public function offlineBasic_topic($id)
+    {
+    $result = $this->db->query("SELECT * FROM `topic` WHERE course_id=$id");
+
+    if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return 0;
+        }
+    }
 
 }

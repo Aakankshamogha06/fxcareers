@@ -12,17 +12,16 @@
                        <div class="form-row">
                            
                        <div class="form-group col-md-12">
-                               <label for="course_id" class="form-label"> course <span class="text-danger">*</span></label>
-                               <select id="course_id" class="form-control" name="course_id">
-                                   <option value="">Select course</option>
-                                   <?php
-                                    $course_fetch_data = $this->topic_model->course_fetch();
-                                    foreach ($course_fetch_data as $data) { ?>
-                                       <option value="<?php echo $data['id']; ?>"><?php echo $data['course_type']; ?></option>
-                                   <?php } ?>
-
-                               </select>
-                           </div>
+                       <label for="course_id" class="form-label"> course <span class="text-danger">*</span></label>
+                                <select id="course_id" class="form-control" name="course_id">
+                                    <option value="">Select course</option>
+                                    <?php
+                                        $course_fetch_data = $this->topic_model->course_fetch();
+                                        foreach ($course_fetch_data as $data) { ?>
+                                        <option value="<?php echo $data['id']; ?>"><?php echo $data['course_name']; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
 
                            <div class="form-group col-md-12">
                                <label for="inputEmail4" class="form-label">Topic name<span class="text-danger">*</span> </label>

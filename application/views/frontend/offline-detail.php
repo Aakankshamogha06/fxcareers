@@ -82,8 +82,8 @@
 
                             <h4>Program Content</h4>
                             <?php
-                            $onlineBasic_topic = $this->topic_model->onlineBasic_topic($row->id);
-                            foreach ($onlineBasic_topic as $row2) { ?>
+                            $offlineBasic_topic = $this->topic_model->offlineBasic_topic($row->id);
+                            foreach ($offlineBasic_topic as $row2) { ?>
                             
                             <details class="accordian-detail">
                                     <summary><?= $row2->topic_name ?></summary>

@@ -8,6 +8,7 @@ class ebook_model extends CI_Model
 		$data = [
 			
 			'ebook_name' => $data['ebook_name'],
+			'ebook_desc' => $data['ebook_desc'],
             'ebook_image' => $ebook_image,
            'ebook_pdf' =>$ebook_pdf,
             'ebook_type' => $data['ebook_type'],
@@ -49,6 +50,7 @@ class ebook_model extends CI_Model
 		$newdata = [
 			
 			'ebook_name' => $data['ebook_name'],
+			'ebook_desc' => $data['ebook_desc'],
             'ebook_image' => $ebook_image,
            'ebook_pdf' =>$ebook_pdf,
             'ebook_type' => $data['ebook_type'],

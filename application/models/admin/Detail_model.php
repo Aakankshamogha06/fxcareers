@@ -13,6 +13,9 @@ class detail_model extends CI_Model
             'mode' => $data['mode'],
             'lesson' => $data['lesson'],
             'description' => $data['description'],
+			'duration' => $data['duration'],
+			'category' => $data['category'],
+			'language' => $data['language'],
             'price' => $data['price'],
             'long_description' => $data['long_description'],
             
@@ -39,9 +42,74 @@ class detail_model extends CI_Model
     }
 }
 
+public function course_detail_view($id)
+{
+    $result = $this->db->query("SELECT *,(SELECT category_name FROM course_category WHERE detail.category = course_category.id)AS category,
+    (SELECT mode_name FROM course_mode WHERE detail.mode = course_mode.id)AS mode,
+    (SELECT language_name FROM course_language WHERE detail.language = course_language.id)AS language
+    FROM `detail` WHERE id=$id;");
+
+    if ($result->num_rows() > 0) {
+        return $result->result();
+    } else {
+        return 0;
+    }
+}
+
 
 	
+public function online_course()
+{
+    $result = $this->db->query("SELECT *,(SELECT category_name FROM course_category WHERE detail.category = course_category.id)AS category,
+    (SELECT mode_name FROM course_mode WHERE detail.mode = course_mode.id)AS mode,
+    (SELECT language_name FROM course_language WHERE detail.language = course_language.id)AS language
+    FROM `detail` WHERE mode=1;");
 
+    if ($result->num_rows() > 0) {
+        return $result->result();
+    } else {
+        return 0;
+    }
+}
+public function offlineBasic($id)
+{
+$result = $this->db->query("SELECT *,(SELECT category_name FROM course_category WHERE detail.category = course_category.id)AS category,
+(SELECT mode_name FROM course_mode WHERE detail.mode = course_mode.id)AS mode,
+(SELECT language_name FROM course_language WHERE detail.language = course_language.id)AS language
+FROM `detail` WHERE REPLACE(LOWER(detail.course_name), ' ', '-')='$id' and detail.mode='2'");
+if ($result->num_rows() > 0) {
+		return $result->result();
+	} else {
+		return 0;
+	}
+}
+
+public function onlineBasic($id)
+{
+$result = $this->db->query("SELECT *,(SELECT category_name FROM course_category WHERE detail.category = course_category.id)AS category,
+(SELECT mode_name FROM course_mode WHERE detail.mode = course_mode.id)AS mode,
+(SELECT language_name FROM course_language WHERE detail.language = course_language.id)AS language
+FROM `detail` WHERE REPLACE(LOWER(detail.course_name), ' ', '-')='$id' and detail.mode='1'");
+if ($result->num_rows() > 0) {
+		return $result->result();
+	} else {
+		return 0;
+	}
+}
+
+	public function offline_course()
+    {
+        $result = $this->db->query("SELECT *,(SELECT category_name FROM course_category WHERE detail.category = course_category.id)AS category,
+    (SELECT mode_name FROM course_mode WHERE detail.mode = course_mode.id)AS mode,
+    (SELECT language_name FROM course_language WHERE detail.language = course_language.id)AS language
+    FROM `detail` WHERE mode=2;");
+
+    if ($result->num_rows() > 0) {
+        return $result->result();
+    } else {
+        return 0;
+    }
+    }
 
 	public function detail_delete($id)
 	{
@@ -59,6 +127,9 @@ class detail_model extends CI_Model
             'mode' => $data['mode'],
             'lesson' => $data['lesson'],
             'description' => $data['description'],
+			'duration' => $data['duration'],
+			'category' => $data['category'],
+			'language' => $data['language'],
             'price' => $data['price'],
             'long_description' => $data['long_description'],
 		];

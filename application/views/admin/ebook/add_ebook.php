@@ -15,6 +15,11 @@
                                <input type="text" id="ebook_name" class="form-control" name="ebook_name">
 
                            </div>
+                           <div class="form-group col-md-6">
+                               <label for="ebook_desc" class="form-label"> Ebook Description <span class="text-danger">*</span></label>
+                               <input type="text" id="ebook_desc" class="form-control" name="ebook_desc">
+
+                           </div>
                            
                            <div class="form-group col-md-6">
                                <label for="inputEmail4" class="form-label"> E-book Image <span class="text-danger">*</span> </label>

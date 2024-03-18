@@ -7,14 +7,22 @@ class Website extends CI_Controller
         parent::__construct();
         $this->load->model('admin/Auth_model', 'Auth_model');
         $this->load->model('admin/blog_detail_model', 'blog_detail_model');
-
+        $this->load->model('admin/gallery_model', 'gallery_model');
+        $this->load->model('admin/sub_gallery_model', 'sub_gallery_model');
+        $this->load->model('admin/Franchise_model', 'Franchise_model');
+        $this->load->model('admin/Contact_model', 'Contact_model');
+        $this->load->model('admin/curriculum_model', 'curriculum_model');
+        $this->load->model('admin/topic_model', 'topic_model');
+        $this->load->model('admin/detail_model','detail_model');
+        $this->load->model('admin/ebook_model','ebook_model');
         $this->load->helper('url');
     }
 
     public function index()
     {
+        $data['detail_view'] = $this->detail_model->online_course(); 
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/index');
+        $this->load->view('frontend/index',$data);
         $this->load->view('frontend/include/footer');
     }
 
@@ -50,16 +58,46 @@ class Website extends CI_Controller
         $this->load->view('frontend/contact');
         $this->load->view('frontend/include/footer');
     }
+    public function contact_submit_data()
+    {
+        $data = [];
+        if ($this->input->post()) {
+            $data = $this->input->post();
+            if ($this->Contact_model->contact_submit_data($data) == true) 
+            {
+                ?>
+<script type="text/javascript">
+alert("Submit Successfully");
+
+window.location.href = "<?php echo base_url(); ?>";
+</script>
+<?php
+                exit; 
+            }
+        }
+    }
     public function detail()
     {
+        $id = $this->uri->segment(2);
+        $data['detail_view'] = $this->detail_model->onlineBasic($id);
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/detail');
+        $this->load->view('frontend/detail',$data);
+        $this->load->view('frontend/include/footer');
+    }
+
+    public function offline_detail()
+    {
+        $id = $this->uri->segment(2);
+        $data['detail_view'] = $this->detail_model->offlineBasic($id);
+        $this->load->view('frontend/include/header');
+        $this->load->view('frontend/offline-detail',$data);
         $this->load->view('frontend/include/footer');
     }
     public function ebook()
     {
+        $data['ebook_view'] = $this->ebook_model->ebook_view();
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/ebook');
+        $this->load->view('frontend/ebook',$data);
         $this->load->view('frontend/include/footer');
     }
     public function franchise()
@@ -68,28 +106,52 @@ class Website extends CI_Controller
         $this->load->view('frontend/franchise');
         $this->load->view('frontend/include/footer');
     }
+
+    public function franchise_submit_data()
+    {
+        $data = [];
+        if ($this->input->post()) {
+            $data = $this->input->post();
+            if ($this->Franchise_model->franchise_submit_data($data) == true) {
+                ?>
+                <script type="text/javascript">
+                alert("Submit Successfully");
+
+                window.location.href = "<?php echo base_url(); ?>";
+                </script>
+                <?php
+                exit; 
+            }
+        } 
+    }
+
+
     public function gallery()
     {
+        $data['gallery_view'] = $this->gallery_model->gallery_view(); 
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/gallery');
+        $this->load->view('frontend/gallery',$data);
         $this->load->view('frontend/include/footer');
     }
     public function offline_program()
     {
+        $data['detail_view'] = $this->detail_model->offline_course(); 
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/offline-program');
+        $this->load->view('frontend/offline-program',$data);
         $this->load->view('frontend/include/footer');
     }
     public function online_program()
     {
+        $data['detail_view'] = $this->detail_model->online_course(); 
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/online-program');
+        $this->load->view('frontend/online-program',$data);
         $this->load->view('frontend/include/footer');
     }
     public function recorded_videos()
     {
+        $data['detail_view'] = $this->detail_model->detail_view(); 
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/recorded-videos');
+        $this->load->view('frontend/recorded-videos',$data);
         $this->load->view('frontend/include/footer');
     }
     public function team()

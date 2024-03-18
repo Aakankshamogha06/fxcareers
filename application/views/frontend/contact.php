@@ -34,23 +34,23 @@
                             <h1 class="display-6">Send Us A Message</h1>
                         </div>
                         <div class="contact-form">
-                            <form>
+                            <form <?= base_url('website/contact_submit_data'); ?> method="post">
                                 <div class="row">
                                     <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control bh5" placeholder="Name" required="required" />
+                                        <input type="text" class="form-control bh5" placeholder="Name" name="username" required="required" />
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input type="tel" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="form-control bh5" placeholder="Mobile Number" required="required" />
+                                        <input type="tel" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="form-control bh5" name="mobile_no" placeholder="Mobile Number" required="required" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control bh5" placeholder="Email" required="required" />
+                                        <input type="email" class="form-control bh5" placeholder="Email" name="email" required="required" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control bh5" rows="5" placeholder="Message" required="required"></textarea>
+                                    <textarea class="form-control bh5" rows="5" placeholder="Message" name="message" required="required"></textarea>
                                 </div>
                                 <div>
-                                    <button class="theme-btn py-2 px-4" type="submit">
+                                    <button class="theme-btn py-2 px-4" type="submit" name="submit">
                                         Send Message
                                     </button>
                                 </div>

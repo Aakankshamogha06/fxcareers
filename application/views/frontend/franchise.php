@@ -41,25 +41,25 @@
             <div class="col-lg-6 col-xl-5">
                 <div class="p-3 pb-4 shadow rounded sticky-top">
                     <h3 class="mb-4 wow fadeInRight">For Franchise</h3>
-                    <form action="#" method="post">
+                    <form action="<?= base_url('website/franchise_submit_data'); ?>" method="post">
                         <div class="row gy-4 wow fadeInRight">
                             <div class="col-xl-6">
-                                <input type="text" class="form-control rounded-sm" placeholder="Full Name*" required />
+                                <input type="text" class="form-control rounded-sm" name="username" placeholder="Full Name*" required />
                             </div>
                             <div class="col-xl-6">
-                                <input type="tel" class="form-control rounded-sm" placeholder="Phone Number*" required />
+                                <input type="tel" class="form-control rounded-sm" name="mobile_no" placeholder="Phone Number*" required />
                             </div>
                             <div class="col-xl-6">
-                                <input type="email" class="form-control rounded-sm" placeholder="Email*" required />
+                                <input type="email" class="form-control rounded-sm" name="email" placeholder="Email*" required />
                             </div>
                             <div class="col-xl-6">
-                                <input type="text" class="form-control rounded-sm" placeholder="Location*" required />
+                                <input type="text" class="form-control rounded-sm" name="location" placeholder="Location*" required />
                             </div>
                             <div class="col-12">
-                                <textarea name="" id="" cols="30" rows="5" class="form-control rounded-sm" placeholder="Message"></textarea>
+                                <textarea  cols="30" rows="5" class="form-control rounded-sm" name="message" placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
-                                <button class="theme-btn" type="submit">Submit</button>
+                                <button class="theme-btn" name="submit" type="submit">Submit</button>
                             </div>
                         </div>
                     </form>

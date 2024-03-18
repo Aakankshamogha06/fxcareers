@@ -168,13 +168,13 @@ $route['course_language/edit_course_language/(:any)'] = 'admin/course_language/c
 $route['course_language/course_language_update_data'] = 'admin/course_language/course_language_update_data';
 $route['course_language/course_language_delete/(:any)'] = 'admin/course_language/course_language_delete/$1';
 
-  // course_category ****************
-// $route['course_category/add_course_category'] = 'admin/course_category/add_course_category';
-// $route['course_category/course_category_submit_data'] = 'admin/course_category/course_category_submit_data';
-// $route['course_category/view_course_category']        = 'admin/course_category/course_category_view';
-// $route['course_category/edit_course_category/(:any)'] = 'admin/course_category/course_category_edit/$1';
-// $route['course_category/course_category_update_data'] = 'admin/course_category/course_category_update_data';
-// $route['course_category/course_category_delete/(:any)'] = 'admin/course_category/course_category_delete/$1';
+//franchise ****************
+$route['franchise/add_franchise'] = 'admin/franchise/add_franchise';
+$route['franchise/franchise_submit_data'] = 'admin/franchise/franchise_submit_data';
+$route['franchise/view_franchise']        = 'admin/franchise/franchise_view';
+$route['franchise/edit_franchise/(:any)'] = 'admin/franchise/franchise_edit/$1';
+$route['franchise/franchise_update_data'] = 'admin/franchise/franchise_update_data';
+$route['franchise/franchise_delete/(:any)'] = 'admin/franchise/franchise_delete/$1';
 
 
 
@@ -186,7 +186,8 @@ $route['analysis']  = 'website/analysis';
 $route['contact']  = 'website/contact';
 $route['ebook']  = 'website/ebook';
 $route['contact']  = 'website/contact';
-$route['detail']  = 'website/detail';
+$route['detail/(:any)']  = 'website/detail/$1';
+$route['offline-detail/(:any)']  = 'website/offline_detail/$1';
 $route['blog-detail']  = 'website/blog_detail';
 $route['gallery']  = 'website/gallery';
 $route['offline-program']  = 'website/offline_program';
@@ -194,4 +195,5 @@ $route['online-program']  = 'website/online_program';
 $route['recorded-videos']  = 'website/recorded_videos';
 $route['team']  = 'website/team';
 $route['testimonial']  = 'website/testimonial';
+$route['franchise']  = 'website/franchise';
 $route['blog/(:any)']  = 'website/blog_detail/$1';

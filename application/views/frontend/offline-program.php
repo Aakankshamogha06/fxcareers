@@ -13,7 +13,7 @@
         <div class="breadscrumb-title">
             <h1 class="text-white display-3 mb-4 wow fadeInUp">Offline Program</h1>
             <div class="d-inline-flex text-white mb-4 wow fadeInUp" data-wow-delay="100ms">
-                <p class="m-0 text-uppercase"><a class="text-secondary" href="./">Home</a></p>
+                <p class="m-0 text-uppercase"><a class="text-secondary" href="<?=base_url()?>">Home</a></p>
                 <i class="fa fa-angle-double-right pt-1 px-3"></i>
                 <p class="m-0 text-uppercase">Offline Program</p>
             </div>
@@ -36,22 +36,23 @@
             </div>
         </div>
         <div class="row gy-4 justify-content-center">
-            <?php for ($i = 0; $i < 5; $i++) { ?>
+        <?php 
+            foreach($detail_view as $row):?>
                 <div class="col-lg-4 col-md-6 wow fadeInUp">
-                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="<?=base_url()?>detail">
-                        <img class="img-fluid" src="<?=base_url()?>public/web/img/program1.jpg" alt="">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="<?=base_url()?>offline-detail/<?=str_replace(' ','-',strtolower($row->course_name));?>">
+                        <img class="img-fluid" src="<?=base_url('uploads/course/').$row->course_image;?>" alt="">
                         <div class="courses-text">
-                            <h4 class="text-center text-white px-3">Intermediate Program</h4>
+                            <h4 class="text-center text-white px-3"><?=$row->course_name?></h4>
                             <div class="border-top w-100 mt-3">
                                 <div class="d-flex justify-content-between p-4">
                                     <span class="text-white"><i class="fa fa-user mr-2"></i>Live Classes</span>
-                                    <span class="text-white"><i class="fa-solid fa-clock mr-2"></i>20hrs</span>
+                                    <span class="text-white"><i class="fa-solid fa-clock mr-2"></i><?=$row->duration?>hrs</span>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-            <?php } ?>
+            <?php endforeach; ?>
 
             <!-- commented pagination -->
             <div class="col-12 d-none">

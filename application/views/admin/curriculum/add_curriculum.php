@@ -17,7 +17,7 @@
                                     <?php
                                         $course_fetch_data = $this->curriculum_model->course_fetch();
                                         foreach ($course_fetch_data as $data) { ?>
-                                        <option value="<?php echo $data['id']; ?>"><?php echo $data['course_type']; ?></option>
+                                        <option value="<?php echo $data['id']; ?>"><?php echo $data['course_name']; ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
