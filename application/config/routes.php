@@ -197,3 +197,11 @@ $route['team']  = 'website/team';
 $route['testimonial']  = 'website/testimonial';
 $route['franchise']  = 'website/franchise';
 $route['blog/(:any)']  = 'website/blog_detail/$1';
+
+
+
+/* API */
+$route['api/register'] = 'api/User/register';
+$route['api/login'] = 'api/User/login';
+$route['api/logout'] = 'api/User/logout';
+$route['reGenToken'] = 'api/Token/reGenToken';
