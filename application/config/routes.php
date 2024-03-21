@@ -176,6 +176,14 @@ $route['franchise/edit_franchise/(:any)'] = 'admin/franchise/franchise_edit/$1';
 $route['franchise/franchise_update_data'] = 'admin/franchise/franchise_update_data';
 $route['franchise/franchise_delete/(:any)'] = 'admin/franchise/franchise_delete/$1';
 
+//slider ****************
+$route['slider/add_slider'] = 'admin/slider/add_slider';
+$route['slider/slider_submit_data'] = 'admin/slider/slider_submit_data';
+$route['slider/view_slider']        = 'admin/slider/slider_view';
+$route['slider/edit_slider/(:any)'] = 'admin/slider/slider_edit/$1';
+$route['slider/slider_update_data'] = 'admin/slider/slider_update_data';
+$route['slider/slider_delete/(:any)'] = 'admin/slider/slider_delete/$1';
+
 
 
 //website
@@ -205,3 +213,7 @@ $route['api/register'] = 'api/User/register';
 $route['api/login'] = 'api/User/login';
 $route['api/logout'] = 'api/User/logout';
 $route['reGenToken'] = 'api/Token/reGenToken';
+$route['course_api/course'] = 'course_api/course_get';
+$route['course_api/course_by_id/(:/num)'] = 'course_api/course_by_id_get/$1';
+$route['ebook_api/ebook'] = 'ebook_api/ebook_get';
+$route['slider_api/slider'] = 'slider_api/slider_get';

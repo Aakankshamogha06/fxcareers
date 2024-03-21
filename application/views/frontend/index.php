@@ -107,10 +107,56 @@
           <button class="btn btn-secondary px-4 px-lg-5">Search</button>
         </div>
       </div>
-    </div> -->
+    </div>  -->
   </div>
 </div>
-<!-- Header End -->
+
+<!--     Header End --> 
+
+<!-- banner-section -->
+<section class=" position-relative banner-sec">
+  <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
+    <div class="slide-item position-relative ">
+      <div class="image-layer position-absolute" style="background-image:url('<?=base_url()?>public/web/img/slider1.jpg')"></div>
+      <div class="auto-container">
+        <div class="content-box text-center position-relative z_5">
+          <h3 class="" style="color: #f9c311;">Unlock Your Trading Potential</h3>
+          <h1 class="text-white">Chat with Our Experts and Uncover the Art of Trading!</h1>
+          <div class="btn-box clearfix mt-4">
+            <a href="<?=base_url()?>demo" class="btn-two"><span>Book A Demo </span></a>
+            <a href="<?=base_url()?>sign" class="btn-two" style="margin-left: 1rem;"><span>Start With Us</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-item position-relative ">
+      <div class="image-layer position-absolute" style="background-image:url('<?=base_url()?>public/web/img/slider2.jpg')"></div>
+      <div class="auto-container">
+        <div class="content-box text-center position-relative z_5">
+          <h3 class="" style="color: #f9c311;">MCM International Fast Track Course</h3>
+          <h1 class="text-white">Master the Fundamentals and Advanced Strategies of Currency Market</h1>
+          <div class="btn-box clearfix mt-4">
+            <!-- <a href="<?=base_url()?>demo" class="btn-two"><span>Book A Demo </span></a> -->
+            <a href="#" class="btn-two"><span>Start With Us </span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="slide-item position-relative ">
+      <div class="image-layer position-absolute" style="background-image:url('<?=base_url()?>public/web/img/slider3.jpg')"></div>
+      <div class="auto-container">
+        <div class="content-box text-center position-relative z_5">
+          <h3 class="" style="color: #f9c311;">Our Courses</h3>
+          <h1 class="text-white">Our Programs offers the Best Currency Trading Education & Training in Financial Markets</h1>
+          <div class="btn-box clearfix mt-4">
+            <a href="#" class="btn-two ms-2"><span>Start With Us </span></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+<!-- banner-section end -->
 
 <!-- About Start -->
 <section class="space-sec">

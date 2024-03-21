@@ -144,6 +144,14 @@
                 <span class="hide-menu">E-BOOK</span>
               </a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/slider/slider_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-slideshow"></i>
+                </span>
+                <span class="hide-menu">SLIDER</span>
+              </a>
+            </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu"><b style="font-size:20px;">AUTH</b></span>

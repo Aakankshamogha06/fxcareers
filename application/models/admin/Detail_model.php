@@ -204,4 +204,17 @@ if ($result->num_rows() > 0) {
 		}
 	}
 
+	public function detail($id)
+    {
+
+        $assign_data = $this->db->query("SELECT * FROM `detail` where detail.id=$id ");
+
+        $fetch = $assign_data->num_rows();
+        if ($fetch > 0) {
+            return $fetch = $assign_data->result_array();
+        } else {
+            return false;
+        }
+    }
+
 }
