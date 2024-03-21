@@ -106,4 +106,14 @@ class topic_model extends CI_Model
         }
     }
 
+	public function topic($id)
+{
+	
+	$result = $this->db->query("SELECT * FROM topic WHERE course_id= $id");
+	if ($result->num_rows() > 0) {
+		return $result->result();
+	} else {
+		return 0;
+	}
+}
 }

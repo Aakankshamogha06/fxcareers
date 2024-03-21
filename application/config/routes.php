@@ -217,3 +217,7 @@ $route['course_api/course'] = 'course_api/course_get';
 $route['course_api/course_by_id/(:/num)'] = 'course_api/course_by_id_get/$1';
 $route['ebook_api/ebook'] = 'ebook_api/ebook_get';
 $route['slider_api/slider'] = 'slider_api/slider_get';
+$route['course_api/curriculum/(:/num)/(:/num)'] = 'course_api/curriculum_get/$1/$2';
+$route['course_api/topic/(:/num)'] = 'course_api/topic_get/$1';
+$route['blog_api/blog'] = 'blog_api/blog_get';
+$route['blog_api/blog_by_id/(:/num)'] = 'blog_api/blog_by_id_get/$1';

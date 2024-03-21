@@ -36,7 +36,8 @@ class curriculum_model extends CI_Model
 public function curriculum($id,$tp_id)
 {
 	
-	$result = $this->db->query("SELECT * FROM curriculum WHERE course_id=$id and topic_name=$tp_id");
+	$result = $this->db->query("SELECT *,(SELECT topic_name FROM topic WHERE topic.id= curriculum.topic_name)as topic_name 
+	FROM curriculum WHERE course_id=$id and topic_name=$tp_id");
 	if ($result->num_rows() > 0) {
 		return $result->result();
 	} else {
@@ -106,15 +107,5 @@ public function curriculum($id,$tp_id)
 		}
 	}
 
-	public function curriculum_api($c_id,$t_id)
-    {
-        
-        $result = $this->db->query("SELECT * FROM `curriculum`  WHERE course_id=$c_id and topic_name=$t_id");
-        if ($result->num_rows() > 0) {
-            return $result->result();
-        } else {
-            return 0;
-        }
-    }
-
+	
 }

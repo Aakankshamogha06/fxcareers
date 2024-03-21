@@ -128,4 +128,18 @@ public function blog_detail_data_nm()
 
         return $query->result();
     }
+
+	public function blog($id)
+    {
+
+        $assign_data = $this->db->query("SELECT * FROM `blog_detail` where blog_detail.id=$id ");
+
+        $fetch = $assign_data->num_rows();
+        if ($fetch > 0) {
+            return $fetch = $assign_data->result_array();
+        } else {
+            return false;
+        }
+    }
+
 }
