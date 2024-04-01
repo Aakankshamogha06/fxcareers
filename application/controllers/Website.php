@@ -167,5 +167,11 @@ class Website extends CI_Controller
         $this->load->view('frontend/testimonial');
         $this->load->view('frontend/include/footer');
     }
+    public function trade()
+    {
+        $this->load->view('frontend/include/header');
+        $this->load->view('frontend/trade');
+        $this->load->view('frontend/include/footer');
+    }
 }
 ?>

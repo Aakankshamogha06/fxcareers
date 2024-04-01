@@ -4,11 +4,11 @@
     <div class=" breadcrumb-sec franchise-bg main-section position-relative overlay-bottom">
         <div class="container position-relative text-center text-lg-left">
             <div class="breadscrumb-title">
-                <h1 class="text-white display-3 mb-4 wow fadeInUp">Franchise</h1>
+                <h1 class="text-white display-3 mb-4 wow fadeInUp">Trade</h1>
                 <div class="d-inline-flex text-white mb-4 wow fadeInUp" data-wow-delay="100ms">
                     <p class="m-0 text-uppercase"><a class="text-secondary" href="./">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Franchise</p>
+                    <p class="m-0 text-uppercase">Trade</p>
                 </div>
             </div>
         </div>

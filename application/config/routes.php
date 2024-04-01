@@ -203,7 +203,7 @@ $route['online-program']  = 'website/online_program';
 $route['recorded-videos']  = 'website/recorded_videos';
 $route['team']  = 'website/team';
 $route['testimonial']  = 'website/testimonial';
-$route['franchise']  = 'website/franchise';
+$route['trade']  = 'website/trade';
 $route['blog/(:any)']  = 'website/blog_detail/$1';
 
 

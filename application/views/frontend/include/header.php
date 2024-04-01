@@ -87,7 +87,7 @@
                                 <a href="<?=base_url()?>testimonial" class="dropdown-item">Testimonials</a>
                             </div>
                         </div>
-                        <a href="franchise" class="nav-item nav-link">Franchise</a>
+                        <a href="trade" class="nav-item nav-link">Trade</a>
                         <div class="nav-item dropdown">
                             <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown">Programs <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-menu drop-after  m-0">
@@ -125,7 +125,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="<?=base_url()?>franchise" class="menu-link">Franchise</a></li>
+                        <li><a href="<?=base_url()?>trade" class="menu-link">trade</a></li>
                         <li><a role="button" class="menu-link moblie-dropdwon">Programs <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-mb-menu">
                                 <ul>
