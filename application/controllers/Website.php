@@ -15,6 +15,7 @@ class Website extends CI_Controller
         $this->load->model('admin/topic_model', 'topic_model');
         $this->load->model('admin/detail_model','detail_model');
         $this->load->model('admin/ebook_model','ebook_model');
+        $this->load->model('admin/analysis_detail_model','analysis_detail_model');
         $this->load->helper('url');
     }
 
@@ -22,6 +23,8 @@ class Website extends CI_Controller
     {
         $data['detail_view'] = $this->detail_model->online_course(); 
         $data['offline_view'] = $this->detail_model->offline_course(); 
+        $data['blog_detail_view'] = $this->blog_detail_model->blog_detail_view(); 
+        $data['analysis_detail_view'] = $this->analysis_detail_model->analysis_detail_view();
         $this->load->view('frontend/include/header');
         $this->load->view('frontend/index',$data);
         $this->load->view('frontend/include/footer');
@@ -35,8 +38,16 @@ class Website extends CI_Controller
     }
     public function analysis()
     {
+        $data['analysis_detail_view'] = $this->analysis_detail_model->analysis_detail_view(); 
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/analysis');
+        $this->load->view('frontend/analysis',$data);
+        $this->load->view('frontend/include/footer');
+    }
+    public function analysis_detail()
+    {
+        $data['analysis_detail'] = $this->analysis_detail_model->analysis_detail_data_nm();
+        $this->load->view('frontend/include/header');
+        $this->load->view('frontend/analysis-detail',$data);
         $this->load->view('frontend/include/footer');
     }
     public function blog_detail()

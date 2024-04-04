@@ -65,6 +65,14 @@
               </a>
             </li>
             <li class="sidebar-item">
+              <a class="sidebar-link" href="<?= base_url('admin/analysis_detail/analysis_detail_view'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">ANALYSIS DETAIL</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
               <a class="sidebar-link" href="<?= base_url('admin/gallery/gallery_view'); ?>" aria-expanded="false">
                 <span>
                   <i class="ti ti-photo-check"></i>

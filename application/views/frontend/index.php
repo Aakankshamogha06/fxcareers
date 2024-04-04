@@ -862,21 +862,20 @@
       <div class="col-lg-4 col-sm-6">
         <h3 class="text-warning mb-4 wow fadeInUp">Blogs</h3>
         <div class="marque">
-          <?php for ($i = 0; $i < 9; $i++) { ?>
+          <?php foreach ($blog_detail_view as $row) { ?>
             <div class="row align-items-center mb-4">
               <div class="col-4">
                 <div class="date-box">
-                  <span class="d-block">2</span>
-                  <span class="">Jan</span>
+                  <span class="d-block"><img src="<?=base_url('uploads/blogs/').$row->blog_image;?>" class="card-img-top" alt="USDINR Analysis" /></span>
                 </div>
               </div>
               <div class="col-8">
-                <a href="" class="d-block title-list">
-                  <h6 class="mb-2">FXCareers New Batch Starting 2nd Jan</h6>
+                <a href="<?=base_url()?>blog/<?=str_replace(' ','-',strtolower($row->blog_name));?>" class="d-block title-list">
+                  <h6 class="mb-2"><?=$row -> blog_name?></h6>
                 </a>
                 <p class="mb-2 location">
-                  <i class="fa fa-location mr-1"></i>
-                  <span>Delhi</span>
+                  <i class="fa fa-calendar mr-1"></i>
+                  <span><?=$row->blog_date?></span>
                 </p>
 
               </div>
@@ -887,7 +886,7 @@
       <div class="col-lg-4 col-sm-6">
         <h3 class="text-warning mb-4 wow fadeInUp">Notifications</h3>
         <div class="marque">
-          <?php for ($i = 0; $i < 9; $i++) { ?>
+          <?php for ($i = 0; $i < 5; $i++) { ?>
             <div class="row align-items-center mb-4">
               <div class="col-4">
                 <div class="date-box">
@@ -912,21 +911,20 @@
       <div class="col-lg-4 col-sm-6">
         <h3 class="text-warning mb-4 wow fadeInUp">News Analysis</h3>
         <div class="marque">
-          <?php for ($i = 0; $i < 9; $i++) { ?>
+        <?php foreach ($analysis_detail_view as $row) { ?>
             <div class="row align-items-center mb-4">
               <div class="col-4">
                 <div class="date-box">
-                  <span class="d-block">2</span>
-                  <span class="">Jan</span>
+                  <span class="d-block"><img src="<?=base_url('uploads/analysis/').$row->analysis_image;?>" class="card-img-top" alt="USDINR Analysis" /></span>
                 </div>
               </div>
               <div class="col-8">
-                <a href="" class="d-block title-list">
-                  <h6 class="mb-2">FXCareers New Batch Starting 2nd Jan</h6>
+                <a href="<?=base_url()?>analysis/<?=str_replace(' ','-',strtolower($row->analysis_name));?>" class="d-block  title-list">
+                  <h6 class="mb-2"><?=$row->analysis_name?></h6>
                 </a>
                 <p class="mb-2 location">
-                  <i class="fa fa-location mr-1"></i>
-                  <span>Delhi</span>
+                  <i class="fa fa-calendar mr-1"></i>
+                  <span><?=$row->analysis_date?></span>
                 </p>
 
               </div>

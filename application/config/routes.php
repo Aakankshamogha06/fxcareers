@@ -184,6 +184,13 @@ $route['slider/edit_slider/(:any)'] = 'admin/slider/slider_edit/$1';
 $route['slider/slider_update_data'] = 'admin/slider/slider_update_data';
 $route['slider/slider_delete/(:any)'] = 'admin/slider/slider_delete/$1';
 
+//analysis_detail ****************
+$route['analysis_detail/add_analysis_detail'] = 'admin/analysis_detail/add_analysis_detail';
+$route['analysis_detail/analysis_detail_submit_data'] = 'admin/analysis_detail/analysis_detail_submit_data';
+$route['analysis_detail/view_analysis_detail']        = 'admin/analysis_detail/analysis_detail_view';
+$route['analysis_detail/edit_analysis_detail/(:any)'] = 'admin/analysis_detail/analysis_detail_edit/$1';
+$route['analysis_detail/analysis_detail_update_data'] = 'admin/analysis_detail/analysis_detail_update_data';
+$route['analysis_detail/analysis_detail_delete/(:any)'] = 'admin/analysis_detail/analysis_detail_delete/$1';
 
 
 //website
@@ -205,7 +212,7 @@ $route['team']  = 'website/team';
 $route['testimonial']  = 'website/testimonial';
 $route['trade']  = 'website/trade';
 $route['blog/(:any)']  = 'website/blog_detail/$1';
-
+$route['analysis/(:any)']  = 'website/analysis_detail/$1';
 
 
 /* API */
