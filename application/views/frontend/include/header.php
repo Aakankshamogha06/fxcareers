@@ -39,8 +39,8 @@
                             <small><i class="fa fa-phone-alt fa-rotate-90 mr-2"></i>1800-120-3180</small>
                         </a>
                         <small class="px-2 d-xs-none">|</small>
-                        <a href="mailto:info@fxcareers.com" class="text-white">
-                            <small><i class="fa fa-envelope mr-2"></i>info@fxcareers.com</small>
+                        <a href="mailto:info@fxcareers.ae" class="text-white">
+                            <small><i class="fa fa-envelope mr-2"></i>info@fxcareers.ae</small>
                         </a>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="toggler-icon fa-2x fa-solid fa-bars"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-between px-lg-3">
+                <div class="collapse navbar-collapse justify-content-between ">
                     <div class="navbar-nav mx-auto  py-lg-0">
                         <a href="<?=base_url()?>" class="nav-item nav-link">Home</a>
                         <div class="nav-item dropdown">
@@ -87,7 +87,8 @@
                                 <a href="<?=base_url()?>testimonial" class="dropdown-item">Testimonials</a>
                             </div>
                         </div>
-                        <a href="trade" class="nav-item nav-link">Trade</a>
+                        <a href="<?=base_url()?>trade"  class="nav-item nav-link">Trade</a>
+                        <a href="<?=base_url()?>live-news"  class="nav-item nav-link">Live News</a>
                         <div class="nav-item dropdown">
                             <a role="button" class="nav-link dropdown-toggle" data-toggle="dropdown">Programs <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-menu drop-after  m-0">
@@ -101,12 +102,13 @@
                         <a href="<?=base_url()?>blog" class="nav-item nav-link">Blog</a>
                         <a href="<?=base_url()?>contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="https://www.fxcareers.com/admin/auth/login" target="_blank" class="theme-btn  d-none d-lg-block">Join Us <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="<?=base_url()?>login" class="theme-btn  d-none d-lg-block">Login <i class="fa-solid"></i></a>
+                    <a href="<?=base_url()?>signin" class="theme-btn  d-none d-lg-block ms-2" style="background-color: black;">Signin <i class="fa-solid"></i></a>
                 </div>
             </nav>
         </div>
         <!-- mobile menu -->
-        <!-- <div class="offcanvas offcanvas-end mobile-menu" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas offcanvas-end mobile-menu" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header justify-content-end">
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -125,7 +127,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="<?=base_url()?>trade" class="menu-link">trade</a></li>
+                        <li><a href="<?=base_url()?>trade" class="menu-link">Trade</a></li>
+                        <li><a href="<?=base_url()?>live-news" class="menu-link">Live News</a></li>
                         <li><a role="button" class="menu-link moblie-dropdwon">Programs <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-mb-menu">
                                 <ul>
@@ -142,7 +145,7 @@
                     </ul>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Navbar End -->
     </header>
 
@@ -154,4 +157,4 @@
         } else {
             document.querySelector(".header .navbar-brand>img").setAttribute("src", "<?=base_url()?>public/web/img/logo.png");
         }
-        </script>
+    </script>

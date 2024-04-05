@@ -30,7 +30,7 @@
                     <a href="tel:18001203180" class="text-white-50"><i class="fa fa-phone-alt fa-rotate-90 mr-2"></i>1800-120-3180</a>
                 </p>
                 <p>
-                    <a href="mailto:info@fxcareers.com" class="text-white-50"><i class="fa fa-envelope mr-2"></i>info@fxcareers.com</a>
+                    <a href="mailto:info@fxcareers.ae" class="text-white-50"><i class="fa fa-envelope mr-2"></i>info@fxcareers.ae</a>
                 </p>
                 <div class=" social-icons d-flex justify-content-start mt-4">
                     <a class="text-white mr-3" href="https://www.facebook.com/Officialfxcareers/" target="_blank">
@@ -112,7 +112,46 @@
 
 <!-- Javascript -->
 <script src="<?= base_url() ?>public/web/js/main.js"></script>
+<script>
+  // banner-carousel
 
+  $('.banner-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    //animateOut: 'fadeOut',
+    //animateIn: 'fadeIn',
+    active: true,  
+    autoplay: true,
+    autoplayTimeout:10000,
+    navText: ['<span class="fa-solid fa-arrow-left"></span>', '<span class="fa-solid fa-arrow-right"></span>'],
+    responsive: {
+        
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 1,
+        nav: false
+      },
+      767: {
+        items: 1,
+        nav: false
+      },
+      800: {
+        items: 1,
+        nav: false
+      },
+      991: {
+        items: 1,
+        nav: false
+      },
+      1024: {
+        items: 1
+      }
+    }
+  });</script>
 </body>
 
 </html>
