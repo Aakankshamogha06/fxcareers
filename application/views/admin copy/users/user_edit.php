@@ -4,7 +4,7 @@
             <!-- [ sample-page ] start -->
             <div class="col-sm-12">
                 <div class="card">
-
+                <div class="card-body">
                     <div class="card-header">
                         <h5>Add User</h5>
                         <?php if(isset($msg) || validation_errors() !== ''): ?>
@@ -15,7 +15,7 @@
 						</div>
               <?php endif; ?>
                     </div>
-                    <div class="card-body">
+                    
                     <?php echo form_open(base_url('admin/users/edit/'.$user['id']) )?> 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -45,7 +45,7 @@
                     <option value="">Select Role</option>
                     <?php
                     
-                    $role_fetch_data = $this->User_model->role_fetch();
+                    $role_fetch_data = $this->user_model->role_fetch();
                     foreach ($role_fetch_data as $data) {?>
                      <option value="<?php echo $data['id']; ?>"<?php if ($data['id'] === $user['is_admin']) echo 'selected="selected"'?>><?php echo $data['role_name']; ?></option>
                       <?php } ?>

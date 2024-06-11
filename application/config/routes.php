@@ -195,7 +195,7 @@ $route['analysis_detail/analysis_detail_delete/(:any)'] = 'admin/analysis_detail
 
 //website
 $route['index']  = 'website/index';
-$route['about']  = 'website/about';
+$route['about-us']  = 'website/about';
 $route['blog']  = 'website/blog';
 $route['analysis']  = 'website/analysis';
 $route['contact']  = 'website/contact';

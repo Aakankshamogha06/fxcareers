@@ -2,36 +2,27 @@
 <html lang="en">
 
 <head>
-    <title>FXCareers </title>
-
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="">
-    <meta name="author" content="Phoenixcoded" />
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/x-icon" href="https://www.FXCareers.com/public/web/images/favicon.png">
-    <!-- vendor css -->
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/style.css">
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" href="<?= base_url() ?>public/src/assets/css/styles.css">
-    <link rel="stylesheet" href="<?= base_url() ?>public/src/assets/css/styles.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.3/bootstrap-table.min.js"></script>
-
-    <style>
-        .dataTables_wrapper {
-            position: relative;
-            clear: both;
-            /* overflow: scroll; */
-        }
-    </style>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FXCAREERS</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/font-awesome/css/font-awesome.min.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="<?=base_url()?>public/admin/assets/images/favicon.png" />
+  </head>
 
 <body class="">
 
@@ -49,14 +40,20 @@
     <?php include('include/sidebar.php'); ?>
 
     <?php $this->load->view($view); ?>
-    <script src="<?= base_url() ?>public/assets/js/vendor-all.min.js"></script>
-    <script src="<?= base_url() ?>public/assets/js/plugins/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>public/assets/js/pcoded.min.js"></script>
-
-    <!-- Apex Chart -->
-    <script src="<?= base_url() ?>public/assets/js/plugins/apexcharts.min.js"></script>
-
-
-    <!-- custom-chart js -->
-    <script src="<?= base_url() ?>public/assets/js/pages/dashboard-main.js"></script>
+    <script src="<?=base_url()?>public/admin/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="<?=base_url()?>public/admin/assets/vendors/chart.js/chart.umd.js"></script>
+    <script src="<?=base_url()?>public/admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="<?=base_url()?>public/admin/assets/js/off-canvas.js"></script>
+    <script src="<?=base_url()?>public/admin/assets/js/misc.js"></script>
+    <script src="<?=base_url()?>public/admin/assets/js/settings.js"></script>
+    <script src="<?=base_url()?>public/admin/assets/js/todolist.js"></script>
+    <script src="<?=base_url()?>public/admin/assets/js/jquery.cookie.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="<?=base_url()?>public/admin/assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
 </body>

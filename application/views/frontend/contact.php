@@ -1,102 +1,183 @@
 
-<!-- Header Start -->
-<section>
-    <div class=" breadcrumb-seccontact-bg main-section position-relative overlay-bottom">
-        <div class="container position-relative text-center text-lg-left">
-            <div class="breadscrumb-title">
-                <h1 class="text-white display-3 mb-4 wow fadeInUp">Contact Us</h1>
-                <div class="d-inline-flex text-white mb-4 wow fadeInUp" data-wow-delay="100ms">
-                    <p class="m-0 text-uppercase"><a class="text-secondary" href="./">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact Us</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Header End -->
+   <main>
 
-
-<!-- Contact Start -->
-<section class="space-sec">
-    <div class="container">
-
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="contact-form-wrap">
-                    <div class="row">
-                    <div class="col-lg-6 mb-md-4 mb-xs-4">
-
-                        <div class="section-title position-relative mb-4">
-                            <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">
-                                Need Help?
-                            </h6>
-                            <h1 class="display-6">Send Us A Message</h1>
+      <!-- breadcrumb-area-start -->
+      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+         <div class="container">
+            <div class="row ">
+               <div class="col-md-12">
+                  <div class="it-breadcrumb-content z-index-3 text-center">
+                     <div class="it-breadcrumb-title-box">
+                        <h3 class="it-breadcrumb-title">contact us</h3>
+                     </div>
+                     <div class="it-breadcrumb-list-wrap">
+                        <div class="it-breadcrumb-list">
+                           <span><a href="index.html">home</a></span>
+                           <span class="dvdr">//</span>
+                           <span>contact</span>
                         </div>
-                        <div class="contact-form">
-                            <form <?= base_url('website/contact_submit_data'); ?> method="post">
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control bh5" placeholder="Name" name="username" required="required" />
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input type="tel" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="form-control bh5" name="mobile_no" placeholder="Mobile Number" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control bh5" placeholder="Email" name="email" required="required" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control bh5" rows="5" placeholder="Message" name="message" required="required"></textarea>
-                                </div>
-                                <div>
-                                    <button class="theme-btn py-2 px-4" type="submit" name="submit">
-                                        Send Message
-                                    </button>
-                                </div>
-                            </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- breadcrumb-area-end -->
+
+      <!-- contact-area-start -->
+      <div class="it-contact__area pt-120 pb-120">
+         <div class="container">
+            <div class="it-contact__wrap fix z-index-3 p-relative">
+               <div class="it-contact__shape-1 d-none d-xl-block">
+                  <img src="assets/img/contact/shape-2-1.png" alt="">
+               </div>
+               <div class="row align-items-end">
+                  <div class="col-xl-7">
+                     <div class="it-contact__right-box">
+                        <div class="it-contact__section-box pb-20">
+                           <h4 class="it-contact__title pb-15">Get in Touch</h4>
+                           <p>Suspendisse ultrice gravida dictum fusce placerat <br>
+                              ultricies integer </p>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8601642483754!2d77.15672907614477!3d28.66390538265421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d036a3146e6e3%3A0xc7a677d027f326e7!2sFXCareers!5e0!3m2!1sen!2sin!4v1704262520351!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    </div>
-                </div>
+                        <div class="it-contact__content mb-55">
+                           <ul>
+                              <li>
+                                 <div class="it-contact__list d-flex align-items-start">
+                                    <div class="it-contact__icon">
+                                       <span><i class="fa-solid fa-location-dot"></i></span>
+                                    </div>
+                                    <div class="it-contact__text">
+                                       <span>Our Address</span>
+                                       <a href="#"> 1209, Burlington tower - Business Bay - Dubai - United Arab Emirates</a> 
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="it-contact__list d-flex align-items-start">
+                                    <div class="it-contact__icon">
+                                       <span><i class="fa-solid fa-phone phone"></i></span>
+                                    </div>
+                                    <div class="it-contact__text">
+                                       <span>Call Us</span>
+                                       <a href="tel:+99358954565">+99- 35895-4565</a>
+                                       
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="it-contact__list d-flex align-items-start">
+                                    <div class="it-contact__icon">
+                                       <span><i class="fa-solid fa-phone phone"></i></span>
+                                    </div>
+                                    <div class="it-contact__text">
+                                       <span>Email Us</span>
+                                      
+                                       <a href="mailto:supportyou@info.com">supportyou@info.com</a>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="it-contact__bottom-box d-flex align-items-center justify-content-between">
+                           <div class="it-contact__scrool smooth">
+                              <a href="#it-newsletter"><i class="fa-solid fa-arrow-down"></i>Customer Care</a>
+                           </div>
+                           <div class="it-footer-social">
+                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                              <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-5">
+                     <div class="it-contact__form-box">
+                        <form action="#">
+                           <div class="row">
+                              <div class="col-12 mb-25">
+                                 <div class="it-contact-input-box">
+                                    <label>Name*</label>
+                                    <input type="text" placeholder="Name">
+                                 </div>
+                              </div>
+                              <div class="col-12 mb-25">
+                                 <div class="it-contact-input-box">
+                                    <label>Email Address*</label>
+                                    <input type="email" placeholder="Email">
+                                 </div>
+                              </div>
+                              <div class="col-12 mb-25">
+                                 <div class="it-contact-input-box">
+                                    <label>Phone*</label>
+                                    <input type="text" placeholder="Phone">
+                                 </div>
+                              </div>
+                              <div class="col-12 mb-25">
+                                 <div class="it-contact-input-box">
+                                    <label>Subject*</label>
+                                    <input type="text" placeholder="Subject">
+                                 </div>
+                              </div>
+                              <div class="col-12 mb-25">
+                                 <div class="it-contact-textarea-box">
+                                    <label>Message</label>
+                                    <textarea placeholder="Message"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                        <button type="submit" class="it-btn">
+                           <span>
+                           Send Message
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5"
+                                 stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                             </svg>
+                        </span>
+                     </button>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- Contact End -->
-<section class="space-sec pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-        <div class="col-10 text-center mb-5">
-                <h2 class="display-5 text-center mb-3 wow fadeInUp" data-wow-delay="100ms">Our Presence</h2>
-                <p class=" mb-3 wow fadeInUp" data-wow-delay="200ms">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, sequi.</p>
+         </div>
+      </div>
+      <!-- contact-area-end -->
+
+      <!-- newsletter-area-start -->
+      <div id="it-newsletter" class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
+         <div class="it-newsletter-shape-1 d-none d-lg-block">
+            <img src="assets/img/newsletter/shape-1-1.png" alt="">
+         </div>
+         <div class="it-newsletter-shape-2 d-none d-lg-block">
+            <img src="assets/img/newsletter/shape-1-2.png" alt="">
+         </div>
+         <div class="it-newsletter-shape-3 d-none d-xl-block">
+            <img src="assets/img/newsletter/shape-1-3.png" alt="">
+         </div>
+         <div class="it-newsletter-shape-4 d-none d-xl-block">
+            <img src="assets/img/newsletter/shape-1-4.png" alt="">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="it-newsletter-left">
+                     <h4 class="it-section-title text-white pb-20">Join Our Newsletter</h4>
+                     <span>Subscribe our newsletter to get our latest update & news.</span>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="it-newsletter-right p-relative text-end">
+                     <input type="text" placeholder="Enter your email:">
+                     <button class="it-btn black-bg" type="submit"><span>subscribe now</span></button>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 mb-md-4 mb-xs-4  wow fadeInUp" data-wow-delay="200ms">
-             <div class="our-locations d-flex align-items-center gap-4  mb-3">
-                <img src="img/indea.png" alt="">
-                <h5>Delhi</h5> 
-             </div>
-             <p>48, 4th floor, Build High Contractions Tower- 2,  Rama Road Industrial Area,  Moti Nagar, Delhi 110015.</p>
-            </div> 
-            <div class="col-md-4 mb-md-4 mb-xs-4 wow fadeInUp" data-wow-delay="300ms">
-             <div class="our-locations d-flex align-items-center  gap-4  mb-3">
-                <img src="img/indea.png" alt="">
-                <h5>Ahemdabad</h5>
-             </div>
-             <p>Z1 Zion tower, office no. 1109,   Sindhu Bhawan Road Near Hotel Avalon Vodakdev  Ahmedabad  380001</p>
-            </div>
-            <div class="col-md-4 mb-md-4 mb-xs-4 wow fadeInUp" data-wow-delay="300ms">
-             <div class="our-locations d-flex align-items-center  gap-4 mb-3">
-                <img src="img/dubai.png" alt="">
-                <h5>Dubai</h5>                
-             </div>
-             <p>1209, Burlington tower Business Bay, <br>   Dubai - United Arab Emirates</p>
-            </div>
-        </div>
-    </div>
-</section>
+         </div>
+      </div>
+      <!-- newsletter-area-end -->
+   </main>
+<!-- footer Include  -->

@@ -33,7 +33,7 @@ class Website extends CI_Controller
     public function about()
     {
         $this->load->view('frontend/include/header');
-        $this->load->view('frontend/about');
+        $this->load->view('frontend/about-us');
         $this->load->view('frontend/include/footer');
     }
     public function analysis()

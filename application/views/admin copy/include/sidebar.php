@@ -1,157 +1,177 @@
-<nav class="pcoded-navbar  ">
-	<?php
-	$cur_tab = $this->uri->segment(2) == '' ? 'dashboard' : $this->uri->segment(2);
-	?>
-	<div class="navbar-wrapper  ">
-		<div class="navbar-content scroll-div ">
+<!--  Body Wrapper -->
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+  <!-- Sidebar Start -->
+  <aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div>
+      <div class="brand-logo d-flex align-items-center justify-content-between">
+        <a href="<?= base_url() ?>" class="text-nowrap logo-img">
+          <img src="<?= base_url() ?>public/web/img/logo.png" width="180" alt="" />
 
-			<div class="">
-				<div class="main-menu-header">
-					<img class="img-radius" src="<?= base_url() ?>public/assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
-					<div class="user-details">
-						<?php
-						$userName = $this->session->userdata('name');
-						$userRole = $this->session->userdata('role');
-						?>
-						<span><?= $userName !== null ? ucwords($userName) : '' ?></span>
-						<div id="more-details"><?= $userRole !== null ? ucwords($userRole) : '' ?><i class="fa fa-chevron-down m-l-5"></i></div>
-					</div>
-				</div>
-				<div class="collapse" id="nav-user-link">
-					<ul class="list-unstyled">
+        </a>
+        <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+          <i class="ti ti-x fs-8"></i>
+        </div>
+      </div>
+      <!-- Sidebar navigation-->
+      <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+        <ul id="sidebarnav">
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu"><b style="font-size:20px;">HOME</b></span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/dashboard '); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-dashboard"></i>
+              </span>
+              <span class="hide-menu">DASHBOARD</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/users'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-user"></i>
+              </span>
+              <span class="hide-menu">USER</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/seo/seo_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-seo"></i>
+              </span>
+              <span class="hide-menu">SEO</span>
+            </a>
+          </li>
 
-						<li class="list-group-item"><a href="<?= site_url('admin/auth/logout'); ?>"><i class="feather icon-log-out m-r-5"></i>LOGOUT</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<ul class="nav pcoded-inner-navbar ">
-
-				<li class="nav-item">
-					<a href="<?= site_url('admin/dashboard'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-house" style="color:white;"></i></span><span class="pcoded-mtext">DASHBOARD</span></a>
-				</li>
-
-				<?php if ($this->session->userdata('role') === '1') : ?>
-					<li class="nav-item pcoded-hasmenu">
-						<a href="#" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-user" style="color:white;"></i></span><span class="pcoded-mtext">USER</span></a>
-						<ul class="pcoded-submenu">
-							<li><a href="<?= base_url('admin/users/add'); ?>">Add User</a></li>
-							<li><a href="<?= base_url('admin/users'); ?>">View User</a></li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/news/news_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-newspaper" style="color:white;"></i></span><span class="pcoded-mtext">NEWS</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/news_category/news_category_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-th-list" style="color:white;"></i></span><span class="pcoded-mtext">NEWS CATEGORY</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/news_sub_category/news_sub_category_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-folder-open" style="color:white;"></i></span><span class="pcoded-mtext">NEWS SUB CATEGORY</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/calender/calender_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-calendar" style="color:white;"></i></span><span class="pcoded-mtext">CALENDAR</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/charts/charts_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-chart-pie" style="color:white;"></i></span><span class="pcoded-mtext">CHARTS</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/event/event_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-calendar" style="color:white;"></i></span><span class="pcoded-mtext">EVENTS</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/menu/menu_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-bars" style="color:white;"></i></span><span class="pcoded-mtext">MENU</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/sub_menu/sub_menu_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-caret-square-right" style="color:white;"></i></span><span class="pcoded-mtext">SUB MENU</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/sub_sub_menu/sub_sub_menu_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-caret-square-down" style="color:white;"></i></span><span class="pcoded-mtext">SUB SUB MENU</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/advertisement/advertisement_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-ad" style="color:white;"></i></span><span class="pcoded-mtext">ADVERTISEMENT</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/contact_us/contact_us_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-user" style="color:white;"></i></span><span class="pcoded-mtext">CONTACT US</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/blog_category/blog_category_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-pencil-alt" style="color:white;"></i></span><span class="pcoded-mtext">BLOG CATEGORY</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/blog/blog_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-blog" style="color:white;"></i></span><span class="pcoded-mtext">BLOGS</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/pricing/pricing_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-tags" style="color:white;"></i></span><span class="pcoded-mtext">PRICING</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/pricing_features/pricing_features_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-cogs" style="color:white;"></i></span><span class="pcoded-mtext">PRICING FEATURES</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/signal/signal_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-signal" style="color:white;"></i></span><span class="pcoded-mtext">SIGNAL</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/learn/learn_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-book" style="color:white;"></i></span><span class="pcoded-mtext">LEARN</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/trade/trade_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-handshake" style="color:white;"></i></span><span class="pcoded-mtext">TRADE</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/analysis/analysis_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-search" style="color:white;"></i></span><span class="pcoded-mtext">ANALYSIS</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/seo/seo_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-search-plus" style="color:white;"></i></span><span class="pcoded-mtext">SEO</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/type/type_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-bars" style="color:white;"></i></span><span class="pcoded-mtext">TYPE</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/sub_type/sub_type_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-caret-square-down" style="color:white;"></i></span><span class="pcoded-mtext">SUB TYPE</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/news_type/news_type_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-envelope" style="color:white;"></i></span><span class="pcoded-mtext">NEWS TYPE</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/author_role/author_role_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-user" style="color:white;"></i></span><span class="pcoded-mtext">AUTHOR ROLE</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/author/author_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-user" style="color:white;"></i></span><span class="pcoded-mtext">AUTHOR</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/author_pricing/author_pricing_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-tags" style="color:white;"></i></span><span class="pcoded-mtext">AUTHOR PRICING</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/author_pricing_features/author_pricing_features_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-cogs" style="color:white;"></i></span><span class="pcoded-mtext">AUTHOR PRICING FEATURES</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/currency_pair/currency_pair_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-user" style="color:white;"></i></span><span class="pcoded-mtext">CURRENCY PAIR</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/trading_signals/trading_signals_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-signal" style="color:white;"></i></span><span class="pcoded-mtext">TRADING SIGNAL</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/live_rate/live_rate_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-percent" style="color:white;"></i></span><span class="pcoded-mtext">LIVE RATE</span></a>
-					</li>
-				<?php endif; ?>
-
-
-				<!-- editor panel -->
-				<?php if ($this->session->userdata('role') === '3') : ?>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/news/news_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-newspaper" style="color:white;"></i></span><span class="pcoded-mtext">NEWS</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/news_category/news_category_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-th-list" style="color:white;"></i></span><span class="pcoded-mtext">NEWS CATEGORY</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/news_sub_category/news_sub_category_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-folder-open" style="color:white;"></i></span><span class="pcoded-mtext">NEWS SUB CATEGORY</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/blog_category/blog_category_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-pencil-alt" style="color:white;"></i></span><span class="pcoded-mtext">BLOG CATEGORY</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="<?= base_url('admin/blog/blog_view'); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa-solid fa fa-blog" style="color:white;"></i></span><span class="pcoded-mtext">BLOGS</span></a>
-					</li>
-				<?php endif; ?>
-			</ul>
-
-		</div>
-	</div>
-</nav>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/blog_category/blog_category_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-brand-blogger"></i>
+              </span>
+              <span class="hide-menu">BLOGS CATEGORY</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/blog_detail/blog_detail_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-article"></i>
+              </span>
+              <span class="hide-menu">BLOGS DETAIL</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/analysis_detail/analysis_detail_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-article"></i>
+              </span>
+              <span class="hide-menu">ANALYSIS DETAIL</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/gallery/gallery_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-photo-check"></i>
+              </span>
+              <span class="hide-menu">GALLERY</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/sub_gallery/sub_gallery_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-photo-star"></i>
+              </span>
+              <span class="hide-menu">SUB GALLERY</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/course_category/course_category_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-book"></i>
+              </span>
+              <span class="hide-menu">COURSE CATEGORY</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/course_mode/course_mode_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-book"></i>
+              </span>
+              <span class="hide-menu">COURSE MODE</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/course_language/course_language_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-book"></i>
+              </span>
+              <span class="hide-menu">COURSE LANGUAGE</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/course/course_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-certificate-2"></i>
+              </span>
+              <span class="hide-menu">COURSE</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/topic/topic_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-presentation-analytics"></i>
+              </span>
+              <span class="hide-menu">TOPIC</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/curriculum/curriculum_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-list-details"></i>
+              </span>
+              <span class="hide-menu">CURRICULUM</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/detail/detail_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-details"></i>
+              </span>
+              <span class="hide-menu"> COURSE DETAIL</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/ebook/ebook_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-book"></i>
+              </span>
+              <span class="hide-menu">E-BOOK</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/slider/slider_view'); ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-slideshow"></i>
+              </span>
+              <span class="hide-menu">SLIDER</span>
+            </a>
+          </li>
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu"><b style="font-size:20px;">AUTH</b></span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="<?= base_url('admin/auth/login') ?>" aria-expanded="false">
+              <span>
+                <i class="ti ti-login"></i>
+              </span>
+              <span class="hide-menu">LOGOUT</span>
+            </a>
+          </li>
+      </nav>
+      <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+  </aside>
+  <!--  Sidebar End -->

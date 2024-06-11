@@ -1,98 +1,232 @@
-<style>
-    .blog-card {
-        transition: all .3s ease-in-out;
-    }
 
-    .blog-card:hover {
-        transform: translateY(-10px);
-        filter: drop-shadow(0 13px 10px #0f0f0050);
-    }
+   <main>
 
-    .blog-card>a>img {
-        height: 200px;
-        object-fit: contain;
-    }
-
-    .blog-card .card-body {
-        background-color: #fffaea;
-    }
-</style>
-
-<!-- Header Start -->
-<section>
-<div class="breadcrumb-sec blog-bg main-section position-relative overlay-bottom" >
-    <div class="container position-relative text-center text-lg-left">
-        <div class="breadscrumb-title">
-            <h1 class="text-white display-3 mb-4 wow fadeInUp">Blog</h1>
-            <div class="d-inline-flex text-white mb-4 wow fadeInUp" data-wow-delay="100ms">
-                <p class="m-0 text-uppercase"><a class="text-secondary" href="<?=base_url()?>">Home</a></p>
-                <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">Blog</p>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-<!-- Header End -->
-
-
-<!-- Contact Start -->
-<section class="space-sec">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-10 offset-lg-1 text-center">
-                <div class="section-title position-relative mb-4">
-                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2 wow fadeInUp">LATEST BLOGS</h6>
-                    <h2 class="display-5 mb-3 wow fadeInUp" data-wow-delay="100ms">Stay Up-to-Date with our Latest Financial&nbsp;Blogs</h2>
-                </div>
-            </div>
-            <?php 
-            foreach($blog_detail_view as $row):?>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="card border-primary rounded overflow-hidden h-100 blog-card">
-                    <a href="<?=base_url()?>blog/<?=str_replace(' ','-',strtolower($row->blog_name));?>">
-                        
-                            <img src="<?=base_url('uploads/blogs/').$row->blog_image;?>" class="card-img-top" alt="USDINR Analysis" />
-                        
-                        <div class="card-body">
-                            <p class="card-text d-flex justify-content-between">
-                                <small class="text-muted"><i class="fa-solid fa-clock mr-2"></i><?= date('d-m-Y', strtotime($row->blog_date))?></small>
-                                <small class="text-muted"><i class="fa-solid fa-user-tie mr-2"></i><?=$row->blog_author?></small>
-                            </p>
-                            <h5 class="card-title">
-                                <a class="text-secondary" href="<?=base_url()?>blog-detail"><?=$row->blog_name?></a>
-                            </h5>
-                            <p class="card-text"><?=substr($row->blog_desc,0,30),'...'; ?></p>
-                            <a href="<?= base_url('blog/')?><?=str_replace(' ','-',strtolower($row->blog_name));?>"class="btn btn-primary">Read More</a>
-                            </a> 
+      <!-- breadcrumb-area-start -->
+      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+         <div class="container">
+            <div class="row ">
+               <div class="col-md-12">
+                  <div class="it-breadcrumb-content z-index-3 text-center">
+                     <div class="it-breadcrumb-title-box">
+                        <h3 class="it-breadcrumb-title">blog </h3>
+                     </div>
+                     <div class="it-breadcrumb-list-wrap">
+                        <div class="it-breadcrumb-list">
+                           <span><a href="index.html">home</a></span>
+                           <span class="dvdr">//</span>
+                           <span>blog</span>
                         </div>
-                    </div>
-                </div>
-            <?php endforeach ?>
-            <div class="col-12">
-                <nav aria-label="pagination-navigation">
-                    <ul class="pagination justify-content-center mt-3 wow fadeInUp">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
-                        </li>
-                        <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
-</section>
-<!-- Contact End -->
+         </div>
+      </div>
+      <!-- breadcrumb-area-end -->
 
+      <!-- blog-area-start -->
+      <div class="it-blog-area  pt-120 pb-90">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                     <div class="it-blog-item">
+                        <div class="it-blog-thumb fix">
+                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-1.jpg" alt=""></a>
+                        </div>
+                        <div class="it-blog-meta pb-15">
+                           <span>
+                              <i class="fa-solid fa-calendar-days"></i>
+                              14 June 2023</span>
+                           <span>
+                              <i class="fa-light fa-messages"></i>
+                              Comment (06)</span>
+                        </div>
+                        <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
+                        <a class="it-btn sm" href="blog-details.html">
+                           <span>
+                              read more
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>   
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                     <div class="it-blog-item">
+                        <div class="it-blog-thumb fix">
+                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-2.jpg" alt=""></a>
+                        </div>
+                        <div class="it-blog-meta pb-15">
+                           <span>
+                              <i class="fa-solid fa-calendar-days"></i>
+                              14 June 2023</span>
+                           <span>
+                              <i class="fa-light fa-messages"></i>
+                              Comment (06)</span>
+                        </div>
+                        <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
+                        <a class="it-btn sm" href="blog-details.html">
+                           <span>
+                              read more
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>   
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                     <div class="it-blog-item">
+                        <div class="it-blog-thumb fix">
+                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-3.jpg" alt=""></a>
+                        </div>
+                        <div class="it-blog-meta pb-15">
+                           <span>
+                              <i class="fa-solid fa-calendar-days"></i>
+                              14 June 2023</span>
+                           <span>
+                              <i class="fa-light fa-messages"></i>
+                              Comment (06)</span>
+                        </div>
+                        <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
+                        <a class="it-btn sm" href="blog-details.html">
+                           <span>
+                              read more
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>   
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                     <div class="it-blog-item">
+                        <div class="it-blog-thumb fix">
+                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-1.jpg" alt=""></a>
+                        </div>
+                        <div class="it-blog-meta pb-15">
+                           <span>
+                              <i class="fa-solid fa-calendar-days"></i>
+                              14 June 2023</span>
+                           <span>
+                              <i class="fa-light fa-messages"></i>
+                              Comment (06)</span>
+                        </div>
+                        <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
+                        <a class="it-btn sm" href="blog-details.html">
+                           <span>
+                              read more
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>   
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                     <div class="it-blog-item">
+                        <div class="it-blog-thumb fix">
+                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-2.jpg" alt=""></a>
+                        </div>
+                        <div class="it-blog-meta pb-15">
+                           <span>
+                              <i class="fa-solid fa-calendar-days"></i>
+                              14 June 2023</span>
+                           <span>
+                              <i class="fa-light fa-messages"></i>
+                              Comment (06)</span>
+                        </div>
+                        <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
+                        <a class="it-btn sm" href="blog-details.html">
+                           <span>
+                              read more
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>   
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                     <div class="it-blog-item">
+                        <div class="it-blog-thumb fix">
+                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-3.jpg" alt=""></a>
+                        </div>
+                        <div class="it-blog-meta pb-15">
+                           <span>
+                              <i class="fa-solid fa-calendar-days"></i>
+                              14 June 2023</span>
+                           <span>
+                              <i class="fa-light fa-messages"></i>
+                              Comment (06)</span>
+                        </div>
+                        <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
+                        <a class="it-btn sm" href="blog-details.html">
+                           <span>
+                              read more
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>   
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- blog-area-end -->
 
+      <!-- newsletter-area-start -->
+      <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
+         <div class="it-newsletter-shape-1 d-none d-lg-block">
+            <img src="assets/img/newsletter/shape-1-1.png" alt="">
+         </div>
+         <div class="it-newsletter-shape-2 d-none d-lg-block">
+            <img src="assets/img/newsletter/shape-1-2.png" alt="">
+         </div>
+         <div class="it-newsletter-shape-3 d-none d-xl-block">
+            <img src="assets/img/newsletter/shape-1-3.png" alt="">
+         </div>
+         <div class="it-newsletter-shape-4 d-none d-xl-block">
+            <img src="assets/img/newsletter/shape-1-4.png" alt="">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="it-newsletter-left">
+                     <h4 class="it-section-title text-white pb-20">Join Our Newsletter</h4>
+                     <span>Subscribe our newsletter to get our latest update & news.</span>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="it-newsletter-right p-relative text-end">
+                     <input type="text" placeholder="Enter your email:">
+                     <button class="it-btn black-bg" type="submit"><span>subscribe now</span></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- newsletter-area-end -->
+
+   </main>
+<!-- footer Include  -->

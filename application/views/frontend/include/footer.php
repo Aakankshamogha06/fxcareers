@@ -1,157 +1,137 @@
-<!-- Footer Start -->
-<div class="container-fluid position-relative overlay-top bg-secondary text-white-50 py-5" style="margin-top: 20px">
-    <div class="container  pt-5">
-        <div class="row align-items-center">
-            <div class="col-md-6 mb-5 pr-lg-5">
-                <a href="<?=base_url()?>" class="navbar-brand">
-                    <img src="<?= base_url() ?>public/web/img/logo-light.png" alt="Footer Logo" title="Footer Logo" class="img-fluid" />
-                </a>
-                <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit assumenda odit cupiditate, vel sit fuga vero ut, laboriosam quibusdam sint hic accusamus impedit deserunt quis reprehenderit perspiciatis eos in facere?</p>
+<footer>
+   <!-- footer-area-start -->
+   <div class="it-footer-area it-footer-bg black-bg pt-120 pb-70" data-background="<?=base_url()?>public/web/assets/img/footer/bg-1-1.jpg">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-50">
+               <div class="it-footer-widget footer-col-1">
+                  <div class="it-footer-logo pb-25">
+                     <a href="index-html"><img src="<?=base_url()?>public/web/assets/img/logo/logo-white.png" alt="" width="40%;"></a>
+                  </div>
+                  <div class="it-footer-text pb-5">
+                     <p>Interdum velit laoreet id donec ultrices <br> tincidunt arcu. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu.</p>
+                  </div>
+                  <div class="it-footer-social">
+                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-6 mb-5 pl-lg-5">
-                <h3 class="text-white mb-4">Newsletter</h3>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px" placeholder="Your Email Address" />
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
+            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 mb-50">
+               <div class="it-footer-widget footer-col-3">
+                  <h4 class="it-footer-title">quick links:</h4>
+                  <div class="it-footer-list">
+
+                     <ul class="">
+                        <li><a href="about-us.php"><i class="fa-regular fa-angle-right"></i> About Us</a></li>
+                        <li><a href="trade-idea.php"><i class="fa-regular fa-angle-right"></i>Trade Idea</a></li>
+                        <li><a href="gallery.php"><i class="fa-regular fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="e-books.php"><i class="fa-regular fa-angle-right"></i> E-Books</a></li>
+                        <li><a href="blog.php"><i class="fa-regular fa-angle-right"></i> Blog</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
+               <div class="it-footer-widget footer-col-2">
+                  <h4 class="it-footer-title">Support:</h4>
+                  <div class="it-footer-list">
+
+                     <ul class="">
+                        <li><a href="#"><i class="fa-regular fa-angle-right"></i> Disclaimer</a></li>
+                        <li><a href="#"><i class="fa-regular fa-angle-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fa-regular fa-angle-right"></i> Career</a></li>
+                        <li><a href="#"><i class="fa-regular fa-angle-right"></i> Refund Policy</a></li>
+                        <li><a href="#"><i class="fa-regular fa-angle-right"></i> Terms &amp; Conditions</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
+               <div class="it-footer-widget footer-col-4">
+                  <h4 class="it-footer-title">Gallery</h4>
+                  <div class="it-footer-gallery-box">
+                     <div class="row gx-5">
+                        <div class="col-md-4 col-4">
+                           <div class="it-footer-thumb mb-10">
+                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-1.png" alt="">
+                           </div>
                         </div>
-                    </div>
-                </div>
+                        <div class="col-md-4 col-4">
+                           <div class="it-footer-thumb mb-10">
+                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-4 mb-10">
+                           <div class="it-footer-thumb">
+                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-3.png" alt="">
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-4">
+                           <div class="it-footer-thumb">
+                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-4.png" alt="">
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-4">
+                           <div class="it-footer-thumb">
+                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-5.png" alt="">
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-4">
+                           <div class="it-footer-thumb">
+                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-6.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <h3 class="text-white mb-4">Get In Touch</h3>
-                <p>
-                    <i class="fa fa-map-marker-alt mr-2"></i>1209, Burlington tower - Business Bay - Dubai - United Arab Emirates
-                </p>
-                <p>
-                    <a href="tel:18001203180" class="text-white-50"><i class="fa fa-phone-alt fa-rotate-90 mr-2"></i>1800-120-3180</a>
-                </p>
-                <p>
-                    <a href="mailto:info@fxcareers.ae" class="text-white-50"><i class="fa fa-envelope mr-2"></i>info@fxcareers.ae</a>
-                </p>
-                <div class=" social-icons d-flex justify-content-start mt-4">
-                    <a class="text-white mr-3" href="https://www.facebook.com/Officialfxcareers/" target="_blank">
-                        <i class="fab  fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white mr-3" href="https://twitter.com/i/flow/login?redirect_after_login=%2FFxcareers11" target="_blank">
-                        <i class="fa-brands  fa-x-twitter"></i>
-                    </a>
-                    <a class="text-white mr-3" href="https://www.linkedin.com/company/fxcareers/" target="_blank">
-                        <i class="fab  fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white mr-3" href="https://www.instagram.com/official_fxcareers/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white" href="https://www.youtube.com/@officialfxcareers" target="_blank">
-                        <i class="fab  fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h3 class="text-white mb-4">Our Programs</h3>
-                <div class="d-flex flex-column justify-content-start footer-links">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>MCM</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>MCM VIP (Flagship Program)</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Basic Program</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Intermediate Program</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Advance Program</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h3 class="text-white mb-4">Quick Links</h3>
-                <div class="d-flex flex-column justify-content-start footer-links">
-                    <a class="text-white-50 mb-2" href="<?=base_url()?>about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white-50 mb-2" href="<?=base_url()?>analysis"><i class="fa fa-angle-right mr-2"></i>Analysis</a>
-                    <a class="text-white-50 mb-2" href="<?=base_url()?>gallery"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-                    <a class="text-white-50 mb-2" href="<?=base_url()?>ebook"><i class="fa fa-angle-right mr-2"></i>E-Books</a>
-                    <a class="text-white-50" href="<?=base_url()?>blog"><i class="fa fa-angle-right mr-2"></i>Blogs</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid bg-secondary text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, 0.1) !important">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-5 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0">Copyright &copy; <?= date('Y') ?> <a href="<?=base_url()?>" class="text-white">FX Careers</a>. All Rights Reserved</p>
-            </div>
-            <div class="col-md-6 col-lg-7 text-center text-md-right footer-links">
-                <a href="#" class="text-white-50">Disclaimer</a>
-                <span class="px-2">|</span>
-                <a href="#" class="text-white-50">Privacy Policy</a>
-                <span class="px-2">|</span>
-                <a href="#" class="text-white-50">Career</a>
-                <span class="px-2">|</span>
-                <a href="#" class="text-white-50">Refund Policy</a>
-                <span class="px-2">|</span>
-                <a href="#" class="text-white-50">Terms of Service</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
+         </div>
+      </div>
+   </div>
+   <!-- footer-area-end -->
 
-<!-- Back to Top -->
-<a role="button" class="btn btn-lg btn-primary rounded-circle btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+   <!-- copy-right area start -->
+   <div class="it-copyright-area it-copyright-height">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+               <div class="it-copyright-text text-center">
+                  <p>Copyright © 2023 <a href="#">FXCareers</a> || All Rights Reserved</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- copy-right area end -->
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
-<!-- <script src="<?= base_url() ?>public/web/js/bootstrap.bundle.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="<?= base_url() ?>public/web/lib/easing/easing.min.js"></script>
-<script src="<?= base_url() ?>public/web/lib/waypoints/waypoints.min.js"></script>
-<script src="<?= base_url() ?>public/web/lib/counterup/counterup.min.js"></script>
-<script src="<?= base_url() ?>public/web/lib/owlcarousel/owl.carousel.js"></script>
-<script src="<?= base_url() ?>public/web/lib/fancybox/fancybox.min.js"></script>
-<script src="<?= base_url() ?>public/web/lib/wow/wow.min.js"></script>
+</footer>
 
-<!-- Javascript -->
-<script src="<?= base_url() ?>public/web/js/main.js"></script>
-<script>
-  // banner-carousel
 
-  $('.banner-carousel').owlCarousel({
-    loop: true,
-    margin: 0,
-    nav: true,
-    //animateOut: 'fadeOut',
-    //animateIn: 'fadeIn',
-    active: true,  
-    autoplay: true,
-    autoplayTimeout:10000,
-    navText: ['<span class="fa-solid fa-arrow-left"></span>', '<span class="fa-solid fa-arrow-right"></span>'],
-    responsive: {
-        
-      0: {
-        items: 1,
-        nav: false
-      },
-      600: {
-        items: 1,
-        nav: false
-      },
-      767: {
-        items: 1,
-        nav: false
-      },
-      800: {
-        items: 1,
-        nav: false
-      },
-      991: {
-        items: 1,
-        nav: false
-      },
-      1024: {
-        items: 1
-      }
-    }
-  });</script>
+
+<!-- JS here -->
+<script src="<?=base_url()?>public/web/assets/js/jquery.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/waypoints.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/bootstrap.bundle.min.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/slick.min.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/magnific-popup.js"></script>
+<script src="<?=base_url()?>public/web/assets/css/fancybox/fancybox.min.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/purecounter.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/wow.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/nice-select.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/swiper-bundle.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/isotope-pkgd.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/imagesloaded-pkgd.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/ajax-form.js"></script>
+<script src="<?=base_url()?>public/web/assets/js/main.js"></script>
+
+
+
 </body>
 
 </html>

@@ -1,11 +1,18 @@
-<div class="pcoded-main-container">
-  <div class="pcoded-content">
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- [ Main Content ] start -->
-    <div class="row">
-      <!-- [ sample-page ] start -->
-      <div class="col-sm-12">
-        <div class="card">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container-fluid">
+
+      <div class="card">
+        <div class="card-body">
           <div class="card-header">
             <h5>View</h5>
             <a href="<?= base_url('admin/seo/add_seo'); ?>">
@@ -13,17 +20,15 @@
             </a>
           </div>
           <div class="card-body">
-            <table id="table_id" class="table table-striped">
+            <table id="table_id" class="table ">
               <thead>
                 <tr>
-                  <th>Sr No</th>
-                  <th>page Name</th>
-                  <th>seo url</th>
-                  <th>seo keywords</th>
-                  <th>meta description</th>
-                  <th>seo title</th>
-                  
-                  <th style="width: 150px;" class="text-right">Option</th>
+                  <th>SR NO</th>
+                  <th>PAGE NAME</th>
+                  <th>KEYWORDS</th>
+                  <th>TITLE</th>
+                  <th>META DESCRIPTION</th>
+                  <th style="width: 150px;" class="text-right">OPTION</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,27 +38,30 @@
                   <tr>
                     <td><?= $c++; ?></td>
                     <td><?= $row->page_name ?></td>
-                    <td><?= $row->url ?></td>
                     <td><?= $row->keywords ?></td>
-                    <td><?= $row->meta_description ?></td>
                     <td><?= $row->title ?></td>
-
-                    <td class="text-right"><a href="<?= base_url('admin/seo/seo_edit/' . $row->id); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/seo/seo_delete/' . $row->id); ?>" class="btn btn-danger btn-flat" onclick="return confirm('Are you sure want to delete ?');">Delete</a></td>
+                    <td><?= $row->meta_description ?></td>
+                    <td class="text-right"><a href="<?= base_url('admin/seo/seo_edit/' . $row->id); ?>">
+                        <i class="ti ti-edit" style="font-size:40px; color:blue;" style="font-size:15px; padding:0px; "></i></a>
+                      <a href="<?= base_url('admin/seo/seo_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"></a>
+                    </td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
-
             </table>
           </div>
         </div>
       </div>
-      <!-- [ sample-page ] end -->
     </div>
-    <!-- [ Main Content ] end -->
   </div>
-</div>
-<script>
-  jQuery(document).ready(function($) {
-    $('#table_id').DataTable();
-  });
-</script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+      $('#table_id').DataTable();
+    });
+  </script>
+
+</body>
+
+</html>

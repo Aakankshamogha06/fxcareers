@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Fx Signals</title>
+    <title>FXCareers </title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <link rel="icon" href="<?= base_url() ?>public/signal_imgs/logo.png" type="image/">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="" />
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-
+    <link rel="icon" type="image/x-icon" href="https://www.FXCareers.com/public/web/images/favicon.png">
     <!-- vendor css -->
     <link rel="stylesheet" href="<?= base_url() ?>public/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <style>
-    .dataTables_wrapper {
-        position: relative;
-        clear: both;
-        overflow: scroll;
-    }
-    td{
-        text-align: center;
-    }
-    th{
-        text-align: center;
-    }
-    </style>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="<?= base_url() ?>public/src/assets/css/styles.css">
+    <link rel="stylesheet" href="<?= base_url() ?>public/src/assets/css/styles.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.3/bootstrap-table.min.js"></script>
+
+    <style>
+        .dataTables_wrapper {
+            position: relative;
+            clear: both;
+            /* overflow: scroll; */
+        }
+    </style>
 </head>
 
 <body class="">
@@ -40,6 +40,10 @@
             <div class="loader-fill"></div>
         </div>
     </div>
+
+
+
+
     <?php include('include/navbar.php'); ?>
 
     <?php include('include/sidebar.php'); ?>
@@ -56,5 +60,3 @@
     <!-- custom-chart js -->
     <script src="<?= base_url() ?>public/assets/js/pages/dashboard-main.js"></script>
 </body>
-
-</html>
