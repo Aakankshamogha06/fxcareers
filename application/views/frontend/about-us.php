@@ -13,7 +13,7 @@
                      </div>
                      <div class="it-breadcrumb-list-wrap">
                         <div class="it-breadcrumb-list">
-                           <span><a href="index.html">home</a></span> 
+                           <span><a href="<?=base_url()?>">home</a></span> 
                            <span class="dvdr">//</span>
                            <span>about us</span>
                         </div>
@@ -82,7 +82,7 @@
                      </div>
                   </div>
                   <div class="it-about-3-btn-box p-relative">
-                     <a class="it-btn" href="contact.html">
+                     <a class="it-btn" href="<?=base_url()?>contact">
                         <span>
                            admission open
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
@@ -298,14 +298,14 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="it-course-item">
                   <div class="it-course-thumb mb-20 p-relative">
-                     <a href="course-details.php"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
+                     <a href="<?=base_url()?>course-details"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
                      <div class="it-course-thumb-text">
                         <span>Online</span>
                      </div>
                   </div>
                   <div class="it-course-content">
 
-                     <h4 class="it-course-title pb-5"><a href="course-details.php">Financial Market Training for Advanced</a></h4>
+                     <h4 class="it-course-title pb-5"><a href="<?=base_url()?>course-details">Financial Market Training for Advanced</a></h4>
                      <div class="it-course-info pb-15 mb-25 d-flex justify-content-between">
                         <span><i class="fa-light fa-file-invoice"></i>Lesson 10</span>
                         <span><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span>
@@ -314,7 +314,7 @@
 
                      <div class="it-course-price-box d-flex justify-content-between">
                         <span><i>$60</i> $120</span>
-                        <a href="course-details.php"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
+                        <a href="<?=base_url()?>course-details"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
                      </div>
                   </div>
                </div>
@@ -322,14 +322,14 @@
             <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="it-course-item">
                   <div class="it-course-thumb mb-20 p-relative">
-                     <a href="course-details.php"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
+                     <a href="<?=base_url()?>course-details"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
                      <div class="it-course-thumb-text">
                         <span>Online</span>
                      </div>
                   </div>
                   <div class="it-course-content">
 
-                     <h4 class="it-course-title pb-5"><a href="course-details.php">Financial Market Training for Advanced</a></h4>
+                     <h4 class="it-course-title pb-5"><a href="<?=base_url()?>course-details">Financial Market Training for Advanced</a></h4>
                      <div class="it-course-info pb-15 mb-25 d-flex justify-content-between">
                         <span><i class="fa-light fa-file-invoice"></i>Lesson 10</span>
                         <span><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span>
@@ -338,7 +338,7 @@
 
                      <div class="it-course-price-box d-flex justify-content-between">
                         <span><i>$60</i> $120</span>
-                        <a href="course-details.php"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
+                        <a href="<?=base_url()?>course-details"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
                      </div>
                   </div>
                </div>
@@ -346,14 +346,14 @@
             <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="it-course-item">
                   <div class="it-course-thumb mb-20 p-relative">
-                     <a href="course-details.php"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
+                     <a href="<?=base_url()?>course-details"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
                      <div class="it-course-thumb-text">
                         <span>Online</span>
                      </div>
                   </div>
                   <div class="it-course-content">
 
-                     <h4 class="it-course-title pb-5"><a href="course-details.php">Financial Market Training for Advanced</a></h4>
+                     <h4 class="it-course-title pb-5"><a href="<?=base_url()?>course-details">Financial Market Training for Advanced</a></h4>
                      <div class="it-course-info pb-15 mb-25 d-flex justify-content-between">
                         <span><i class="fa-light fa-file-invoice"></i>Lesson 10</span>
                         <span><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span>
@@ -362,14 +362,14 @@
 
                      <div class="it-course-price-box d-flex justify-content-between">
                         <span><i>$60</i> $120</span>
-                        <a href="course-details.php"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
+                        <a href="<?=base_url()?>course-details"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
                      </div>
                   </div>
                </div>
             </div>
                <div class="col-xl-12">
                   <div class="it-course-button text-center pt-45">
-                     <a class="it-btn" href="course-2.html">
+                     <a class="it-btn" href="<?=base_url()?>courses">
                         <span>
                            Load More Course
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -420,7 +420,7 @@
                            </div>
                         </div> -->
                         <div class="it-team-3-author-box">
-                           <h4 class="it-team-3-title"><a href="teacher-details.html">Nathan Allen</a></h4>
+                           <h4 class="it-team-3-title"><a href="<?=base_url()?>teacher-details">Nathan Allen</a></h4>
                            <span>Teacher</span>
                         </div>
                      </div>
@@ -444,7 +444,7 @@
                            </div>
                         </div> -->
                         <div class="it-team-3-author-box">
-                           <h4 class="it-team-3-title"><a href="teacher-details.html">Esther Boyd</a></h4>
+                           <h4 class="it-team-3-title"><a href="<?=base_url()?>teacher-details">Esther Boyd</a></h4>
                            <span>Teacher</span>
                         </div>
                      </div>
@@ -468,7 +468,7 @@
                            </div>
                         </div> -->
                         <div class="it-team-3-author-box">
-                           <h4 class="it-team-3-title"><a href="teacher-details.html">Jamie Keller</a></h4>
+                           <h4 class="it-team-3-title"><a href="<?=base_url()?>teacher-details">Jamie Keller</a></h4>
                            <span>Teacher</span>
                         </div>
                      </div>
@@ -492,7 +492,7 @@
                            </div>
                         </div> -->
                         <div class="it-team-3-author-box">
-                           <h4 class="it-team-3-title"><a href="teacher-details.html">Jesus Pendley</a></h4>
+                           <h4 class="it-team-3-title"><a href="<?=base_url()?>teacher-details">Jesus Pendley</a></h4>
                            <span>Teacher</span>
                         </div>
                      </div>

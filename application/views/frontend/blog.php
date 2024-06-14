@@ -2,7 +2,7 @@
    <main>
 
       <!-- breadcrumb-area-start -->
-      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="<?=base_url()?>public/web/assets/img/breadcrumb/breadcrumb.jpg">
          <div class="container">
             <div class="row ">
                <div class="col-md-12">
@@ -12,7 +12,7 @@
                      </div>
                      <div class="it-breadcrumb-list-wrap">
                         <div class="it-breadcrumb-list">
-                           <span><a href="index.html">home</a></span>
+                           <span><a href="<?=base_url()?>">home</a></span>
                            <span class="dvdr">//</span>
                            <span>blog</span>
                         </div>
@@ -29,10 +29,10 @@
          <div class="container">
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                  <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">                  
                      <div class="it-blog-item">
                         <div class="it-blog-thumb fix">
-                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-1.jpg" alt=""></a>
+                           <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-1.jpg" alt=""></a>
                         </div>
                         <div class="it-blog-meta pb-15">
                            <span>
@@ -56,10 +56,10 @@
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                  <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">                  
                      <div class="it-blog-item">
                         <div class="it-blog-thumb fix">
-                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-2.jpg" alt=""></a>
+                           <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-2.jpg" alt=""></a>
                         </div>
                         <div class="it-blog-meta pb-15">
                            <span>
@@ -83,10 +83,10 @@
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                  <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">                  
                      <div class="it-blog-item">
                         <div class="it-blog-thumb fix">
-                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-3.jpg" alt=""></a>
+                           <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-3.jpg" alt=""></a>
                         </div>
                         <div class="it-blog-meta pb-15">
                            <span>
@@ -110,10 +110,10 @@
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                  <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">                  
                      <div class="it-blog-item">
                         <div class="it-blog-thumb fix">
-                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-1.jpg" alt=""></a>
+                           <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-1.jpg" alt=""></a>
                         </div>
                         <div class="it-blog-meta pb-15">
                            <span>
@@ -137,10 +137,10 @@
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                  <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">                  
                      <div class="it-blog-item">
                         <div class="it-blog-thumb fix">
-                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-2.jpg" alt=""></a>
+                           <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-2.jpg" alt=""></a>
                         </div>
                         <div class="it-blog-meta pb-15">
                            <span>
@@ -164,10 +164,10 @@
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                  <div class="it-blog-item-box" data-background="assets/img/blog/bg-1.jpg">                  
+                  <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">                  
                      <div class="it-blog-item">
                         <div class="it-blog-thumb fix">
-                           <a href="blog-details.html"><img src="assets/img/blog/blog-1-3.jpg" alt=""></a>
+                           <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-3.jpg" alt=""></a>
                         </div>
                         <div class="it-blog-meta pb-15">
                            <span>
@@ -198,16 +198,16 @@
       <!-- newsletter-area-start -->
       <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
          <div class="it-newsletter-shape-1 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-1.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-1.png" alt="">
          </div>
          <div class="it-newsletter-shape-2 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-2.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-2.png" alt="">
          </div>
          <div class="it-newsletter-shape-3 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-3.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-3.png" alt="">
          </div>
          <div class="it-newsletter-shape-4 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-4.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-4.png" alt="">
          </div>
          <div class="container">
             <div class="row">

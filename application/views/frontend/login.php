@@ -2,7 +2,7 @@
    <main>
 
       <!-- breadcrumb-area-start -->
-      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="<?=base_url()?>public/web/assets/img/breadcrumb/breadcrumb.jpg">
          <div class="container">
             <div class="row ">
                <div class="col-md-12">
@@ -50,13 +50,13 @@
                               <button class="it-btn large">Login</button>
                            </div>
                            <div class="it-signup-text">
-                              <span>Don't have an account? <a href="register.php">Register</a></span>
+                              <span>Don't have an account? <a href="register">Register</a></span>
                            </div>
                         </div>
                      </form>
                   </div>
                   <div class="col-xl-6 col-lg-6  align-self-center">
-                  <img src="assets/img/login.png" alt="" class="w-75">
+                  <img src="<?=base_url()?>public/web/assets/img/login.png" alt="" class="w-75">
                   </div>
                </div>
             </div>
@@ -67,16 +67,16 @@
       <!-- newsletter-area-start -->
       <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
          <div class="it-newsletter-shape-1 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-1.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-1.png" alt="">
          </div>
          <div class="it-newsletter-shape-2 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-2.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-2.png" alt="">
          </div>
          <div class="it-newsletter-shape-3 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-3.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-3.png" alt="">
          </div>
          <div class="it-newsletter-shape-4 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-4.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-4.png" alt="">
          </div>
          <div class="container">
             <div class="row">

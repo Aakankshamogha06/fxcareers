@@ -38,7 +38,7 @@
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.</p>
                      <div class="it-hero-2-btn-box d-flex align-items-center">
-                        <a class="it-btn" href="courses.php">
+                        <a class="it-btn" href="<?=base_url()?>courses">
                            <span>
                               Explore all Courses
                               <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,14 +185,14 @@
             <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="it-course-item">
                   <div class="it-course-thumb mb-20 p-relative">
-                     <a href="course-details.php"><img src="<?=base_url()?>public/web/assets/img/course/thumbail1.png" alt=""></a>
+                     <a href="<?=base_url()?>course-details"><img src="<?=base_url()?>public/web/assets/img/course/thumbail1.png" alt=""></a>
                      <div class="it-course-thumb-text">
                         <span>Online</span>
                      </div>
                   </div>
                   <div class="it-course-content">
 
-                     <h4 class="it-course-title pb-5"><a href="course-details.php">Basic Financial Market Training Module</a></h4>
+                     <h4 class="it-course-title pb-5"><a href="<?=base_url()?>course-details">Basic Financial Market Training Module</a></h4>
                      <div class="it-course-info pb-15 mb-25 d-flex justify-content-between">
                         <span><i class="fa-light fa-file-invoice"></i>Lesson 10</span>
                         <span><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span>
@@ -201,7 +201,7 @@
 
                      <div class="it-course-price-box d-flex justify-content-between">
                         <span><i>$60</i> $120</span>
-                        <a href="course-details.php"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
+                        <a href="<?=base_url()?>course-details"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
                      </div>
                   </div>
                </div>
@@ -209,14 +209,14 @@
             <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="it-course-item">
                   <div class="it-course-thumb mb-20 p-relative">
-                     <a href="course-details.php"><img src="<?=base_url()?>public/web/assets/img/course/thumbail2.png" alt=""></a>
+                     <a href="<?=base_url()?>course-details"><img src="<?=base_url()?>public/web/assets/img/course/thumbail2.png" alt=""></a>
                      <div class="it-course-thumb-text">
                         <span>Online</span>
                      </div>
                   </div>
                   <div class="it-course-content">
 
-                     <h4 class="it-course-title pb-5"><a href="course-details.php">Financial Market Training for Intermediate</a></h4>
+                     <h4 class="it-course-title pb-5"><a href="<?=base_url()?>course-details">Financial Market Training for Intermediate</a></h4>
                      <div class="it-course-info pb-15 mb-25 d-flex justify-content-between">
                         <span><i class="fa-light fa-file-invoice"></i>Lesson 10</span>
                         <span><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span>
@@ -225,7 +225,7 @@
 
                      <div class="it-course-price-box d-flex justify-content-between">
                         <span><i>$60</i> $120</span>
-                        <a href="course-details.php"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
+                        <a href="<?=base_url()?>course-details"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
                      </div>
                   </div>
                </div>
@@ -233,14 +233,14 @@
             <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="it-course-item">
                   <div class="it-course-thumb mb-20 p-relative">
-                     <a href="course-details.php"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
+                     <a href="<?=base_url()?>course-details"><img src="<?=base_url()?>public/web/assets/img/course/thumbail3.png" alt=""></a>
                      <div class="it-course-thumb-text">
                         <span>Online</span>
                      </div>
                   </div>
                   <div class="it-course-content">
 
-                     <h4 class="it-course-title pb-5"><a href="course-details.php">Financial Market Training for Advanced</a></h4>
+                     <h4 class="it-course-title pb-5"><a href="<?=base_url()?>course-details">Financial Market Training for Advanced</a></h4>
                      <div class="it-course-info pb-15 mb-25 d-flex justify-content-between">
                         <span><i class="fa-light fa-file-invoice"></i>Lesson 10</span>
                         <span><i class="fa-sharp fa-regular fa-clock"></i>19h 30m</span>
@@ -249,14 +249,14 @@
 
                      <div class="it-course-price-box d-flex justify-content-between">
                         <span><i>$60</i> $120</span>
-                        <a href="course-details.php"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
+                        <a href="<?=base_url()?>course-details"><i class="fa-light fa-cart-shopping"></i>Buy Course</a>
                      </div>
                   </div>
                </div>
             </div>
             <div class="col-xl-12">
                <div class="it-course-button text-center pt-45">
-                  <a class="it-btn" href="courses.php">
+                  <a class="it-btn" href="<?=base_url()?>courses">
                      <span>
                         Load More Course
                         <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -327,7 +327,7 @@
                         <p>Suspendisse ultrice gravida dictum fusce placerat ultricies integer quis auctor elit sed vulputate mi sit.</p>
                      </div>
                   </div>
-                  <a class="it-btn" href="about-us.php">
+                  <a class="it-btn" href="<?=base_url()?>about-us">
                      <span>
                         More About Us
                         <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -367,7 +367,7 @@
                   <span>Join Our New Session</span>
                   <h3 class="it-video-title">Call To Enroll Your Child <br> <a href="tel:+91958423452">(+91)958423452</a></h3>
                   <div class="it-video-button">
-                     <a class="it-btn" href="contact.php">
+                     <a class="it-btn" href="<?=base_url()?>contact">
                         <span>
                            Join With us
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -646,7 +646,7 @@
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris..</p>
                   </div>
                   <div class="it-team-button">
-                     <a class="it-btn mr-15" href="contact.php">
+                     <a class="it-btn mr-15" href="<?=base_url()?>contact">
                         <span>
                            Contact us
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -655,7 +655,7 @@
                            </svg>
                         </span>
                      </a>
-                     <a class="it-btn black-bg" href="course-details.php">
+                     <a class="it-btn black-bg" href="<?=base_url()?>course-details">
                         <span>
                            Explore courses
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -687,11 +687,11 @@
                               </div>
                               <div class="it-team-author-box d-flex align-items-center justify-content-between">
                                  <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="teacher-details.php">Esther Howard</a></h5>
+                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Esther Howard</a></h5>
                                     <span>Junior Instructor</span>
                                  </div>
                                  <div class="it-team-link">
-                                    <a href="teacher-details.php">
+                                    <a href="<?=base_url()?>teacher-details">
                                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="currentcolor" />
                                        </svg>
@@ -718,11 +718,11 @@
                               </div>
                               <div class="it-team-author-box d-flex align-items-center justify-content-between">
                                  <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="teacher-details.php">Beverly Hathcock</a></h5>
+                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Beverly Hathcock</a></h5>
                                     <span>Junior Instructor</span>
                                  </div>
                                  <div class="it-team-link">
-                                    <a href="teacher-details.php">
+                                    <a href="<?=base_url()?>teacher-details">
                                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="currentcolor" />
                                        </svg>
@@ -749,11 +749,11 @@
                               </div>
                               <div class="it-team-author-box d-flex align-items-center justify-content-between">
                                  <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="teacher-details.php">Donald Gonzales</a></h5>
+                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Donald Gonzales</a></h5>
                                     <span>Junior Instructor</span>
                                  </div>
                                  <div class="it-team-link">
-                                    <a href="teacher-details.php">
+                                    <a href="<?=base_url()?>teacher-details">
                                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="currentcolor" />
                                        </svg>
@@ -780,11 +780,11 @@
                               </div>
                               <div class="it-team-author-box d-flex align-items-center justify-content-between">
                                  <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="teacher-details.php">Eddie Lenz</a></h5>
+                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Eddie Lenz</a></h5>
                                     <span>Junior Instructor</span>
                                  </div>
                                  <div class="it-team-link">
-                                    <a href="teacher-details.php">
+                                    <a href="<?=base_url()?>teacher-details">
                                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="currentcolor" />
                                        </svg>
@@ -839,7 +839,7 @@
                      <span>Start from today</span>
                      <p>Join our training courses & <br>
                         Build your skill.</p>
-                     <a class="it-btn black-bg mr-15" href="contact.php">
+                     <a class="it-btn black-bg mr-15" href="<?=base_url()?>contact">
                         <span>
                            Join now
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -863,7 +863,7 @@
                      <span>Start from today</span>
                      <p>Join our training courses & <br>
                         Build your skill.</p>
-                     <a class="it-btn black-bg mr-15" href="contact.php">
+                     <a class="it-btn black-bg mr-15" href="<?=base_url()?>contact">
                         <span>
                            Join now
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">

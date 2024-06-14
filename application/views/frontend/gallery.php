@@ -2,7 +2,7 @@
    <main>
 
       <!-- breadcrumb-area-start -->
-      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="<?=base_url()?>public/web/assets/img/breadcrumb/breadcrumb.jpg">
          <div class="container">
             <div class="row ">
                <div class="col-md-12">
@@ -12,7 +12,7 @@
                      </div>
                      <div class="it-breadcrumb-list-wrap">
                         <div class="it-breadcrumb-list">
-                           <span><a href="index.html">home</a></span>
+                           <span><a href="<?=base_url()?>">home</a></span>
                            <span class="dvdr">//</span>
                            <span>gallery</span>
                         </div>
@@ -31,18 +31,18 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="position-relative gallery-img ">
                     <figure class="m-0">
-                        <img src="assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
+                        <img src="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
                     </figure>
                     <div class="gallery-title">
                         <div class=" px-3 py-2  d-flex flex-column  justify-content-center h-100 ">
                             <h4 class="mb-0 text-white">Classes</h4>
                             <div class="gallery-btn">
-                                <a href="assets/img/gallery/class-gallery-1.png"  data-fancybox="gallery1">
+                                <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png"  data-fancybox="gallery1">
                                     View Gallery <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <div class="d-none">
-                                    <a href="assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
-                                    <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
                                 </div>
                             </div>
                         </div>
@@ -52,18 +52,18 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="position-relative gallery-img ">
                     <figure class="m-0">
-                        <img src="assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
+                        <img src="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
                     </figure>
                     <div class="gallery-title">
                         <div class=" px-3 py-2  d-flex flex-column  justify-content-center h-100 ">
                             <h4 class="mb-0 text-white">Classes</h4>
                             <div class="gallery-btn">
-                                <a href="assets/img/gallery/class-gallery-1.png"  data-fancybox="gallery1">
+                                <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png"  data-fancybox="gallery1">
                                     View Gallery <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <div class="d-none">
-                                    <a href="assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
-                                    <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
                                 </div>
                             </div>
                         </div>
@@ -73,18 +73,18 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="position-relative gallery-img ">
                     <figure class="m-0">
-                        <img src="assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
+                        <img src="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
                     </figure>
                     <div class="gallery-title">
                         <div class=" px-3 py-2  d-flex flex-column  justify-content-center h-100 ">
                             <h4 class="mb-0 text-white">Classes</h4>
                             <div class="gallery-btn">
-                                <a href="assets/img/gallery/class-gallery-1.png"  data-fancybox="gallery1">
+                                <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png"  data-fancybox="gallery1">
                                     View Gallery <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <div class="d-none">
-                                    <a href="assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
-                                    <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
                                 </div>
                             </div>
                         </div>
@@ -94,18 +94,18 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="position-relative gallery-img ">
                     <figure class="m-0">
-                        <img src="assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
+                        <img src="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
                     </figure>
                     <div class="gallery-title">
                         <div class=" px-3 py-2  d-flex flex-column  justify-content-center h-100 ">
                             <h4 class="mb-0 text-white">Classes</h4>
                             <div class="gallery-btn">
-                                <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1">
+                                <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1">
                                     View Gallery <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <div class="d-none">
-                                    <a href="assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
-                                    <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
                                 </div>
                             </div>
                         </div>
@@ -115,18 +115,18 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="position-relative gallery-img ">
                     <figure class="m-0">
-                        <img src="assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
+                        <img src="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
                     </figure>
                     <div class="gallery-title">
                         <div class=" px-3 py-2  d-flex flex-column  justify-content-center h-100 ">
                             <h4 class="mb-0 text-white">Classes</h4>
                             <div class="gallery-btn">
-                                <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1">
+                                <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1">
                                     View Gallery <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <div class="d-none">
-                                    <a href="assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
-                                    <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
                                 </div>
                             </div>
                         </div>
@@ -136,18 +136,18 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                <div class="position-relative gallery-img ">
                     <figure class="m-0">
-                        <img src="assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
+                        <img src="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" alt="Classes" class="img-fluid">
                     </figure>
                     <div class="gallery-title">
                         <div class=" px-3 py-2  d-flex flex-column  justify-content-center h-100 ">
                             <h4 class="mb-0 text-white">Classes</h4>
                             <div class="gallery-btn">
-                                <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1">
+                                <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1">
                                     View Gallery <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <div class="d-none">
-                                    <a href="assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
-                                    <a href="assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-2.jpg" data-fancybox="gallery1"></a>
+                                    <a href="<?=base_url()?>public/web/assets/img/gallery/class-gallery-1.png" data-fancybox="gallery1"></a>
                                 </div>
                             </div>
                         </div>
@@ -162,16 +162,16 @@
       <!-- newsletter-area-start -->
       <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
          <div class="it-newsletter-shape-1 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-1.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-1.png" alt="">
          </div>
          <div class="it-newsletter-shape-2 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-2.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-2.png" alt="">
          </div>
          <div class="it-newsletter-shape-3 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-3.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-3.png" alt="">
          </div>
          <div class="it-newsletter-shape-4 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-4.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-4.png" alt="">
          </div>
          <div class="container">
             <div class="row">

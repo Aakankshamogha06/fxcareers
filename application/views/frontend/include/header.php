@@ -127,7 +127,7 @@
                                           </clipPath>
                                        </defs>
                                     </svg>
-                                 </span> (+91) 8929144243dghgh
+                                 </span> (+91) 8929144243
                               </a>
                            </li>
                            <li>

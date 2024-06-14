@@ -196,23 +196,22 @@ $route['analysis_detail/analysis_detail_delete/(:any)'] = 'admin/analysis_detail
 //website
 $route['index']  = 'website/index';
 $route['about-us']  = 'website/about';
-$route['blog']  = 'website/blog';
-$route['analysis']  = 'website/analysis';
-$route['contact']  = 'website/contact';
-$route['ebook']  = 'website/ebook';
-$route['contact']  = 'website/contact';
-$route['detail/(:any)']  = 'website/detail/$1';
-$route['offline-detail/(:any)']  = 'website/offline_detail/$1';
-$route['blog-detail']  = 'website/blog_detail';
 $route['gallery']  = 'website/gallery';
-$route['offline-program']  = 'website/offline_program';
-$route['online-program']  = 'website/online_program';
-$route['recorded-videos']  = 'website/recorded_videos';
-$route['team']  = 'website/team';
-$route['testimonial']  = 'website/testimonial';
-$route['trade']  = 'website/trade';
-$route['blog/(:any)']  = 'website/blog_detail/$1';
-$route['analysis/(:any)']  = 'website/analysis_detail/$1';
+$route['courses'] = 'website/courses';
+$route['one-to-one-session'] = 'website/one_to_one_session';
+$route['become-partner'] = 'website/become_partner';
+$route['e-books']  = 'website/e_books';
+$route['trade-idea']  = 'website/trade_idea';
+$route['blog']  = 'website/blog';
+$route['contact']  = 'website/contact';
+$route['login']  = 'website/login';
+$route['register']  = 'website/register';
+$route['course-details']  = 'website/course_details';
+$route['teacher-details']  = 'website/teacher_details';
+
+
+
+
 
 
 /* API */

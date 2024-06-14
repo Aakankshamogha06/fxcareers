@@ -2,7 +2,7 @@
    <main>
 
       <!-- breadcrumb-area-start -->
-      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="<?=base_url()?>public/web/assets/img/breadcrumb/breadcrumb.jpg">
          <div class="container">
             <div class="row ">
                <div class="col-md-12">
@@ -12,7 +12,7 @@
                      </div>
                      <div class="it-breadcrumb-list-wrap">
                         <div class="it-breadcrumb-list">
-                           <span><a href="index.html">home</a></span>
+                           <span><a href="<?=base_url()?>">home</a></span>
                            <span class="dvdr">//</span>
                            <span>E-books</span>
                         </div>
@@ -31,7 +31,7 @@
                <div class="col-xl-6 col-lg-6 mb-30">
                   <div class="it-course-2-wrap d-flex align-items-center">
                      <div class="it-course-thumb  p-relative">
-                        <a href="course-details.html"><img src="assets/img/ebooks/what-is-investment.png" alt=""></a>                       
+                        <a href="course-details.html"><img src="<?=base_url()?>public/web/assets/img/ebooks/what-is-investment.png" alt=""></a>                       
                      </div>
                      <div class="it-course-content">
                         <h4 class="it-course-title pb-15 mb-0"><a href="course-details.html">What is Investment</a></h4>
@@ -43,7 +43,7 @@
                <div class="col-xl-6 col-lg-6 mb-30">
                   <div class="it-course-2-wrap d-flex align-items-center">
                      <div class="it-course-thumb  p-relative">
-                        <a href="course-details.html"><img src="assets/img/ebooks/indicator.png" alt=""></a>
+                        <a href="course-details.html"><img src="<?=base_url()?>public/web/assets/img/ebooks/indicator.png" alt=""></a>
                        
                      </div>
                      <div class="it-course-content">
@@ -56,7 +56,7 @@
                <div class="col-xl-6 col-lg-6 mb-30">
                   <div class="it-course-2-wrap d-flex align-items-center">
                      <div class="it-course-thumb  p-relative">
-                        <a href="course-details.html"><img src="assets/img/ebooks/forex-termology.png" alt=""></a>                       
+                        <a href="course-details.html"><img src="<?=base_url()?>public/web/assets/img/ebooks/forex-termology.png" alt=""></a>                       
                      </div>
                      <div class="it-course-content">
                         <h4 class="it-course-title pb-15 mb-0"><a href="course-details.html">Forex Terminology</a></h4>
@@ -68,7 +68,7 @@
                <div class="col-xl-6 col-lg-6 mb-30">
                   <div class="it-course-2-wrap d-flex align-items-center">
                      <div class="it-course-thumb  p-relative">
-                        <a href="course-details.html"><img src="assets/img/ebooks/swing-trading.png" alt=""></a>
+                        <a href="course-details.html"><img src="<?=base_url()?>public/web/assets/img/ebooks/swing-trading.png" alt=""></a>
                        
                      </div>
                      <div class="it-course-content">
@@ -82,7 +82,7 @@
                <div class="col-xl-6 col-lg-6 mb-30">
                   <div class="it-course-2-wrap d-flex align-items-center">
                      <div class="it-course-thumb  p-relative">
-                        <a href="course-details.html"><img src="assets/img/ebooks/what-is-trading.png" alt="" class="w-100"></a>
+                        <a href="course-details.html"><img src="<?=base_url()?>public/web/assets/img/ebooks/what-is-trading.png" alt="" class="w-100"></a>
                        
                      </div>
                      <div class="it-course-content">
@@ -102,16 +102,16 @@
       <!-- newsletter-area-start -->
       <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
          <div class="it-newsletter-shape-1 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-1.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-1.png" alt="">
          </div>
          <div class="it-newsletter-shape-2 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-2.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-2.png" alt="">
          </div>
          <div class="it-newsletter-shape-3 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-3.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-3.png" alt="">
          </div>
          <div class="it-newsletter-shape-4 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-4.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-4.png" alt="">
          </div>
          <div class="container">
             <div class="row">

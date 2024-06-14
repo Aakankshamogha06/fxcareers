@@ -2,7 +2,7 @@
    <main>
 
       <!-- breadcrumb-area-start -->
-      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="assets/img/breadcrumb/breadcrumb.jpg">
+      <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="<?=base_url()?>public/web/assets/img/breadcrumb/breadcrumb.jpg">
          <div class="container">
             <div class="row ">
                <div class="col-md-12">
@@ -174,16 +174,16 @@
       <!-- newsletter-area-start -->
       <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
          <div class="it-newsletter-shape-1 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-1.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newslettershape-1-1.png" alt="">
          </div>
          <div class="it-newsletter-shape-2 d-none d-lg-block">
-            <img src="assets/img/newsletter/shape-1-2.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newslettershape-1-2.png" alt="">
          </div>
          <div class="it-newsletter-shape-3 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-3.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newslettershape-1-3.png" alt="">
          </div>
          <div class="it-newsletter-shape-4 d-none d-xl-block">
-            <img src="assets/img/newsletter/shape-1-4.png" alt="">
+            <img src="<?=base_url()?>public/web/assets/img/newslettershape-1-4.png" alt="">
          </div>
          <div class="container">
             <div class="row">
