@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
-</head>
-<body>
-<div class="container-fluid">
-  <div class="container-fluid">
-
-    <div class="card">
-      <div class="card-body">
-        <div class="card-header">
-        <h5>View</h5>
-            <a href="<?= base_url('admin/ebook/add_ebook'); ?>">
-              <button type="button" c class="btn btn-primary toggle-btn mb-4 mr-2" style="margin-left: 80.5%;">Add</button>
-            </a>
-          </div>
-          <div class="card-body">
-            <table id="table_id" class="table">
-              <thead>
-                <tr>
+<div class="content">
+  <div class="container-fluid pt-4 px-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-12">
+        <div class="bg-secondary rounded p-4">
+          <h6 class="mb-4">VIEW </h6>
+          <a href="<?= base_url('admin/ebook/add_ebook'); ?>">
+            <button type="button" class="btn btn-primary toggle-btn mb-4 mr-2" style="margin-left: 80.5%;">Add</button>
+          </a>
+          <hr>
+          <div class="table-container">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead style="color:#FEC83D;">
+                  <tr>
                   <th>SR NO</th>
                   <th>E-BOOK NAME</th>
                   <th>E-BOOK IMAGE</th>
@@ -54,8 +45,11 @@
                     <td><?= $row->ebook_type ?></td>
 
                     <td class="text-right">
-                <!-- <a href="<?= base_url('admin/ebook/ebook_edit/' . $row->id); ?>" class="ti ti-edit" style="font-size:40px; color:blue;"style="font-size:15px; padding:0px;"></a> -->
-                    <a href="<?= base_url('admin/ebook/ebook_delete/' . $row->id); ?>" class="ti ti-trash" style="font-size:40px; color:red;" onclick="return confirm('Are you sure want to delete ?');"style="font-size:15px; padding:0px;"></a></td>
+                      <!-- <a href="<?= base_url('admin/ebook/ebook_edit/' . $row->id); ?>">
+                          <i class="fas fa-edit" style="font-size: 24px; color: blue;"></i></a> -->
+                        <a href="<?= base_url('admin/ebook/ebook_delete/' . $row->id); ?>" onclick="return confirm('Are you sure want to delete ?');">
+                          <i class="fas fa-trash-alt" style="font-size: 24px; color: red;"></i>
+                      </td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>

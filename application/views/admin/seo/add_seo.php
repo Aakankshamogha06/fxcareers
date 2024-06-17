@@ -1,7 +1,9 @@
-<div class="container-fluid">
-    <div class="container-fluid">
-        <div class="card">
-            <div class="card-body">
+<div class="content">
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-12">
+
+                <div class="bg-secondary rounded h-100 p-4">
                 <h5 class="card-title fw-semibold mb-4">SEO</h5>
 
                 <form class="form-horizontal" method="post" action="<?= base_url('seo/seo_submit_data'); ?>">

@@ -1,45 +1,35 @@
-<div class="pcoded-main-container">
-    <div class="pcoded-content">
-        <div class="row">
-            <!-- [ sample-page ] start -->
-            <div class="col-sm-12">
-                <div class="card">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h5>Add User</h5>
-                        <?php if(isset($msg) || validation_errors() !== ''): ?>
-                          <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                          <?= validation_errors();?>
-                  <?= isset($msg)? $msg: ''; ?>
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-						</div>
-              <?php endif; ?>
-                    </div>
+<div class="content">
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-12">
+
+                <div class="bg-secondary rounded h-100 p-4">
+                <h5 class="card-title fw-semibold mb-4">USER</h5>
                     
                     <?php echo form_open(base_url('admin/users/edit/'.$user['id']) )?> 
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
                                 <label for="firstname" >First Name</label>
                                 <input type="text" name="firstname" value="<?= $user['firstname']; ?>" class="form-control" id="firstname" placeholder="">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
                                 <label for="lastname" >Last Name</label>
                                 <input type="text" name="lastname" value="<?= $user['lastname']; ?>" class="form-control" id="lastname" placeholder="">
                                 </div>
                             </div>
                             <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                             <label for="email" >Email</label>
                             <input type="email" name="email" value="<?= $user['email']; ?>" class="form-control" id="email" placeholder="">
                             </div>
-                            <div class="form-group col-md-6" >
+                            <div class="form-group col-md-12" >
                             <label for="mobile_no" >Mobile No</label>
 
                             <input type="number" name="mobile_no" value="<?= $user['mobile_no']; ?>" class="form-control" id="mobile_no" placeholder="">
                             </div>
                         </div>
                         <div class="form-row">
-                          <div class="form-group col-md-6">
+                          <div class="form-group col-md-12">
                                 <label for="role" >Select Role</label>
                                 <select name="user_role" class="form-control">
                     <option value="">Select Role</option>

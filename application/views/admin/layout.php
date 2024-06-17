@@ -2,27 +2,42 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
     <title>FXCAREERS</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/font-awesome/css/font-awesome.min.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="<?=base_url()?>public/admin/assets/css/style.css">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="<?=base_url()?>public/admin/assets/images/favicon.png" />
-  </head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="<?=base_url()?>public/web/assets/img/logo/favicon-1.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?=base_url()?>public/admin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>public/admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="<?=base_url()?>public/admin/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="<?=base_url()?>public/admin/css/style.css" rel="stylesheet">
+
+    <style>
+        .dataTables_wrapper {
+            position: relative;
+            clear: both;
+            /* overflow: scroll; */
+        }
+    </style>
+</head>
 
 <body class="">
 
@@ -40,20 +55,17 @@
     <?php include('include/sidebar.php'); ?>
 
     <?php $this->load->view($view); ?>
-    <script src="<?=base_url()?>public/admin/assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="<?=base_url()?>public/admin/assets/vendors/chart.js/chart.umd.js"></script>
-    <script src="<?=base_url()?>public/admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="<?=base_url()?>public/admin/assets/js/off-canvas.js"></script>
-    <script src="<?=base_url()?>public/admin/assets/js/misc.js"></script>
-    <script src="<?=base_url()?>public/admin/assets/js/settings.js"></script>
-    <script src="<?=base_url()?>public/admin/assets/js/todolist.js"></script>
-    <script src="<?=base_url()?>public/admin/assets/js/jquery.cookie.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <script src="<?=base_url()?>public/admin/assets/js/dashboard.js"></script>
-    <!-- End custom js for this page -->
+   <!-- JavaScript Libraries -->
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?=base_url()?>public/admin/lib/chart/chart.min.js"></script>
+    <script src="<?=base_url()?>public/admin/lib/easing/easing.min.js"></script>
+    <script src="<?=base_url()?>public/admin/lib/waypoints/waypoints.min.js"></script>
+    <script src="<?=base_url()?>public/admin/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?=base_url()?>public/admin/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="<?=base_url()?>public/admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="<?=base_url()?>public/admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="<?=base_url()?>public/admin/js/main.js"></script>
 </body>

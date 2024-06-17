@@ -1,22 +1,22 @@
-<div class="container-fluid">
-    <div class="container-fluid">
+<div class="content">
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-12">
 
+                <div class="bg-secondary rounded h-100 p-4">
+                    <?php foreach ($view_blog_category as $row) :
 
-        <div class="card">
-            <div class="card-body">
-                <?php foreach ($view_blog_category as $row) :
-
-                ?>
-                    <div class="card-header">
-                        <h5>Edit blog_category</h5>
-                        <?php if (isset($msg) || validation_errors() !== '') : ?>
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <?= validation_errors(); ?>
-                                <?= isset($msg) ? $msg : ''; ?>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                            </div>
-                        <?php endif; ?>
-                    </div>
+                    ?>
+                        <div class="card-header">
+                            <h5>Edit seo</h5>
+                            <?php if (isset($msg) || validation_errors() !== '') : ?>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <?= validation_errors(); ?>
+                                    <?= isset($msg) ? $msg : ''; ?>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     <form class="form-horizontal" method="post" action="<?= base_url('blog_category/blog_category_update_data'); ?>">
                     <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                     <div class="form-row">
