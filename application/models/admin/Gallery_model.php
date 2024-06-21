@@ -27,6 +27,16 @@ class gallery_model extends CI_Model
         return 0;
     }
 }
+public function gallery()
+{
+    $result = $this->db->query(" SELECT *  FROM gallery LIMIT 6");
+
+    if ($result->num_rows() > 0) {
+        return $result->result();
+    } else {
+        return 0;
+    }
+}
 
 
 

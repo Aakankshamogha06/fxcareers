@@ -27,31 +27,33 @@
       <div class="it-teacher-details-area pt-120 pb-120">
          <div class="container">
             <div class="it-teacher-details-wrap">
+            <?php foreach($teacher_detail as $row):?>   
                <div class="row">
                   <div class="col-xl-3 col-lg-3">
+                    
                      <div class="it-teacher-details-left">
                         <div class="it-teacher-details-left-thumb">
-                           <img src="<?=base_url()?>public/web/assets/img/team/team-inner.jpg" alt="">
+                           <img src="<?=base_url()?>uploads/teachers/<?=$row->teacher_image?>" alt="">
                         </div>
                         <div class="it-teacher-details-left-social text-center">
-                           <a href="#"><i class="fab fa-facebook-f"></i></a>
-                           <a href="#"><i class="fab fa-twitter"></i></a>
-                           <a href="#"><i class="fab fa-skype"></i></a>
-                           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="<?= $row->twitter ?>" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="<?= $row->facebook ?>" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="<?= $row->instagram ?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="<?= $row->skype ?>" target="_blank"><i class="fab fa-skype"></i></a>
                         </div>
                         <div class="it-teacher-details-left-info">
                            <ul>
                               <li>
                                  <i class="fa-light fa-phone-volume"></i>
-                                 <a href="tel:(568)367987237">(568) 367-987-237</a>
+                                 <a href="tel:(568)367987237"><?=$row->teacher_mobile?></a>
                               </li>
                               <li>
                                  <i class="fa-light fa-location-dot"></i>
-                                 <a href="https://www.google.com/maps" target="_blank">Hudson, Wisconsin(WI), 54016</a>
+                                 <a href="https://www.google.com/maps" target="_blank"><?=$row->teacher_address?></a>
                               </li>
                               <li>
                                  <i class="fa-light fa-envelope"></i>
-                                 <a href="mailto:govillage@gmail.com">govillage@gmail.com</a>
+                                 <a href=""><?=$row->teacher_email?></a>
                               </li>
                            </ul>
                         </div>
@@ -61,25 +63,22 @@
                   <div class="col-xl-9 col-lg-9">
                      <div class="it-teacher-details-right">
                         <div class="it-teacher-details-right-title-box">
-                           <h4>Melvin Warner</h4>
-                           <span>teacher</span>
-                           <p>Tempor orci dapibus ultrices in iaculis nunc sed augue. Feugiat in ante metus dictum at
-                              tempor commodo. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Arcu dictum
-                              varius duis at consectetur lorem donec massa.</p>
-                           <p>Tempor orci dapibus ultrices in iaculis nunc sed augue. Feugiat in ante metus dictum at
-                              tempor commodo lectus magna fringilla.</p>
+                           <h4><?=$row->teacher_name?></h4>
+                           <span><?=$row->designation?></span>
+                           <h4>Introduction:</h4>
+                           <p><?=$row->teacher_introduction?></p>
+                           
                         </div>
                         <div class="it-teacher-details-right-content mb-40">
                            <h4>Education:</h4>
-                           <p>I’ve spent years figuring out the “formula” to teaching technical skills in a classroom
-                              environment, and I’m really excited to finally share my expertise with you. I can
-                              confidently
-                              say that my online courses are without a doubt the most comprehensive ones on the market.
+                           <p><?=$row->teacher_education?>
                            </p>
                         </div>
                         
                      </div>
                   </div>
+                  <!-- blog/<?=str_replace(' ','-',strtolower($row->blog_name));?> -->
+                   <?php endforeach?>
                </div>
             </div>
          </div>
@@ -88,38 +87,7 @@
 
     
 
-      <!-- newsletter-area-start -->
-      <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
-         <div class="it-newsletter-shape-1 d-none d-lg-block">
-            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-1.png" alt="">
-         </div>
-         <div class="it-newsletter-shape-2 d-none d-lg-block">
-            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-2.png" alt="">
-         </div>
-         <div class="it-newsletter-shape-3 d-none d-xl-block">
-            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-3.png" alt="">
-         </div>
-         <div class="it-newsletter-shape-4 d-none d-xl-block">
-            <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-4.png" alt="">
-         </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-6 col-md-6">
-                  <div class="it-newsletter-left">
-                     <h4 class="it-section-title text-white pb-20">Join Our Newsletter</h4>
-                     <span>Subscribe our newsletter to get our latest update & news.</span>
-                  </div>
-               </div>
-               <div class="col-xl-6 col-lg-6 col-md-6">
-                  <div class="it-newsletter-right p-relative text-end">
-                     <input type="text" placeholder="Enter your email:">
-                     <button class="it-btn black-bg" type="submit"><span>subscribe now</span></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- newsletter-area-end -->
+      
 
    </main>
 

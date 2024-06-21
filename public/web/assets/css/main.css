@@ -13129,5 +13129,9 @@ input[type=radio] {
 .order-button-payment button {
   width: 100%;
 }
+.sticky-top{
+  z-index: 0!important;
+  top: 120px;
+}
 
 /*# sourceMappingURL=main.css.map */

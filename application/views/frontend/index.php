@@ -671,10 +671,11 @@
                <div class="it-team-right-box">
                   <div class="row">
                      <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
+                     <?php  foreach($teachers as $row):?>
                         <div class="it-team-item">
                            <div class="it-team-thumb-box p-relative">
                               <div class="it-team-thumb">
-                                 <img src="<?=base_url()?>public/web/assets/img/team/team-1-1.png" alt="">
+                              <img src="<?=base_url()?>uploads/teachers/<?=$row->teacher_image?>" alt="team image">
                               </div>
                               <div class="it-team-social-box">
                                  <button><i class="fa-sharp fa-light fa-share-nodes"></i></button>
@@ -687,8 +688,8 @@
                               </div>
                               <div class="it-team-author-box d-flex align-items-center justify-content-between">
                                  <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Esther Howard</a></h5>
-                                    <span>Junior Instructor</span>
+                                 <h4 class="it-team-3-title"><a href="<?=base_url()?>teacher/<?=str_replace(' ','-',strtolower($row->teacher_name));?>" style="color: black;"><?=$row->teacher_name?></a></h4>
+                                 <span><?=$row->designation?></span>
                                  </div>
                                  <div class="it-team-link">
                                     <a href="<?=base_url()?>teacher-details">
@@ -700,100 +701,9 @@
                               </div>
                            </div>
                         </div>
+                        <?php endforeach?>
                      </div>
-                     <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
-                        <div class="it-team-item">
-                           <div class="it-team-thumb-box p-relative">
-                              <div class="it-team-thumb">
-                                 <img src="<?=base_url()?>public/web/assets/img/team/team-1-2.png" alt="">
-                              </div>
-                              <div class="it-team-social-box">
-                                 <button><i class="fa-sharp fa-light fa-share-nodes"></i></button>
-                                 <div class="it-team-social">
-                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                 </div>
-                              </div>
-                              <div class="it-team-author-box d-flex align-items-center justify-content-between">
-                                 <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Beverly Hathcock</a></h5>
-                                    <span>Junior Instructor</span>
-                                 </div>
-                                 <div class="it-team-link">
-                                    <a href="<?=base_url()?>teacher-details">
-                                       <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="currentcolor" />
-                                       </svg>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
-                        <div class="it-team-item">
-                           <div class="it-team-thumb-box p-relative">
-                              <div class="it-team-thumb">
-                                 <img src="<?=base_url()?>public/web/assets/img/team/team-1-3.png" alt="">
-                              </div>
-                              <div class="it-team-social-box">
-                                 <button><i class="fa-sharp fa-light fa-share-nodes"></i></button>
-                                 <div class="it-team-social">
-                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                 </div>
-                              </div>
-                              <div class="it-team-author-box d-flex align-items-center justify-content-between">
-                                 <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Donald Gonzales</a></h5>
-                                    <span>Junior Instructor</span>
-                                 </div>
-                                 <div class="it-team-link">
-                                    <a href="<?=base_url()?>teacher-details">
-                                       <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="currentcolor" />
-                                       </svg>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
-                        <div class="it-team-item">
-                           <div class="it-team-thumb-box p-relative">
-                              <div class="it-team-thumb">
-                                 <img src="<?=base_url()?>public/web/assets/img/team/team-1-4.png" alt="">
-                              </div>
-                              <div class="it-team-social-box">
-                                 <button><i class="fa-sharp fa-light fa-share-nodes"></i></button>
-                                 <div class="it-team-social">
-                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                 </div>
-                              </div>
-                              <div class="it-team-author-box d-flex align-items-center justify-content-between">
-                                 <div class="it-team-author-info">
-                                    <h5 class="it-team-author-name"><a href="<?=base_url()?>teacher-details">Eddie Lenz</a></h5>
-                                    <span>Junior Instructor</span>
-                                 </div>
-                                 <div class="it-team-link">
-                                    <a href="<?=base_url()?>teacher-details">
-                                       <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="currentcolor" />
-                                       </svg>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     
                   </div>
                </div>
             </div>
@@ -905,7 +815,7 @@
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4">
                   <div class="it-blog-button text-start text-md-end">
-                     <a class="it-btn" href="blog-1.html">
+                     <a class="it-btn" href="<?=base_url()?>blog">
                         <span>
                            all blog post
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -918,123 +828,42 @@
                </div>
             </div>
          </div>
-         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-               <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">
-                  <div class="it-blog-item">
-                     <div class="it-blog-thumb fix">
-                        <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-1.jpg" alt=""></a>
+         <div class="it-blog-area  pt-120 pb-90">
+         <div class="container">
+            <div class="row">
+               <?php foreach($blog_detail_view as $row):?>
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">                  
+                     <div class="it-blog-item">
+                        <div class="it-blog-thumb fix">
+                        <a href="<?=base_url()?>blog/<?=str_replace(' ','-',strtolower($row->blog_name));?>">
+                        <img src="<?=base_url('uploads/blogs/').$row->blog_image;?>" alt=""></a>
+                        </div>
+                        <div class="it-blog-meta pb-15">
+                           <span>
+                              <i class="fa-solid fa-calendar-days"></i>
+                              <?= date('d-m-Y', strtotime($row->blog_date))?></span>
+                        </div>
+                        <h4 class="it-blog-title line-clamp-2"><a href="<?= base_url('blog/')?><?=str_replace(' ','-',strtolower($row->blog_name));?>"><?=substr($row->blog_name,0,10).'..'?></a></h4>
+                        <a class="it-btn sm" href="<?= base_url('blog/')?><?=str_replace(' ','-',strtolower($row->blog_name));?>">
+                           <span>
+                              read more
+                              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>   
                      </div>
-                     <div class="it-blog-meta pb-15">
-                        <span>
-                           <i class="fa-solid fa-calendar-days"></i>
-                           14 June 2023</span>
-                        <span>
-                           <i class="fa-light fa-messages"></i>
-                           Comment (06)</span>
-                     </div>
-                     <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
-                     <a class="it-btn sm" href="blog-details.html">
-                        <span>
-                           read more
-                           <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                           </svg>
-                        </span>
-                     </a>
                   </div>
                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-               <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">
-                  <div class="it-blog-item">
-                     <div class="it-blog-thumb fix">
-                        <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-2.jpg" alt=""></a>
-                     </div>
-                     <div class="it-blog-meta pb-15">
-                        <span>
-                           <i class="fa-solid fa-calendar-days"></i>
-                           14 June 2023</span>
-                        <span>
-                           <i class="fa-light fa-messages"></i>
-                           Comment (06)</span>
-                     </div>
-                     <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
-                     <a class="it-btn sm" href="blog-details.html">
-                        <span>
-                           read more
-                           <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                           </svg>
-                        </span>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-               <div class="it-blog-item-box" data-background="<?=base_url()?>public/web/assets/img/blog/bg-1.jpg">
-                  <div class="it-blog-item">
-                     <div class="it-blog-thumb fix">
-                        <a href="blog-details.html"><img src="<?=base_url()?>public/web/assets/img/blog/blog-1-3.jpg" alt=""></a>
-                     </div>
-                     <div class="it-blog-meta pb-15">
-                        <span>
-                           <i class="fa-solid fa-calendar-days"></i>
-                           14 June 2023</span>
-                        <span>
-                           <i class="fa-light fa-messages"></i>
-                           Comment (06)</span>
-                     </div>
-                     <h4 class="it-blog-title line-clamp-2"><a href="blog-details.html">velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</a></h4>
-                     <a class="it-btn sm" href="blog-details.html">
-                        <span>
-                           read more
-                           <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M11 1.24023L16 7.24023L11 13.2402" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M1 7.24023H16" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                           </svg>
-                        </span>
-                     </a>
-                  </div>
-               </div>
+               <?php endforeach?>
             </div>
          </div>
+      </div>
       </div>
    </div>
    <!-- blog-area-end -->
 
-   <!-- newsletter-area-start -->
-   <div class="it-newsletter-area it-newsletter-height fix p-relative theme-bg">
-      <div class="it-newsletter-shape-1 d-none d-lg-block">
-         <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-1.png" alt="">
-      </div>
-      <div class="it-newsletter-shape-2 d-none d-lg-block">
-         <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-2.png" alt="">
-      </div>
-      <div class="it-newsletter-shape-3 d-none d-xl-block">
-         <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-3.png" alt="">
-      </div>
-      <div class="it-newsletter-shape-4 d-none d-xl-block">
-         <img src="<?=base_url()?>public/web/assets/img/newsletter/shape-1-4.png" alt="">
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6">
-               <div class="it-newsletter-left">
-                  <h4 class="it-section-title text-white pb-20">Join Our Newsletter</h4>
-                  <span>Subscribe our newsletter to get our latest update & news.</span>
-               </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
-               <div class="it-newsletter-right p-relative text-end">
-                  <input type="text" placeholder="Enter your email:">
-                  <button class="it-btn black-bg" type="submit"><span>subscribe now</span></button>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- newsletter-area-end -->
+  
 </main>

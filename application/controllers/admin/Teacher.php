@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class blog_detail extends MY_Controller
+class teacher extends MY_Controller
 {
 
 	function __construct()
@@ -15,7 +15,7 @@ class blog_detail extends MY_Controller
 		$this->load->helper('cookie');
 		$this->load->library('form_validation');
 		$this->load->library('encryption');
-		$this->load->model('admin/blog_detail_model', 'blog_detail_model');
+		$this->load->model('admin/teacher_model', 'teacher_model');
 		$this->load->helper('security');
 
 		date_default_timezone_set('Asia/Kolkata');
@@ -26,12 +26,12 @@ class blog_detail extends MY_Controller
 
 
 
-	public function add_blog_detail()
+	public function add_teacher()
 	{
 		if ($this->session->has_userdata('is_admin_login')) {
 
 
-			$data['view'] = 'admin/blog_detail/add_blog_detail';
+			$data['view'] = 'admin/teacher/add_teacher';
 
 			$this->load->view('admin/layout', $data);
 		} else {
@@ -39,7 +39,7 @@ class blog_detail extends MY_Controller
 		}
 	}
 
-	public function blog_detail_submit_data()
+	public function teacher_submit_data()
 	{
 		if ($this->session->has_userdata('is_admin_login')) {
 
@@ -47,24 +47,24 @@ class blog_detail extends MY_Controller
 			$data = [];
 			if ($this->input->post()) {
 				$data = $this->input->post();
-				$config['upload_path'] = 'uploads/blogs';
+				$config['upload_path'] = 'uploads/teachers';
 				$config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
 				$config['encrypt_name'] = TRUE;
 				$this->load->library('upload',$config);
 				$this->upload->initialize($config);
-				if($this->upload->do_upload('blog_image'))
+				if($this->upload->do_upload('teacher_image'))
 				{
 					$uploadData = $this->upload->data();
-					$blog_image = $uploadData['file_name'];
+					$teacher_image = $uploadData['file_name'];
 				}
 				else
 				{
 					$error = array('error' => $this->upload->display_errors());
 					print_r($error);
 				}
-				if ($this->blog_detail_model->blog_detail_data_submit($data,$blog_image) == true) {
+				if ($this->teacher_model->teacher_data_submit($data,$teacher_image) == true) {
 
-					redirect("admin/blog_detail/blog_detail_view");
+					redirect("admin/teacher/teacher_view");
 				} ?> <?php
 					} else {
 						$data['message'] = '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Error!</strong> Sorry Please Try Again.</div>';
@@ -76,12 +76,12 @@ class blog_detail extends MY_Controller
 
 
 			
-			public function blog_detail_view()
+			public function teacher_view()
 			{
 				if ($this->session->has_userdata('is_admin_login')) {
 
-					$data['blog_detail_view'] = $this->blog_detail_model->blog_detail_view();
-					$data['view'] = 'admin/blog_detail/view_blog_detail';
+					$data['teacher_view'] = $this->teacher_model->teacher_view();
+					$data['view'] = 'admin/teacher/view_teacher';
 					$this->load->view('admin/layout', $data);
 				} else {
 					redirect('admin/auth/login');
@@ -89,45 +89,45 @@ class blog_detail extends MY_Controller
 			}
 
 
-			public function blog_detail_edit($id)
+			public function teacher_edit($id)
 			{
 				if ($this->session->has_userdata('is_admin_login')) {
 
 					$id = $this->uri->segment(4);
 
-					$data['view_blog_detail'] = $this->blog_detail_model->blog_detail_edit($id);
-					$data['view'] = 'admin/blog_detail/edit_blog_detail';
+					$data['view_teacher'] = $this->teacher_model->teacher_edit($id);
+					$data['view'] = 'admin/teacher/edit_teacher';
 					$this->load->view('admin/layout', $data);
 				} else {
 					redirect('admin/auth/login');
 				}
 			}
 
-			public function blog_detail_update_data()
+			public function teacher_update_data()
 			{
 				if ($this->session->has_userdata('is_admin_login')) {
 
 					$data = [];
 					if ($this->input->post()) {
 						$data = $this->input->post();
-						$config['upload_path'] = 'uploads/blogs';
+						$config['upload_path'] = 'uploads/teachers';
 						$config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
 						$config['encrypt_name'] = TRUE;
 						$this->load->library('upload',$config);
 						$this->upload->initialize($config);
-						if($this->upload->do_upload('blog_image'))
+						if($this->upload->do_upload('teacher_image'))
 						{
 							$uploadData = $this->upload->data();
-							$blog_image = $uploadData['file_name'];
+							$teacher_image = $uploadData['file_name'];
 						}
 						else
 						{
 							$error = array('error' => $this->upload->display_errors());
 							print_r($error);
 						}
-						if ($this->blog_detail_model->blog_detail_update_data($data,$blog_image) == true) {
+						if ($this->teacher_model->teacher_update_data($data,$teacher_image) == true) {
 
-							redirect("blog_detail/view_blog_detail");
+							redirect("teacher/view_teacher");
 						} ?><?php
 						} else {
 							$data['message'] = '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Error!</strong> Sorry Please Try Again.</div>';
@@ -136,25 +136,19 @@ class blog_detail extends MY_Controller
 						redirect('admin/auth/login');
 					}
 				}
-				public function blog_detail_delete($id)
+				public function teacher_delete($id)
 				{
 					if ($this->session->has_userdata('is_admin_login')) {
 
 						$id = $this->uri->segment(4);
 
-						if ($this->blog_detail_model->blog_detail_delete($id) == true) {
+						if ($this->teacher_model->teacher_delete($id) == true) {
 
-							redirect("blog_detail/view_blog_detail");
+							redirect("teacher/view_teacher");
 			}
 			} else {
 				redirect('admin/auth/login');
 		}
 	}
-	public function index() {
-        $this->load->model('Blog_detail_model');
-        $category = 'blog_category';
-        $data['blogs'] = $this->Blog_detail_model->get_recent_blogs($category);
-        $this->load->view('blog_view', $data);
-    }
 }
 ?>

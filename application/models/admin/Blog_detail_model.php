@@ -34,7 +34,14 @@ class blog_detail_model extends CI_Model
         return 0;
     }
 }
-
+public function blog_detail(){
+	$result = $this->db->query("SELECT * FROM `blog_detail` ORDER BY blog_date DESC LIMIT 3");
+	if ($result->num_rows() > 0) {
+        return $result->result();
+    } else {
+        return 0;
+    }
+}
 
 public function blog_detail_data_nm()
 {
@@ -59,11 +66,11 @@ public function blog_detail_data_nm()
 	}
 
 
-	public function blog_detail_update_data($data)
+	public function blog_detail_update_data($data,$blog_image)
 	{
 		$newdata = [
 			'blog_name' => $data['blog_name'],
-			'blog_image'=>$data['blog_image'],
+			'blog_image'=>$blog_image,
             'blog_category' => $data['blog_category'],
             'blog_author' => $data['blog_author'],
             'blog_date' => $data['blog_date'],
@@ -117,17 +124,16 @@ public function blog_detail_data_nm()
 			return false;
 		}
 	}
-	public function get_recent_blogs($category, $limit = 3) {
-        $this->db->select('*');
-        $this->db->from('blog_detail'); 
-        $this->db->where('blog_category', $category);
-        $this->db->order_by('blog_date', 'DESC');
-        $this->db->limit($limit);
-
-        $query = $this->db->get();
-
-        return $query->result();
-    }
+	public function get_recent_blogs($limit = 3) {
+		$this->db->select('*');
+		$this->db->from('blog_detail');
+		$this->db->order_by('blog_date', 'DESC');
+		$this->db->limit($limit);
+	
+		$query = $this->db->get();
+	
+		return $query->result();
+	}	
 
 	public function blog($id)
     {

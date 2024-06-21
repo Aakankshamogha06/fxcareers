@@ -192,7 +192,16 @@ $route['analysis_detail/edit_analysis_detail/(:any)'] = 'admin/analysis_detail/a
 $route['analysis_detail/analysis_detail_update_data'] = 'admin/analysis_detail/analysis_detail_update_data';
 $route['analysis_detail/analysis_detail_delete/(:any)'] = 'admin/analysis_detail/analysis_detail_delete/$1';
 
+//teacher ****************
+$route['teacher/add_teacher'] = 'admin/teacher/add_teacher';
+$route['teacher/teacher_submit_data'] = 'admin/teacher/teacher_submit_data';
+$route['teacher/view_teacher']        = 'admin/teacher/teacher_view';
+$route['teacher/edit_teacher/(:any)'] = 'admin/teacher/teacher_edit/$1';
+$route['teacher/teacher_update_data'] = 'admin/teacher/teacher_update_data';
+$route['teacher/teacher_delete/(:any)'] = 'admin/teacher/teacher_delete/$1';
 
+
+  
 //website
 $route['index']  = 'website/index';
 $route['about-us']  = 'website/about';
@@ -208,6 +217,14 @@ $route['login']  = 'website/login';
 $route['register']  = 'website/register';
 $route['course-details']  = 'website/course_details';
 $route['teacher-details']  = 'website/teacher_details';
+$route['self-learning']  = 'website/self_learning';
+$route['classroom-courses']  = 'website/classroom_courses';
+$route['classroom-detail/(:any)']  = 'website/classroom_detail/$1';
+$route['blog/(:any)'] = 'website/blog_details/$1';
+$route['blog-details'] = 'website/blog_details';
+$route['book-slot'] = 'website/book_slot';
+$route['teacher'] = 'website/teacher';
+$route['teacher/(:any)'] = 'website/teacher_details/$1';
 
 
 

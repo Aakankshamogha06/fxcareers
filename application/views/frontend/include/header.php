@@ -57,7 +57,7 @@
             <button class="close-btn"><i class="fal fa-times"></i></button>
          </div>
          <div class="itoffcanvas__logo">
-            <a href="index.html">
+            <a href="<?=base_url()?>">
                <img src="<?=base_url()?>public/web/assets/img/logo/logo-white.png" alt="" style="max-width: 136px;">
             </a>
          </div>
@@ -74,7 +74,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Email</span>
-                  <a href="maito:info@fxcareers.com">info@fxcareers.com</a>
+                  <a href="maito:info@fxcareers.ae">info@fxcareers.ae</a>
                </div>
             </div>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
@@ -178,7 +178,7 @@
                      <div class="row align-items-center">
                         <div class="col-xl-2 col-6">
                            <div class="it-header-2-logo" style="width: 70%;">
-                              <a href="index"><img src="<?=base_url()?>public/web/assets/img/logo/logo.png" alt="" style="max-width: 136px;"></a>
+                              <a href="<?=base_url()?>"><img src="<?=base_url()?>public/web/assets/img/logo/logo.png" alt="" style="max-width: 136px;"></a>
                            </div>
                         </div>
                         <div class="col-xl-7 d-none d-xl-block">
@@ -197,9 +197,9 @@
                                     <li class="has-dropdown">
                                        <a href="javascript:void(0)">Courses</a>
                                        <ul class="it-submenu submenu">
-                                          <li><a href="courses">Classroom Courses</a></li>
+                                          <li><a href="classroom-courses">Classroom Courses</a></li>
                                           <li><a href="courses">Online Courses</a></li>
-                                          <li><a href="courses">Self Learn Courses</a></li>
+                                          <li><a href="self-learning">Self Learn Courses</a></li>
                                        </ul>
                                     </li>
                                     <li class="has-dropdown">

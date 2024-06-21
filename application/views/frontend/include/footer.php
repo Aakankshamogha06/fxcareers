@@ -25,11 +25,11 @@
                   <div class="it-footer-list">
 
                      <ul class="">
-                        <li><a href="about-us.php"><i class="fa-regular fa-angle-right"></i> About Us</a></li>
-                        <li><a href="trade-idea.php"><i class="fa-regular fa-angle-right"></i>Trade Idea</a></li>
-                        <li><a href="gallery.php"><i class="fa-regular fa-angle-right"></i> Gallery</a></li>
-                        <li><a href="e-books.php"><i class="fa-regular fa-angle-right"></i> E-Books</a></li>
-                        <li><a href="blog.php"><i class="fa-regular fa-angle-right"></i> Blog</a>
+                        <li><a href="<?=base_url()?>about-us"><i class="fa-regular fa-angle-right"></i> About Us</a></li>
+                        <li><a href="<?=base_url()?>trade-idea"><i class="fa-regular fa-angle-right"></i>Trade Idea</a></li>
+                        <li><a href="<?=base_url()?>gallery"><i class="fa-regular fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="<?=base_url()?>e-books"><i class="fa-regular fa-angle-right"></i> E-Books</a></li>
+                        <li><a href="<?=base_url()?>blog"><i class="fa-regular fa-angle-right"></i> Blog</a>
                         </li>
                      </ul>
                   </div>
@@ -53,44 +53,20 @@
             </div>
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
-               <div class="it-footer-widget footer-col-4">
-                  <h4 class="it-footer-title">Gallery</h4>
-                  <div class="it-footer-gallery-box">
-                     <div class="row gx-5">
-                        <div class="col-md-4 col-4">
-                           <div class="it-footer-thumb mb-10">
-                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-1.png" alt="">
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-4">
-                           <div class="it-footer-thumb mb-10">
-                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-2.png" alt="">
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-4 mb-10">
-                           <div class="it-footer-thumb">
-                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-3.png" alt="">
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-4">
-                           <div class="it-footer-thumb">
-                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-4.png" alt="">
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-4">
-                           <div class="it-footer-thumb">
-                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-5.png" alt="">
-                           </div>
-                        </div>
-                        <div class="col-md-4 col-4">
-                           <div class="it-footer-thumb">
-                              <img src="<?=base_url()?>public/web/assets/img/footer/thumb-1-6.png" alt="">
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+    <div class="it-footer-widget footer-col-4">
+        <h4 class="it-footer-title">Gallery</h4>
+        <div class="row gx-5">
+            <?php foreach ($gallery_view as $row) : ?>
+                <div class="col-md-4 col-4">
+                    <div class="it-footer-thumb mb-10">
+                        <img src="<?= base_url('uploads/gallery/') . $row->image; ?>" alt="Classes" class="img-fluid gallery-image">
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+
          </div>
       </div>
    </div>
